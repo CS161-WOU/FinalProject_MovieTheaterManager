@@ -1,14 +1,14 @@
-﻿namespace CS161_FinalProject_MovieTheaterManager
+﻿namespace CS161_FinalProject_MovieTheaterManager.Views
 {
-    partial class Main
+    partial class MoviesView
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,11 +23,12 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
+            MainPanel = new Panel();
             TitleLabel = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
             movieCardPanel1 = new Panel();
@@ -114,7 +115,9 @@
             label42 = new Label();
             label43 = new Label();
             pictureBox21 = new PictureBox();
-            MainPanel = new Panel();
+            manageButton = new Button();
+            exitButton = new Button();
+            MainPanel.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             movieCardPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -158,14 +161,29 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
             movieCardPanel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
-            MainPanel.SuspendLayout();
             SuspendLayout();
+            // 
+            // MainPanel
+            // 
+            MainPanel.AutoSize = true;
+            MainPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            MainPanel.BackColor = Color.FromArgb(47, 47, 47);
+            MainPanel.Controls.Add(exitButton);
+            MainPanel.Controls.Add(TitleLabel);
+            MainPanel.Controls.Add(flowLayoutPanel1);
+            MainPanel.Controls.Add(manageButton);
+            MainPanel.Dock = DockStyle.Fill;
+            MainPanel.Location = new Point(0, 0);
+            MainPanel.MinimumSize = new Size(1533, 788);
+            MainPanel.Name = "MainPanel";
+            MainPanel.Size = new Size(1533, 788);
+            MainPanel.TabIndex = 5;
             // 
             // TitleLabel
             // 
             TitleLabel.AutoSize = true;
             TitleLabel.Font = new Font("Copperplate Gothic Bold", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            TitleLabel.ForeColor = Color.FromArgb(157, 186, 214);
+            TitleLabel.ForeColor = Color.White;
             TitleLabel.Location = new Point(12, 25);
             TitleLabel.Name = "TitleLabel";
             TitleLabel.Size = new Size(424, 21);
@@ -206,7 +224,7 @@
             // 
             // movieCardPanel1
             // 
-            movieCardPanel1.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel1.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel1.Controls.Add(label4);
             movieCardPanel1.Controls.Add(label5);
             movieCardPanel1.Controls.Add(pictureBox2);
@@ -218,6 +236,7 @@
             // 
             // label4
             // 
+            label4.BackColor = Color.FromArgb(0, 64, 0);
             label4.ForeColor = Color.Snow;
             label4.Location = new Point(17, 315);
             label4.Name = "label4";
@@ -249,7 +268,7 @@
             // 
             // movieCardPanel2
             // 
-            movieCardPanel2.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel2.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel2.Controls.Add(label6);
             movieCardPanel2.Controls.Add(label7);
             movieCardPanel2.Controls.Add(pictureBox3);
@@ -261,6 +280,7 @@
             // 
             // label6
             // 
+            label6.BackColor = Color.FromArgb(0, 64, 0);
             label6.ForeColor = Color.Snow;
             label6.Location = new Point(17, 315);
             label6.Name = "label6";
@@ -292,7 +312,7 @@
             // 
             // movieCardPanel3
             // 
-            movieCardPanel3.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel3.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel3.Controls.Add(label8);
             movieCardPanel3.Controls.Add(label9);
             movieCardPanel3.Controls.Add(pictureBox4);
@@ -304,6 +324,7 @@
             // 
             // label8
             // 
+            label8.BackColor = Color.FromArgb(0, 64, 0);
             label8.ForeColor = Color.Snow;
             label8.Location = new Point(17, 315);
             label8.Name = "label8";
@@ -335,7 +356,7 @@
             // 
             // movieCardPanel4
             // 
-            movieCardPanel4.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel4.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel4.Controls.Add(label10);
             movieCardPanel4.Controls.Add(label11);
             movieCardPanel4.Controls.Add(pictureBox5);
@@ -347,6 +368,7 @@
             // 
             // label10
             // 
+            label10.BackColor = Color.FromArgb(0, 64, 0);
             label10.ForeColor = Color.Snow;
             label10.Location = new Point(17, 315);
             label10.Name = "label10";
@@ -378,7 +400,7 @@
             // 
             // movieCardPanel5
             // 
-            movieCardPanel5.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel5.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel5.Controls.Add(label12);
             movieCardPanel5.Controls.Add(label13);
             movieCardPanel5.Controls.Add(pictureBox6);
@@ -390,6 +412,7 @@
             // 
             // label12
             // 
+            label12.BackColor = Color.FromArgb(0, 64, 0);
             label12.ForeColor = Color.Snow;
             label12.Location = new Point(17, 315);
             label12.Name = "label12";
@@ -421,7 +444,7 @@
             // 
             // movieCardPanel6
             // 
-            movieCardPanel6.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel6.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel6.Controls.Add(label14);
             movieCardPanel6.Controls.Add(label15);
             movieCardPanel6.Controls.Add(pictureBox7);
@@ -433,6 +456,7 @@
             // 
             // label14
             // 
+            label14.BackColor = Color.FromArgb(0, 64, 0);
             label14.ForeColor = Color.Snow;
             label14.Location = new Point(17, 315);
             label14.Name = "label14";
@@ -464,7 +488,7 @@
             // 
             // movieCardPanel7
             // 
-            movieCardPanel7.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel7.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel7.Controls.Add(label2);
             movieCardPanel7.Controls.Add(label3);
             movieCardPanel7.Controls.Add(pictureBox1);
@@ -476,6 +500,7 @@
             // 
             // label2
             // 
+            label2.BackColor = Color.FromArgb(0, 64, 0);
             label2.ForeColor = Color.Snow;
             label2.Location = new Point(17, 315);
             label2.Name = "label2";
@@ -507,7 +532,7 @@
             // 
             // movieCardPanel8
             // 
-            movieCardPanel8.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel8.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel8.Controls.Add(label16);
             movieCardPanel8.Controls.Add(label17);
             movieCardPanel8.Controls.Add(pictureBox8);
@@ -519,6 +544,7 @@
             // 
             // label16
             // 
+            label16.BackColor = Color.FromArgb(0, 64, 0);
             label16.ForeColor = Color.Snow;
             label16.Location = new Point(17, 315);
             label16.Name = "label16";
@@ -550,7 +576,7 @@
             // 
             // movieCardPanel9
             // 
-            movieCardPanel9.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel9.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel9.Controls.Add(label18);
             movieCardPanel9.Controls.Add(label19);
             movieCardPanel9.Controls.Add(pictureBox9);
@@ -562,6 +588,7 @@
             // 
             // label18
             // 
+            label18.BackColor = Color.FromArgb(0, 64, 0);
             label18.ForeColor = Color.Snow;
             label18.Location = new Point(17, 315);
             label18.Name = "label18";
@@ -593,7 +620,7 @@
             // 
             // movieCardPanel10
             // 
-            movieCardPanel10.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel10.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel10.Controls.Add(label20);
             movieCardPanel10.Controls.Add(label21);
             movieCardPanel10.Controls.Add(pictureBox10);
@@ -605,6 +632,7 @@
             // 
             // label20
             // 
+            label20.BackColor = Color.FromArgb(0, 64, 0);
             label20.ForeColor = Color.Snow;
             label20.Location = new Point(17, 315);
             label20.Name = "label20";
@@ -636,7 +664,7 @@
             // 
             // movieCardPanel11
             // 
-            movieCardPanel11.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel11.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel11.Controls.Add(label22);
             movieCardPanel11.Controls.Add(label23);
             movieCardPanel11.Controls.Add(pictureBox11);
@@ -648,6 +676,7 @@
             // 
             // label22
             // 
+            label22.BackColor = Color.FromArgb(0, 64, 0);
             label22.ForeColor = Color.Snow;
             label22.Location = new Point(17, 315);
             label22.Name = "label22";
@@ -679,7 +708,7 @@
             // 
             // movieCardPanel12
             // 
-            movieCardPanel12.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel12.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel12.Controls.Add(label24);
             movieCardPanel12.Controls.Add(label25);
             movieCardPanel12.Controls.Add(pictureBox12);
@@ -691,6 +720,7 @@
             // 
             // label24
             // 
+            label24.BackColor = Color.FromArgb(0, 64, 0);
             label24.ForeColor = Color.Snow;
             label24.Location = new Point(17, 315);
             label24.Name = "label24";
@@ -722,7 +752,7 @@
             // 
             // movieCardPanel13
             // 
-            movieCardPanel13.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel13.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel13.Controls.Add(label26);
             movieCardPanel13.Controls.Add(label27);
             movieCardPanel13.Controls.Add(pictureBox13);
@@ -734,6 +764,7 @@
             // 
             // label26
             // 
+            label26.BackColor = Color.FromArgb(0, 64, 0);
             label26.ForeColor = Color.Snow;
             label26.Location = new Point(17, 315);
             label26.Name = "label26";
@@ -765,7 +796,7 @@
             // 
             // movieCardPanel14
             // 
-            movieCardPanel14.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel14.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel14.Controls.Add(label28);
             movieCardPanel14.Controls.Add(label29);
             movieCardPanel14.Controls.Add(pictureBox14);
@@ -777,6 +808,7 @@
             // 
             // label28
             // 
+            label28.BackColor = Color.FromArgb(0, 64, 0);
             label28.ForeColor = Color.Snow;
             label28.Location = new Point(17, 315);
             label28.Name = "label28";
@@ -808,7 +840,7 @@
             // 
             // movieCardPanel15
             // 
-            movieCardPanel15.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel15.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel15.Controls.Add(label30);
             movieCardPanel15.Controls.Add(label31);
             movieCardPanel15.Controls.Add(pictureBox15);
@@ -820,6 +852,7 @@
             // 
             // label30
             // 
+            label30.BackColor = Color.FromArgb(0, 64, 0);
             label30.ForeColor = Color.Snow;
             label30.Location = new Point(17, 315);
             label30.Name = "label30";
@@ -851,7 +884,7 @@
             // 
             // movieCardPanel16
             // 
-            movieCardPanel16.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel16.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel16.Controls.Add(label32);
             movieCardPanel16.Controls.Add(label33);
             movieCardPanel16.Controls.Add(pictureBox16);
@@ -863,6 +896,7 @@
             // 
             // label32
             // 
+            label32.BackColor = Color.FromArgb(0, 64, 0);
             label32.ForeColor = Color.Snow;
             label32.Location = new Point(17, 315);
             label32.Name = "label32";
@@ -894,7 +928,7 @@
             // 
             // movieCardPanel17
             // 
-            movieCardPanel17.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel17.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel17.Controls.Add(label34);
             movieCardPanel17.Controls.Add(label35);
             movieCardPanel17.Controls.Add(pictureBox17);
@@ -906,6 +940,7 @@
             // 
             // label34
             // 
+            label34.BackColor = Color.FromArgb(0, 64, 0);
             label34.ForeColor = Color.Snow;
             label34.Location = new Point(17, 315);
             label34.Name = "label34";
@@ -937,7 +972,7 @@
             // 
             // movieCardPanel18
             // 
-            movieCardPanel18.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel18.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel18.Controls.Add(label36);
             movieCardPanel18.Controls.Add(label37);
             movieCardPanel18.Controls.Add(pictureBox18);
@@ -949,6 +984,7 @@
             // 
             // label36
             // 
+            label36.BackColor = Color.FromArgb(0, 64, 0);
             label36.ForeColor = Color.Snow;
             label36.Location = new Point(17, 315);
             label36.Name = "label36";
@@ -980,7 +1016,7 @@
             // 
             // movieCardPanel19
             // 
-            movieCardPanel19.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel19.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel19.Controls.Add(label38);
             movieCardPanel19.Controls.Add(label39);
             movieCardPanel19.Controls.Add(pictureBox19);
@@ -992,6 +1028,7 @@
             // 
             // label38
             // 
+            label38.BackColor = Color.FromArgb(0, 64, 0);
             label38.ForeColor = Color.Snow;
             label38.Location = new Point(17, 315);
             label38.Name = "label38";
@@ -1023,7 +1060,7 @@
             // 
             // movieCardPanel20
             // 
-            movieCardPanel20.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel20.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel20.Controls.Add(label40);
             movieCardPanel20.Controls.Add(label41);
             movieCardPanel20.Controls.Add(pictureBox20);
@@ -1035,6 +1072,7 @@
             // 
             // label40
             // 
+            label40.BackColor = Color.FromArgb(0, 64, 0);
             label40.ForeColor = Color.Snow;
             label40.Location = new Point(17, 315);
             label40.Name = "label40";
@@ -1066,7 +1104,7 @@
             // 
             // movieCardPanel21
             // 
-            movieCardPanel21.BackColor = Color.FromArgb(157, 186, 214);
+            movieCardPanel21.BackColor = Color.FromArgb(85, 85, 85);
             movieCardPanel21.Controls.Add(label42);
             movieCardPanel21.Controls.Add(label43);
             movieCardPanel21.Controls.Add(pictureBox21);
@@ -1078,6 +1116,7 @@
             // 
             // label42
             // 
+            label42.BackColor = Color.FromArgb(0, 64, 0);
             label42.ForeColor = Color.Snow;
             label42.Location = new Point(17, 315);
             label42.Name = "label42";
@@ -1107,30 +1146,41 @@
             pictureBox21.TabIndex = 0;
             pictureBox21.TabStop = false;
             // 
-            // MainPanel
+            // manageButton
             // 
-            MainPanel.AutoSize = true;
-            MainPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            MainPanel.BackColor = Color.FromArgb(122, 160, 199);
-            MainPanel.Controls.Add(TitleLabel);
-            MainPanel.Controls.Add(flowLayoutPanel1);
-            MainPanel.Dock = DockStyle.Fill;
-            MainPanel.Location = new Point(0, 0);
-            MainPanel.MinimumSize = new Size(1533, 788);
-            MainPanel.Name = "MainPanel";
-            MainPanel.Size = new Size(1533, 788);
-            MainPanel.TabIndex = 4;
+            manageButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            manageButton.BackColor = Color.FromArgb(86, 135, 184);
+            manageButton.ForeColor = Color.White;
+            manageButton.Location = new Point(2717, 15);
+            manageButton.Margin = new Padding(3, 4, 3, 4);
+            manageButton.Name = "manageButton";
+            manageButton.Size = new Size(136, 42);
+            manageButton.TabIndex = 1;
+            manageButton.Text = "Manage";
+            manageButton.UseVisualStyleBackColor = false;
             // 
-            // Main
+            // exitButton
+            // 
+            exitButton.BackColor = Color.Tomato;
+            exitButton.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            exitButton.ForeColor = SystemColors.Control;
+            exitButton.Location = new Point(1407, 20);
+            exitButton.Name = "exitButton";
+            exitButton.Size = new Size(113, 32);
+            exitButton.TabIndex = 4;
+            exitButton.Text = "EXIT";
+            exitButton.UseVisualStyleBackColor = false;
+            // 
+            // MoviesView
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.OldLace;
             ClientSize = new Size(1533, 788);
             Controls.Add(MainPanel);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "Main";
-            Text = "Main";
+            Name = "MoviesView";
+            Text = "MoviesView";
+            MainPanel.ResumeLayout(false);
+            MainPanel.PerformLayout();
             flowLayoutPanel1.ResumeLayout(false);
             movieCardPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -1174,13 +1224,13 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox20).EndInit();
             movieCardPanel21.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
-            MainPanel.ResumeLayout(false);
-            MainPanel.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
+
+        private Panel MainPanel;
         private Label TitleLabel;
         private FlowLayoutPanel flowLayoutPanel1;
         private Panel movieCardPanel1;
@@ -1207,7 +1257,6 @@
         private Label label14;
         private Label label15;
         private PictureBox pictureBox7;
-        private Panel MainPanel;
         private Panel movieCardPanel7;
         private Label label2;
         private Label label3;
@@ -1268,5 +1317,7 @@
         private Label label42;
         private Label label43;
         private PictureBox pictureBox21;
+        private Button manageButton;
+        private Button exitButton;
     }
 }
