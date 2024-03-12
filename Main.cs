@@ -6,5 +6,10 @@ namespace CS161_FinalProject_MovieTheaterManager
         {
             InitializeComponent();
         }
+
+        private void test()
+        {
+            
+        }
     }
 }
