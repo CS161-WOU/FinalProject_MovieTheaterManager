@@ -20,9 +20,9 @@ namespace CS161_FinalProject_MovieTheaterManager.Data
         {
             public int ident { get; set; }
             public string title { get; set; }
-            public List<DateAndTime> availablity { get; set; }
+            public List<DateTime> availablity { get; set; }
             public int screen { get; set; }
-            public reservation[52]? reservations { get; set; }
+            public List<reservation>? reservations { get; set; }
             public Image tumbnail { get; set; }
         }
 

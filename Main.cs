@@ -1,3 +1,5 @@
+using CS161_FinalProject_MovieTheaterManager.Views;
+
 namespace CS161_FinalProject_MovieTheaterManager
 {
     public partial class Main : Form
@@ -7,9 +9,21 @@ namespace CS161_FinalProject_MovieTheaterManager
             InitializeComponent();
         }
 
-        private void test()
+        private void exitButton_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
+        }
+
+        private void getMoviesButton_Click(object sender, EventArgs e)
+        {
+            Form movieForm = new MoviesView();
+            movieForm.Show();
+        }
+
+        private void managerButton_Click(object sender, EventArgs e)
+        {
+            Form managerForm = new ManagerView();
+            managerForm.Show();
         }
     }
 }

@@ -28,172 +28,164 @@
         /// </summary>
         private void InitializeComponent()
         {
-            MainPanel = new Panel();
-            TitleLabel = new Label();
+            tableLayoutPanel1 = new TableLayoutPanel();
             flowLayoutPanel1 = new FlowLayoutPanel();
             movieCardPanel1 = new Panel();
-            label4 = new Label();
-            label5 = new Label();
-            pictureBox2 = new PictureBox();
+            movieSeatsLabel1 = new Label();
+            movieNameLabel1 = new Label();
+            thumbnailPictureBox1 = new PictureBox();
             movieCardPanel2 = new Panel();
-            label6 = new Label();
-            label7 = new Label();
-            pictureBox3 = new PictureBox();
+            movieSeatsLabel2 = new Label();
+            movieNameLabel2 = new Label();
+            thumbnailPictureBox2 = new PictureBox();
             movieCardPanel3 = new Panel();
-            label8 = new Label();
-            label9 = new Label();
-            pictureBox4 = new PictureBox();
+            movieSeatsLabel3 = new Label();
+            movieNameLabel3 = new Label();
+            thumbnailPictureBox3 = new PictureBox();
             movieCardPanel4 = new Panel();
-            label10 = new Label();
-            label11 = new Label();
-            pictureBox5 = new PictureBox();
+            movieSeatsLabel4 = new Label();
+            movieNameLabel4 = new Label();
+            thumbnailPictureBox4 = new PictureBox();
             movieCardPanel5 = new Panel();
-            label12 = new Label();
-            label13 = new Label();
-            pictureBox6 = new PictureBox();
+            movieSeatsLabel5 = new Label();
+            movieNameLabel5 = new Label();
+            thumbnailPictureBox5 = new PictureBox();
             movieCardPanel6 = new Panel();
-            label14 = new Label();
-            label15 = new Label();
-            pictureBox7 = new PictureBox();
+            movieSeatsLabel6 = new Label();
+            movieNameLabel6 = new Label();
+            thumbnailPictureBox6 = new PictureBox();
             movieCardPanel7 = new Panel();
-            label2 = new Label();
-            label3 = new Label();
-            pictureBox1 = new PictureBox();
+            movieSeatsLabel7 = new Label();
+            movieNameLabel7 = new Label();
+            thumbnailPictureBox7 = new PictureBox();
             movieCardPanel8 = new Panel();
-            label16 = new Label();
-            label17 = new Label();
-            pictureBox8 = new PictureBox();
+            movieSeatsLabel8 = new Label();
+            movieNameLabel8 = new Label();
+            thumbnailPictureBox8 = new PictureBox();
             movieCardPanel9 = new Panel();
-            label18 = new Label();
-            label19 = new Label();
-            pictureBox9 = new PictureBox();
+            movieSeatsLabel9 = new Label();
+            movieNameLabel9 = new Label();
+            thumbnailPictureBox9 = new PictureBox();
             movieCardPanel10 = new Panel();
-            label20 = new Label();
-            label21 = new Label();
-            pictureBox10 = new PictureBox();
+            movieSeatsLabel10 = new Label();
+            movieNameLabel10 = new Label();
+            thumbnailPictureBox10 = new PictureBox();
             movieCardPanel11 = new Panel();
-            label22 = new Label();
-            label23 = new Label();
-            pictureBox11 = new PictureBox();
+            movieSeatsLabel11 = new Label();
+            movieNameLabel11 = new Label();
+            thumbnailPictureBox11 = new PictureBox();
             movieCardPanel12 = new Panel();
-            label24 = new Label();
-            label25 = new Label();
-            pictureBox12 = new PictureBox();
+            movieSeatsLabel12 = new Label();
+            movieNameLabel12 = new Label();
+            thumbnailPictureBox12 = new PictureBox();
             movieCardPanel13 = new Panel();
-            label26 = new Label();
-            label27 = new Label();
-            pictureBox13 = new PictureBox();
+            movieSeatsLabel13 = new Label();
+            movieNameLabel13 = new Label();
+            thumbnailPictureBox13 = new PictureBox();
             movieCardPanel14 = new Panel();
-            label28 = new Label();
-            label29 = new Label();
-            pictureBox14 = new PictureBox();
+            movieSeatsLabel14 = new Label();
+            movieNameLabel14 = new Label();
+            thumbnailPictureBox14 = new PictureBox();
             movieCardPanel15 = new Panel();
-            label30 = new Label();
-            label31 = new Label();
-            pictureBox15 = new PictureBox();
+            movieSeatsLabel15 = new Label();
+            movieNameLabel15 = new Label();
+            thumbnailPictureBox15 = new PictureBox();
             movieCardPanel16 = new Panel();
-            label32 = new Label();
-            label33 = new Label();
-            pictureBox16 = new PictureBox();
+            movieSeatsLabel16 = new Label();
+            movieNameLabel16 = new Label();
+            thumbnailPictureBox16 = new PictureBox();
             movieCardPanel17 = new Panel();
-            label34 = new Label();
-            label35 = new Label();
-            pictureBox17 = new PictureBox();
+            movieSeatsLabel17 = new Label();
+            movieNameLabel17 = new Label();
+            thumbnailPictureBox17 = new PictureBox();
             movieCardPanel18 = new Panel();
-            label36 = new Label();
-            label37 = new Label();
-            pictureBox18 = new PictureBox();
+            movieSeatsLabel18 = new Label();
+            movieNameLabel18 = new Label();
+            thumbnailPictureBox18 = new PictureBox();
             movieCardPanel19 = new Panel();
-            label38 = new Label();
-            label39 = new Label();
-            pictureBox19 = new PictureBox();
+            movieSeatsLabel19 = new Label();
+            movieNameLabel19 = new Label();
+            thumbnailPictureBox19 = new PictureBox();
             movieCardPanel20 = new Panel();
-            label40 = new Label();
-            label41 = new Label();
-            pictureBox20 = new PictureBox();
+            movieSeatsLabel20 = new Label();
+            movieNameLabel20 = new Label();
+            thumbnailPictureBox20 = new PictureBox();
             movieCardPanel21 = new Panel();
-            label42 = new Label();
-            label43 = new Label();
-            pictureBox21 = new PictureBox();
-            manageButton = new Button();
+            movieSeatsLabel21 = new Label();
+            movieNameLabel21 = new Label();
+            thumbnailPictureBox21 = new PictureBox();
+            TitleLabel = new Label();
             exitButton = new Button();
-            MainPanel.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             movieCardPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox1).BeginInit();
             movieCardPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox2).BeginInit();
             movieCardPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox3).BeginInit();
             movieCardPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox4).BeginInit();
             movieCardPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox5).BeginInit();
             movieCardPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox6).BeginInit();
             movieCardPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox7).BeginInit();
             movieCardPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox8).BeginInit();
             movieCardPanel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox9).BeginInit();
             movieCardPanel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox10).BeginInit();
             movieCardPanel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox11).BeginInit();
             movieCardPanel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox12).BeginInit();
             movieCardPanel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox13).BeginInit();
             movieCardPanel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox14).BeginInit();
             movieCardPanel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox15).BeginInit();
             movieCardPanel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox16).BeginInit();
             movieCardPanel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox17).BeginInit();
             movieCardPanel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox18).BeginInit();
             movieCardPanel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox19).BeginInit();
             movieCardPanel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox20).BeginInit();
             movieCardPanel21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox21).BeginInit();
             SuspendLayout();
             // 
-            // MainPanel
+            // tableLayoutPanel1
             // 
-            MainPanel.AutoSize = true;
-            MainPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            MainPanel.BackColor = Color.FromArgb(47, 47, 47);
-            MainPanel.Controls.Add(exitButton);
-            MainPanel.Controls.Add(TitleLabel);
-            MainPanel.Controls.Add(flowLayoutPanel1);
-            MainPanel.Controls.Add(manageButton);
-            MainPanel.Dock = DockStyle.Fill;
-            MainPanel.Location = new Point(0, 0);
-            MainPanel.MinimumSize = new Size(1533, 788);
-            MainPanel.Name = "MainPanel";
-            MainPanel.Size = new Size(1533, 788);
-            MainPanel.TabIndex = 5;
-            // 
-            // TitleLabel
-            // 
-            TitleLabel.AutoSize = true;
-            TitleLabel.Font = new Font("Copperplate Gothic Bold", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            TitleLabel.ForeColor = Color.White;
-            TitleLabel.Location = new Point(12, 25);
-            TitleLabel.Name = "TitleLabel";
-            TitleLabel.Size = new Size(424, 21);
-            TitleLabel.TabIndex = 2;
-            TitleLabel.Text = "Totally Real Movie Theater Solutions";
+            tableLayoutPanel1.BackColor = Color.FromArgb(47, 47, 47);
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 81.96722F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 18.0327873F));
+            tableLayoutPanel1.Controls.Add(flowLayoutPanel1, 0, 1);
+            tableLayoutPanel1.Controls.Add(TitleLabel, 0, 0);
+            tableLayoutPanel1.Controls.Add(exitButton, 1, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(10, 10);
+            tableLayoutPanel1.Margin = new Padding(10);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.759124F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 91.24088F));
+            tableLayoutPanel1.Size = new Size(789, 440);
+            tableLayoutPanel1.TabIndex = 0;
             // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            tableLayoutPanel1.SetColumnSpan(flowLayoutPanel1, 2);
             flowLayoutPanel1.Controls.Add(movieCardPanel1);
             flowLayoutPanel1.Controls.Add(movieCardPanel2);
             flowLayoutPanel1.Controls.Add(movieCardPanel3);
@@ -215,1109 +207,1071 @@
             flowLayoutPanel1.Controls.Add(movieCardPanel19);
             flowLayoutPanel1.Controls.Add(movieCardPanel20);
             flowLayoutPanel1.Controls.Add(movieCardPanel21);
-            flowLayoutPanel1.Location = new Point(11, 75);
-            flowLayoutPanel1.Margin = new Padding(11, 13, 11, 13);
-            flowLayoutPanel1.MinimumSize = new Size(1484, 690);
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.Location = new Point(10, 48);
+            flowLayoutPanel1.Margin = new Padding(10);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1509, 700);
-            flowLayoutPanel1.TabIndex = 3;
+            flowLayoutPanel1.Size = new Size(769, 382);
+            flowLayoutPanel1.TabIndex = 7;
             // 
             // movieCardPanel1
             // 
             movieCardPanel1.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel1.Controls.Add(label4);
-            movieCardPanel1.Controls.Add(label5);
-            movieCardPanel1.Controls.Add(pictureBox2);
-            movieCardPanel1.Location = new Point(3, 4);
-            movieCardPanel1.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel1.Controls.Add(movieSeatsLabel1);
+            movieCardPanel1.Controls.Add(movieNameLabel1);
+            movieCardPanel1.Controls.Add(thumbnailPictureBox1);
+            movieCardPanel1.Location = new Point(3, 3);
             movieCardPanel1.Name = "movieCardPanel1";
-            movieCardPanel1.Size = new Size(207, 357);
+            movieCardPanel1.Size = new Size(181, 282);
             movieCardPanel1.TabIndex = 1;
             // 
-            // label4
+            // movieSeatsLabel1
             // 
-            label4.BackColor = Color.FromArgb(0, 64, 0);
-            label4.ForeColor = Color.Snow;
-            label4.Location = new Point(17, 315);
-            label4.Name = "label4";
-            label4.Size = new Size(168, 29);
-            label4.TabIndex = 2;
-            label4.Text = "20/50 Seats Available";
-            label4.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel1.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel1.ForeColor = Color.Snow;
+            movieSeatsLabel1.Location = new Point(15, 249);
+            movieSeatsLabel1.Name = "movieSeatsLabel1";
+            movieSeatsLabel1.Size = new Size(147, 23);
+            movieSeatsLabel1.TabIndex = 2;
+            movieSeatsLabel1.Text = "20/50 Seats Available";
+            movieSeatsLabel1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // movieNameLabel1
             // 
-            label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Snow;
-            label5.Location = new Point(17, 286);
-            label5.Name = "label5";
-            label5.Size = new Size(168, 29);
-            label5.TabIndex = 1;
-            label5.Text = "Some Movie Title";
-            label5.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel1.ForeColor = Color.Snow;
+            movieNameLabel1.Location = new Point(15, 226);
+            movieNameLabel1.Name = "movieNameLabel1";
+            movieNameLabel1.Size = new Size(147, 23);
+            movieNameLabel1.TabIndex = 1;
+            movieNameLabel1.Text = "Some Movie Title";
+            movieNameLabel1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox2
+            // thumbnailPictureBox1
             // 
-            pictureBox2.Location = new Point(17, 22);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(168, 258);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
+            thumbnailPictureBox1.Location = new Point(15, 17);
+            thumbnailPictureBox1.Name = "thumbnailPictureBox1";
+            thumbnailPictureBox1.Size = new Size(147, 204);
+            thumbnailPictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox1.TabIndex = 0;
+            thumbnailPictureBox1.TabStop = false;
             // 
             // movieCardPanel2
             // 
             movieCardPanel2.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel2.Controls.Add(label6);
-            movieCardPanel2.Controls.Add(label7);
-            movieCardPanel2.Controls.Add(pictureBox3);
-            movieCardPanel2.Location = new Point(216, 4);
-            movieCardPanel2.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel2.Controls.Add(movieSeatsLabel2);
+            movieCardPanel2.Controls.Add(movieNameLabel2);
+            movieCardPanel2.Controls.Add(thumbnailPictureBox2);
+            movieCardPanel2.Location = new Point(190, 3);
             movieCardPanel2.Name = "movieCardPanel2";
-            movieCardPanel2.Size = new Size(207, 357);
+            movieCardPanel2.Size = new Size(181, 282);
             movieCardPanel2.TabIndex = 2;
             // 
-            // label6
+            // movieSeatsLabel2
             // 
-            label6.BackColor = Color.FromArgb(0, 64, 0);
-            label6.ForeColor = Color.Snow;
-            label6.Location = new Point(17, 315);
-            label6.Name = "label6";
-            label6.Size = new Size(168, 29);
-            label6.TabIndex = 2;
-            label6.Text = "20/50 Seats Available";
-            label6.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel2.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel2.ForeColor = Color.Snow;
+            movieSeatsLabel2.Location = new Point(15, 249);
+            movieSeatsLabel2.Name = "movieSeatsLabel2";
+            movieSeatsLabel2.Size = new Size(147, 23);
+            movieSeatsLabel2.TabIndex = 2;
+            movieSeatsLabel2.Text = "20/50 Seats Available";
+            movieSeatsLabel2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // movieNameLabel2
             // 
-            label7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.Snow;
-            label7.Location = new Point(17, 286);
-            label7.Name = "label7";
-            label7.Size = new Size(168, 29);
-            label7.TabIndex = 1;
-            label7.Text = "Some Movie Title";
-            label7.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel2.ForeColor = Color.Snow;
+            movieNameLabel2.Location = new Point(15, 226);
+            movieNameLabel2.Name = "movieNameLabel2";
+            movieNameLabel2.Size = new Size(147, 23);
+            movieNameLabel2.TabIndex = 1;
+            movieNameLabel2.Text = "Some Movie Title";
+            movieNameLabel2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox3
+            // thumbnailPictureBox2
             // 
-            pictureBox3.Location = new Point(17, 22);
-            pictureBox3.Margin = new Padding(3, 4, 3, 4);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(168, 258);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 0;
-            pictureBox3.TabStop = false;
+            thumbnailPictureBox2.Location = new Point(15, 17);
+            thumbnailPictureBox2.Name = "thumbnailPictureBox2";
+            thumbnailPictureBox2.Size = new Size(147, 204);
+            thumbnailPictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox2.TabIndex = 0;
+            thumbnailPictureBox2.TabStop = false;
             // 
             // movieCardPanel3
             // 
             movieCardPanel3.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel3.Controls.Add(label8);
-            movieCardPanel3.Controls.Add(label9);
-            movieCardPanel3.Controls.Add(pictureBox4);
-            movieCardPanel3.Location = new Point(429, 4);
-            movieCardPanel3.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel3.Controls.Add(movieSeatsLabel3);
+            movieCardPanel3.Controls.Add(movieNameLabel3);
+            movieCardPanel3.Controls.Add(thumbnailPictureBox3);
+            movieCardPanel3.Location = new Point(377, 3);
             movieCardPanel3.Name = "movieCardPanel3";
-            movieCardPanel3.Size = new Size(207, 357);
+            movieCardPanel3.Size = new Size(181, 282);
             movieCardPanel3.TabIndex = 3;
             // 
-            // label8
+            // movieSeatsLabel3
             // 
-            label8.BackColor = Color.FromArgb(0, 64, 0);
-            label8.ForeColor = Color.Snow;
-            label8.Location = new Point(17, 315);
-            label8.Name = "label8";
-            label8.Size = new Size(168, 29);
-            label8.TabIndex = 2;
-            label8.Text = "20/50 Seats Available";
-            label8.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel3.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel3.ForeColor = Color.Snow;
+            movieSeatsLabel3.Location = new Point(15, 249);
+            movieSeatsLabel3.Name = "movieSeatsLabel3";
+            movieSeatsLabel3.Size = new Size(147, 23);
+            movieSeatsLabel3.TabIndex = 2;
+            movieSeatsLabel3.Text = "20/50 Seats Available";
+            movieSeatsLabel3.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label9
+            // movieNameLabel3
             // 
-            label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.Snow;
-            label9.Location = new Point(17, 286);
-            label9.Name = "label9";
-            label9.Size = new Size(168, 29);
-            label9.TabIndex = 1;
-            label9.Text = "Some Movie Title";
-            label9.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel3.ForeColor = Color.Snow;
+            movieNameLabel3.Location = new Point(15, 226);
+            movieNameLabel3.Name = "movieNameLabel3";
+            movieNameLabel3.Size = new Size(147, 23);
+            movieNameLabel3.TabIndex = 1;
+            movieNameLabel3.Text = "Some Movie Title";
+            movieNameLabel3.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox4
+            // thumbnailPictureBox3
             // 
-            pictureBox4.Location = new Point(17, 22);
-            pictureBox4.Margin = new Padding(3, 4, 3, 4);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(168, 258);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 0;
-            pictureBox4.TabStop = false;
+            thumbnailPictureBox3.Location = new Point(15, 17);
+            thumbnailPictureBox3.Name = "thumbnailPictureBox3";
+            thumbnailPictureBox3.Size = new Size(147, 204);
+            thumbnailPictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox3.TabIndex = 0;
+            thumbnailPictureBox3.TabStop = false;
             // 
             // movieCardPanel4
             // 
             movieCardPanel4.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel4.Controls.Add(label10);
-            movieCardPanel4.Controls.Add(label11);
-            movieCardPanel4.Controls.Add(pictureBox5);
-            movieCardPanel4.Location = new Point(642, 4);
-            movieCardPanel4.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel4.Controls.Add(movieSeatsLabel4);
+            movieCardPanel4.Controls.Add(movieNameLabel4);
+            movieCardPanel4.Controls.Add(thumbnailPictureBox4);
+            movieCardPanel4.Location = new Point(564, 3);
             movieCardPanel4.Name = "movieCardPanel4";
-            movieCardPanel4.Size = new Size(207, 357);
+            movieCardPanel4.Size = new Size(181, 282);
             movieCardPanel4.TabIndex = 4;
             // 
-            // label10
+            // movieSeatsLabel4
             // 
-            label10.BackColor = Color.FromArgb(0, 64, 0);
-            label10.ForeColor = Color.Snow;
-            label10.Location = new Point(17, 315);
-            label10.Name = "label10";
-            label10.Size = new Size(168, 29);
-            label10.TabIndex = 2;
-            label10.Text = "20/50 Seats Available";
-            label10.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel4.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel4.ForeColor = Color.Snow;
+            movieSeatsLabel4.Location = new Point(15, 249);
+            movieSeatsLabel4.Name = "movieSeatsLabel4";
+            movieSeatsLabel4.Size = new Size(147, 23);
+            movieSeatsLabel4.TabIndex = 2;
+            movieSeatsLabel4.Text = "20/50 Seats Available";
+            movieSeatsLabel4.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label11
+            // movieNameLabel4
             // 
-            label11.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.Snow;
-            label11.Location = new Point(17, 286);
-            label11.Name = "label11";
-            label11.Size = new Size(168, 29);
-            label11.TabIndex = 1;
-            label11.Text = "Some Movie Title";
-            label11.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel4.ForeColor = Color.Snow;
+            movieNameLabel4.Location = new Point(15, 226);
+            movieNameLabel4.Name = "movieNameLabel4";
+            movieNameLabel4.Size = new Size(147, 23);
+            movieNameLabel4.TabIndex = 1;
+            movieNameLabel4.Text = "Some Movie Title";
+            movieNameLabel4.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox5
+            // thumbnailPictureBox4
             // 
-            pictureBox5.Location = new Point(17, 22);
-            pictureBox5.Margin = new Padding(3, 4, 3, 4);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(168, 258);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 0;
-            pictureBox5.TabStop = false;
+            thumbnailPictureBox4.Location = new Point(15, 17);
+            thumbnailPictureBox4.Name = "thumbnailPictureBox4";
+            thumbnailPictureBox4.Size = new Size(147, 204);
+            thumbnailPictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox4.TabIndex = 0;
+            thumbnailPictureBox4.TabStop = false;
             // 
             // movieCardPanel5
             // 
             movieCardPanel5.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel5.Controls.Add(label12);
-            movieCardPanel5.Controls.Add(label13);
-            movieCardPanel5.Controls.Add(pictureBox6);
-            movieCardPanel5.Location = new Point(855, 4);
-            movieCardPanel5.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel5.Controls.Add(movieSeatsLabel5);
+            movieCardPanel5.Controls.Add(movieNameLabel5);
+            movieCardPanel5.Controls.Add(thumbnailPictureBox5);
+            movieCardPanel5.Location = new Point(3, 291);
             movieCardPanel5.Name = "movieCardPanel5";
-            movieCardPanel5.Size = new Size(207, 357);
+            movieCardPanel5.Size = new Size(181, 282);
             movieCardPanel5.TabIndex = 5;
             // 
-            // label12
+            // movieSeatsLabel5
             // 
-            label12.BackColor = Color.FromArgb(0, 64, 0);
-            label12.ForeColor = Color.Snow;
-            label12.Location = new Point(17, 315);
-            label12.Name = "label12";
-            label12.Size = new Size(168, 29);
-            label12.TabIndex = 2;
-            label12.Text = "20/50 Seats Available";
-            label12.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel5.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel5.ForeColor = Color.Snow;
+            movieSeatsLabel5.Location = new Point(15, 249);
+            movieSeatsLabel5.Name = "movieSeatsLabel5";
+            movieSeatsLabel5.Size = new Size(147, 23);
+            movieSeatsLabel5.TabIndex = 2;
+            movieSeatsLabel5.Text = "20/50 Seats Available";
+            movieSeatsLabel5.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label13
+            // movieNameLabel5
             // 
-            label13.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.ForeColor = Color.Snow;
-            label13.Location = new Point(17, 286);
-            label13.Name = "label13";
-            label13.Size = new Size(168, 29);
-            label13.TabIndex = 1;
-            label13.Text = "Some Movie Title";
-            label13.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel5.ForeColor = Color.Snow;
+            movieNameLabel5.Location = new Point(15, 226);
+            movieNameLabel5.Name = "movieNameLabel5";
+            movieNameLabel5.Size = new Size(147, 23);
+            movieNameLabel5.TabIndex = 1;
+            movieNameLabel5.Text = "Some Movie Title";
+            movieNameLabel5.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox6
+            // thumbnailPictureBox5
             // 
-            pictureBox6.Location = new Point(17, 22);
-            pictureBox6.Margin = new Padding(3, 4, 3, 4);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(168, 258);
-            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox6.TabIndex = 0;
-            pictureBox6.TabStop = false;
+            thumbnailPictureBox5.Location = new Point(15, 17);
+            thumbnailPictureBox5.Name = "thumbnailPictureBox5";
+            thumbnailPictureBox5.Size = new Size(147, 204);
+            thumbnailPictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox5.TabIndex = 0;
+            thumbnailPictureBox5.TabStop = false;
             // 
             // movieCardPanel6
             // 
             movieCardPanel6.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel6.Controls.Add(label14);
-            movieCardPanel6.Controls.Add(label15);
-            movieCardPanel6.Controls.Add(pictureBox7);
-            movieCardPanel6.Location = new Point(1068, 4);
-            movieCardPanel6.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel6.Controls.Add(movieSeatsLabel6);
+            movieCardPanel6.Controls.Add(movieNameLabel6);
+            movieCardPanel6.Controls.Add(thumbnailPictureBox6);
+            movieCardPanel6.Location = new Point(190, 291);
             movieCardPanel6.Name = "movieCardPanel6";
-            movieCardPanel6.Size = new Size(207, 357);
+            movieCardPanel6.Size = new Size(181, 282);
             movieCardPanel6.TabIndex = 6;
             // 
-            // label14
+            // movieSeatsLabel6
             // 
-            label14.BackColor = Color.FromArgb(0, 64, 0);
-            label14.ForeColor = Color.Snow;
-            label14.Location = new Point(17, 315);
-            label14.Name = "label14";
-            label14.Size = new Size(168, 29);
-            label14.TabIndex = 2;
-            label14.Text = "20/50 Seats Available";
-            label14.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel6.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel6.ForeColor = Color.Snow;
+            movieSeatsLabel6.Location = new Point(15, 249);
+            movieSeatsLabel6.Name = "movieSeatsLabel6";
+            movieSeatsLabel6.Size = new Size(147, 23);
+            movieSeatsLabel6.TabIndex = 2;
+            movieSeatsLabel6.Text = "20/50 Seats Available";
+            movieSeatsLabel6.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label15
+            // movieNameLabel6
             // 
-            label15.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label15.ForeColor = Color.Snow;
-            label15.Location = new Point(17, 286);
-            label15.Name = "label15";
-            label15.Size = new Size(168, 29);
-            label15.TabIndex = 1;
-            label15.Text = "Some Movie Title";
-            label15.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel6.ForeColor = Color.Snow;
+            movieNameLabel6.Location = new Point(15, 226);
+            movieNameLabel6.Name = "movieNameLabel6";
+            movieNameLabel6.Size = new Size(147, 23);
+            movieNameLabel6.TabIndex = 1;
+            movieNameLabel6.Text = "Some Movie Title";
+            movieNameLabel6.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox7
+            // thumbnailPictureBox6
             // 
-            pictureBox7.Location = new Point(17, 22);
-            pictureBox7.Margin = new Padding(3, 4, 3, 4);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(168, 258);
-            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox7.TabIndex = 0;
-            pictureBox7.TabStop = false;
+            thumbnailPictureBox6.Location = new Point(15, 17);
+            thumbnailPictureBox6.Name = "thumbnailPictureBox6";
+            thumbnailPictureBox6.Size = new Size(147, 204);
+            thumbnailPictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox6.TabIndex = 0;
+            thumbnailPictureBox6.TabStop = false;
             // 
             // movieCardPanel7
             // 
             movieCardPanel7.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel7.Controls.Add(label2);
-            movieCardPanel7.Controls.Add(label3);
-            movieCardPanel7.Controls.Add(pictureBox1);
-            movieCardPanel7.Location = new Point(1281, 4);
-            movieCardPanel7.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel7.Controls.Add(movieSeatsLabel7);
+            movieCardPanel7.Controls.Add(movieNameLabel7);
+            movieCardPanel7.Controls.Add(thumbnailPictureBox7);
+            movieCardPanel7.Location = new Point(377, 291);
             movieCardPanel7.Name = "movieCardPanel7";
-            movieCardPanel7.Size = new Size(207, 357);
+            movieCardPanel7.Size = new Size(181, 282);
             movieCardPanel7.TabIndex = 7;
             // 
-            // label2
+            // movieSeatsLabel7
             // 
-            label2.BackColor = Color.FromArgb(0, 64, 0);
-            label2.ForeColor = Color.Snow;
-            label2.Location = new Point(17, 315);
-            label2.Name = "label2";
-            label2.Size = new Size(168, 29);
-            label2.TabIndex = 2;
-            label2.Text = "20/50 Seats Available";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel7.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel7.ForeColor = Color.Snow;
+            movieSeatsLabel7.Location = new Point(15, 249);
+            movieSeatsLabel7.Name = "movieSeatsLabel7";
+            movieSeatsLabel7.Size = new Size(147, 23);
+            movieSeatsLabel7.TabIndex = 2;
+            movieSeatsLabel7.Text = "20/50 Seats Available";
+            movieSeatsLabel7.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // movieNameLabel7
             // 
-            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Snow;
-            label3.Location = new Point(17, 286);
-            label3.Name = "label3";
-            label3.Size = new Size(168, 29);
-            label3.TabIndex = 1;
-            label3.Text = "Some Movie Title";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel7.ForeColor = Color.Snow;
+            movieNameLabel7.Location = new Point(15, 226);
+            movieNameLabel7.Name = "movieNameLabel7";
+            movieNameLabel7.Size = new Size(147, 23);
+            movieNameLabel7.TabIndex = 1;
+            movieNameLabel7.Text = "Some Movie Title";
+            movieNameLabel7.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // thumbnailPictureBox7
             // 
-            pictureBox1.Location = new Point(17, 22);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(168, 258);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            thumbnailPictureBox7.Location = new Point(15, 17);
+            thumbnailPictureBox7.Name = "thumbnailPictureBox7";
+            thumbnailPictureBox7.Size = new Size(147, 204);
+            thumbnailPictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox7.TabIndex = 0;
+            thumbnailPictureBox7.TabStop = false;
             // 
             // movieCardPanel8
             // 
             movieCardPanel8.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel8.Controls.Add(label16);
-            movieCardPanel8.Controls.Add(label17);
-            movieCardPanel8.Controls.Add(pictureBox8);
-            movieCardPanel8.Location = new Point(3, 369);
-            movieCardPanel8.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel8.Controls.Add(movieSeatsLabel8);
+            movieCardPanel8.Controls.Add(movieNameLabel8);
+            movieCardPanel8.Controls.Add(thumbnailPictureBox8);
+            movieCardPanel8.Location = new Point(564, 291);
             movieCardPanel8.Name = "movieCardPanel8";
-            movieCardPanel8.Size = new Size(207, 357);
+            movieCardPanel8.Size = new Size(181, 282);
             movieCardPanel8.TabIndex = 8;
             // 
-            // label16
+            // movieSeatsLabel8
             // 
-            label16.BackColor = Color.FromArgb(0, 64, 0);
-            label16.ForeColor = Color.Snow;
-            label16.Location = new Point(17, 315);
-            label16.Name = "label16";
-            label16.Size = new Size(168, 29);
-            label16.TabIndex = 2;
-            label16.Text = "20/50 Seats Available";
-            label16.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel8.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel8.ForeColor = Color.Snow;
+            movieSeatsLabel8.Location = new Point(15, 249);
+            movieSeatsLabel8.Name = "movieSeatsLabel8";
+            movieSeatsLabel8.Size = new Size(147, 23);
+            movieSeatsLabel8.TabIndex = 2;
+            movieSeatsLabel8.Text = "20/50 Seats Available";
+            movieSeatsLabel8.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label17
+            // movieNameLabel8
             // 
-            label17.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label17.ForeColor = Color.Snow;
-            label17.Location = new Point(17, 286);
-            label17.Name = "label17";
-            label17.Size = new Size(168, 29);
-            label17.TabIndex = 1;
-            label17.Text = "Some Movie Title";
-            label17.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel8.ForeColor = Color.Snow;
+            movieNameLabel8.Location = new Point(15, 226);
+            movieNameLabel8.Name = "movieNameLabel8";
+            movieNameLabel8.Size = new Size(147, 23);
+            movieNameLabel8.TabIndex = 1;
+            movieNameLabel8.Text = "Some Movie Title";
+            movieNameLabel8.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox8
+            // thumbnailPictureBox8
             // 
-            pictureBox8.Location = new Point(17, 22);
-            pictureBox8.Margin = new Padding(3, 4, 3, 4);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(168, 258);
-            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox8.TabIndex = 0;
-            pictureBox8.TabStop = false;
+            thumbnailPictureBox8.Location = new Point(15, 17);
+            thumbnailPictureBox8.Name = "thumbnailPictureBox8";
+            thumbnailPictureBox8.Size = new Size(147, 204);
+            thumbnailPictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox8.TabIndex = 0;
+            thumbnailPictureBox8.TabStop = false;
             // 
             // movieCardPanel9
             // 
             movieCardPanel9.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel9.Controls.Add(label18);
-            movieCardPanel9.Controls.Add(label19);
-            movieCardPanel9.Controls.Add(pictureBox9);
-            movieCardPanel9.Location = new Point(216, 369);
-            movieCardPanel9.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel9.Controls.Add(movieSeatsLabel9);
+            movieCardPanel9.Controls.Add(movieNameLabel9);
+            movieCardPanel9.Controls.Add(thumbnailPictureBox9);
+            movieCardPanel9.Location = new Point(3, 579);
             movieCardPanel9.Name = "movieCardPanel9";
-            movieCardPanel9.Size = new Size(207, 357);
+            movieCardPanel9.Size = new Size(181, 282);
             movieCardPanel9.TabIndex = 9;
             // 
-            // label18
+            // movieSeatsLabel9
             // 
-            label18.BackColor = Color.FromArgb(0, 64, 0);
-            label18.ForeColor = Color.Snow;
-            label18.Location = new Point(17, 315);
-            label18.Name = "label18";
-            label18.Size = new Size(168, 29);
-            label18.TabIndex = 2;
-            label18.Text = "20/50 Seats Available";
-            label18.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel9.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel9.ForeColor = Color.Snow;
+            movieSeatsLabel9.Location = new Point(15, 249);
+            movieSeatsLabel9.Name = "movieSeatsLabel9";
+            movieSeatsLabel9.Size = new Size(147, 23);
+            movieSeatsLabel9.TabIndex = 2;
+            movieSeatsLabel9.Text = "20/50 Seats Available";
+            movieSeatsLabel9.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label19
+            // movieNameLabel9
             // 
-            label19.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label19.ForeColor = Color.Snow;
-            label19.Location = new Point(17, 286);
-            label19.Name = "label19";
-            label19.Size = new Size(168, 29);
-            label19.TabIndex = 1;
-            label19.Text = "Some Movie Title";
-            label19.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel9.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel9.ForeColor = Color.Snow;
+            movieNameLabel9.Location = new Point(15, 226);
+            movieNameLabel9.Name = "movieNameLabel9";
+            movieNameLabel9.Size = new Size(147, 23);
+            movieNameLabel9.TabIndex = 1;
+            movieNameLabel9.Text = "Some Movie Title";
+            movieNameLabel9.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox9
+            // thumbnailPictureBox9
             // 
-            pictureBox9.Location = new Point(17, 22);
-            pictureBox9.Margin = new Padding(3, 4, 3, 4);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(168, 258);
-            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox9.TabIndex = 0;
-            pictureBox9.TabStop = false;
+            thumbnailPictureBox9.Location = new Point(15, 17);
+            thumbnailPictureBox9.Name = "thumbnailPictureBox9";
+            thumbnailPictureBox9.Size = new Size(147, 204);
+            thumbnailPictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox9.TabIndex = 0;
+            thumbnailPictureBox9.TabStop = false;
             // 
             // movieCardPanel10
             // 
             movieCardPanel10.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel10.Controls.Add(label20);
-            movieCardPanel10.Controls.Add(label21);
-            movieCardPanel10.Controls.Add(pictureBox10);
-            movieCardPanel10.Location = new Point(429, 369);
-            movieCardPanel10.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel10.Controls.Add(movieSeatsLabel10);
+            movieCardPanel10.Controls.Add(movieNameLabel10);
+            movieCardPanel10.Controls.Add(thumbnailPictureBox10);
+            movieCardPanel10.Location = new Point(190, 579);
             movieCardPanel10.Name = "movieCardPanel10";
-            movieCardPanel10.Size = new Size(207, 357);
+            movieCardPanel10.Size = new Size(181, 282);
             movieCardPanel10.TabIndex = 10;
             // 
-            // label20
+            // movieSeatsLabel10
             // 
-            label20.BackColor = Color.FromArgb(0, 64, 0);
-            label20.ForeColor = Color.Snow;
-            label20.Location = new Point(17, 315);
-            label20.Name = "label20";
-            label20.Size = new Size(168, 29);
-            label20.TabIndex = 2;
-            label20.Text = "20/50 Seats Available";
-            label20.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel10.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel10.ForeColor = Color.Snow;
+            movieSeatsLabel10.Location = new Point(15, 249);
+            movieSeatsLabel10.Name = "movieSeatsLabel10";
+            movieSeatsLabel10.Size = new Size(147, 23);
+            movieSeatsLabel10.TabIndex = 2;
+            movieSeatsLabel10.Text = "20/50 Seats Available";
+            movieSeatsLabel10.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label21
+            // movieNameLabel10
             // 
-            label21.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label21.ForeColor = Color.Snow;
-            label21.Location = new Point(17, 286);
-            label21.Name = "label21";
-            label21.Size = new Size(168, 29);
-            label21.TabIndex = 1;
-            label21.Text = "Some Movie Title";
-            label21.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel10.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel10.ForeColor = Color.Snow;
+            movieNameLabel10.Location = new Point(15, 226);
+            movieNameLabel10.Name = "movieNameLabel10";
+            movieNameLabel10.Size = new Size(147, 23);
+            movieNameLabel10.TabIndex = 1;
+            movieNameLabel10.Text = "Some Movie Title";
+            movieNameLabel10.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox10
+            // thumbnailPictureBox10
             // 
-            pictureBox10.Location = new Point(17, 22);
-            pictureBox10.Margin = new Padding(3, 4, 3, 4);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(168, 258);
-            pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox10.TabIndex = 0;
-            pictureBox10.TabStop = false;
+            thumbnailPictureBox10.Location = new Point(15, 17);
+            thumbnailPictureBox10.Name = "thumbnailPictureBox10";
+            thumbnailPictureBox10.Size = new Size(147, 204);
+            thumbnailPictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox10.TabIndex = 0;
+            thumbnailPictureBox10.TabStop = false;
             // 
             // movieCardPanel11
             // 
             movieCardPanel11.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel11.Controls.Add(label22);
-            movieCardPanel11.Controls.Add(label23);
-            movieCardPanel11.Controls.Add(pictureBox11);
-            movieCardPanel11.Location = new Point(642, 369);
-            movieCardPanel11.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel11.Controls.Add(movieSeatsLabel11);
+            movieCardPanel11.Controls.Add(movieNameLabel11);
+            movieCardPanel11.Controls.Add(thumbnailPictureBox11);
+            movieCardPanel11.Location = new Point(377, 579);
             movieCardPanel11.Name = "movieCardPanel11";
-            movieCardPanel11.Size = new Size(207, 357);
+            movieCardPanel11.Size = new Size(181, 282);
             movieCardPanel11.TabIndex = 11;
             // 
-            // label22
+            // movieSeatsLabel11
             // 
-            label22.BackColor = Color.FromArgb(0, 64, 0);
-            label22.ForeColor = Color.Snow;
-            label22.Location = new Point(17, 315);
-            label22.Name = "label22";
-            label22.Size = new Size(168, 29);
-            label22.TabIndex = 2;
-            label22.Text = "20/50 Seats Available";
-            label22.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel11.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel11.ForeColor = Color.Snow;
+            movieSeatsLabel11.Location = new Point(15, 249);
+            movieSeatsLabel11.Name = "movieSeatsLabel11";
+            movieSeatsLabel11.Size = new Size(147, 23);
+            movieSeatsLabel11.TabIndex = 2;
+            movieSeatsLabel11.Text = "20/50 Seats Available";
+            movieSeatsLabel11.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label23
+            // movieNameLabel11
             // 
-            label23.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label23.ForeColor = Color.Snow;
-            label23.Location = new Point(17, 286);
-            label23.Name = "label23";
-            label23.Size = new Size(168, 29);
-            label23.TabIndex = 1;
-            label23.Text = "Some Movie Title";
-            label23.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel11.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel11.ForeColor = Color.Snow;
+            movieNameLabel11.Location = new Point(15, 226);
+            movieNameLabel11.Name = "movieNameLabel11";
+            movieNameLabel11.Size = new Size(147, 23);
+            movieNameLabel11.TabIndex = 1;
+            movieNameLabel11.Text = "Some Movie Title";
+            movieNameLabel11.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox11
+            // thumbnailPictureBox11
             // 
-            pictureBox11.Location = new Point(17, 22);
-            pictureBox11.Margin = new Padding(3, 4, 3, 4);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(168, 258);
-            pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox11.TabIndex = 0;
-            pictureBox11.TabStop = false;
+            thumbnailPictureBox11.Location = new Point(15, 17);
+            thumbnailPictureBox11.Name = "thumbnailPictureBox11";
+            thumbnailPictureBox11.Size = new Size(147, 204);
+            thumbnailPictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox11.TabIndex = 0;
+            thumbnailPictureBox11.TabStop = false;
             // 
             // movieCardPanel12
             // 
             movieCardPanel12.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel12.Controls.Add(label24);
-            movieCardPanel12.Controls.Add(label25);
-            movieCardPanel12.Controls.Add(pictureBox12);
-            movieCardPanel12.Location = new Point(855, 369);
-            movieCardPanel12.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel12.Controls.Add(movieSeatsLabel12);
+            movieCardPanel12.Controls.Add(movieNameLabel12);
+            movieCardPanel12.Controls.Add(thumbnailPictureBox12);
+            movieCardPanel12.Location = new Point(564, 579);
             movieCardPanel12.Name = "movieCardPanel12";
-            movieCardPanel12.Size = new Size(207, 357);
+            movieCardPanel12.Size = new Size(181, 282);
             movieCardPanel12.TabIndex = 12;
             // 
-            // label24
+            // movieSeatsLabel12
             // 
-            label24.BackColor = Color.FromArgb(0, 64, 0);
-            label24.ForeColor = Color.Snow;
-            label24.Location = new Point(17, 315);
-            label24.Name = "label24";
-            label24.Size = new Size(168, 29);
-            label24.TabIndex = 2;
-            label24.Text = "20/50 Seats Available";
-            label24.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel12.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel12.ForeColor = Color.Snow;
+            movieSeatsLabel12.Location = new Point(15, 249);
+            movieSeatsLabel12.Name = "movieSeatsLabel12";
+            movieSeatsLabel12.Size = new Size(147, 23);
+            movieSeatsLabel12.TabIndex = 2;
+            movieSeatsLabel12.Text = "20/50 Seats Available";
+            movieSeatsLabel12.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label25
+            // movieNameLabel12
             // 
-            label25.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label25.ForeColor = Color.Snow;
-            label25.Location = new Point(17, 286);
-            label25.Name = "label25";
-            label25.Size = new Size(168, 29);
-            label25.TabIndex = 1;
-            label25.Text = "Some Movie Title";
-            label25.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel12.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel12.ForeColor = Color.Snow;
+            movieNameLabel12.Location = new Point(15, 226);
+            movieNameLabel12.Name = "movieNameLabel12";
+            movieNameLabel12.Size = new Size(147, 23);
+            movieNameLabel12.TabIndex = 1;
+            movieNameLabel12.Text = "Some Movie Title";
+            movieNameLabel12.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox12
+            // thumbnailPictureBox12
             // 
-            pictureBox12.Location = new Point(17, 22);
-            pictureBox12.Margin = new Padding(3, 4, 3, 4);
-            pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(168, 258);
-            pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox12.TabIndex = 0;
-            pictureBox12.TabStop = false;
+            thumbnailPictureBox12.Location = new Point(15, 17);
+            thumbnailPictureBox12.Name = "thumbnailPictureBox12";
+            thumbnailPictureBox12.Size = new Size(147, 204);
+            thumbnailPictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox12.TabIndex = 0;
+            thumbnailPictureBox12.TabStop = false;
             // 
             // movieCardPanel13
             // 
             movieCardPanel13.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel13.Controls.Add(label26);
-            movieCardPanel13.Controls.Add(label27);
-            movieCardPanel13.Controls.Add(pictureBox13);
-            movieCardPanel13.Location = new Point(1068, 369);
-            movieCardPanel13.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel13.Controls.Add(movieSeatsLabel13);
+            movieCardPanel13.Controls.Add(movieNameLabel13);
+            movieCardPanel13.Controls.Add(thumbnailPictureBox13);
+            movieCardPanel13.Location = new Point(3, 867);
             movieCardPanel13.Name = "movieCardPanel13";
-            movieCardPanel13.Size = new Size(207, 357);
+            movieCardPanel13.Size = new Size(181, 282);
             movieCardPanel13.TabIndex = 13;
             // 
-            // label26
+            // movieSeatsLabel13
             // 
-            label26.BackColor = Color.FromArgb(0, 64, 0);
-            label26.ForeColor = Color.Snow;
-            label26.Location = new Point(17, 315);
-            label26.Name = "label26";
-            label26.Size = new Size(168, 29);
-            label26.TabIndex = 2;
-            label26.Text = "20/50 Seats Available";
-            label26.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel13.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel13.ForeColor = Color.Snow;
+            movieSeatsLabel13.Location = new Point(15, 249);
+            movieSeatsLabel13.Name = "movieSeatsLabel13";
+            movieSeatsLabel13.Size = new Size(147, 23);
+            movieSeatsLabel13.TabIndex = 2;
+            movieSeatsLabel13.Text = "20/50 Seats Available";
+            movieSeatsLabel13.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label27
+            // movieNameLabel13
             // 
-            label27.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label27.ForeColor = Color.Snow;
-            label27.Location = new Point(17, 286);
-            label27.Name = "label27";
-            label27.Size = new Size(168, 29);
-            label27.TabIndex = 1;
-            label27.Text = "Some Movie Title";
-            label27.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel13.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel13.ForeColor = Color.Snow;
+            movieNameLabel13.Location = new Point(15, 226);
+            movieNameLabel13.Name = "movieNameLabel13";
+            movieNameLabel13.Size = new Size(147, 23);
+            movieNameLabel13.TabIndex = 1;
+            movieNameLabel13.Text = "Some Movie Title";
+            movieNameLabel13.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox13
+            // thumbnailPictureBox13
             // 
-            pictureBox13.Location = new Point(17, 22);
-            pictureBox13.Margin = new Padding(3, 4, 3, 4);
-            pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(168, 258);
-            pictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox13.TabIndex = 0;
-            pictureBox13.TabStop = false;
+            thumbnailPictureBox13.Location = new Point(15, 17);
+            thumbnailPictureBox13.Name = "thumbnailPictureBox13";
+            thumbnailPictureBox13.Size = new Size(147, 204);
+            thumbnailPictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox13.TabIndex = 0;
+            thumbnailPictureBox13.TabStop = false;
             // 
             // movieCardPanel14
             // 
             movieCardPanel14.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel14.Controls.Add(label28);
-            movieCardPanel14.Controls.Add(label29);
-            movieCardPanel14.Controls.Add(pictureBox14);
-            movieCardPanel14.Location = new Point(1281, 369);
-            movieCardPanel14.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel14.Controls.Add(movieSeatsLabel14);
+            movieCardPanel14.Controls.Add(movieNameLabel14);
+            movieCardPanel14.Controls.Add(thumbnailPictureBox14);
+            movieCardPanel14.Location = new Point(190, 867);
             movieCardPanel14.Name = "movieCardPanel14";
-            movieCardPanel14.Size = new Size(207, 357);
+            movieCardPanel14.Size = new Size(181, 282);
             movieCardPanel14.TabIndex = 14;
             // 
-            // label28
+            // movieSeatsLabel14
             // 
-            label28.BackColor = Color.FromArgb(0, 64, 0);
-            label28.ForeColor = Color.Snow;
-            label28.Location = new Point(17, 315);
-            label28.Name = "label28";
-            label28.Size = new Size(168, 29);
-            label28.TabIndex = 2;
-            label28.Text = "20/50 Seats Available";
-            label28.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel14.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel14.ForeColor = Color.Snow;
+            movieSeatsLabel14.Location = new Point(15, 249);
+            movieSeatsLabel14.Name = "movieSeatsLabel14";
+            movieSeatsLabel14.Size = new Size(147, 23);
+            movieSeatsLabel14.TabIndex = 2;
+            movieSeatsLabel14.Text = "20/50 Seats Available";
+            movieSeatsLabel14.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label29
+            // movieNameLabel14
             // 
-            label29.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label29.ForeColor = Color.Snow;
-            label29.Location = new Point(17, 286);
-            label29.Name = "label29";
-            label29.Size = new Size(168, 29);
-            label29.TabIndex = 1;
-            label29.Text = "Some Movie Title";
-            label29.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel14.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel14.ForeColor = Color.Snow;
+            movieNameLabel14.Location = new Point(15, 226);
+            movieNameLabel14.Name = "movieNameLabel14";
+            movieNameLabel14.Size = new Size(147, 23);
+            movieNameLabel14.TabIndex = 1;
+            movieNameLabel14.Text = "Some Movie Title";
+            movieNameLabel14.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox14
+            // thumbnailPictureBox14
             // 
-            pictureBox14.Location = new Point(17, 22);
-            pictureBox14.Margin = new Padding(3, 4, 3, 4);
-            pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(168, 258);
-            pictureBox14.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox14.TabIndex = 0;
-            pictureBox14.TabStop = false;
+            thumbnailPictureBox14.Location = new Point(15, 17);
+            thumbnailPictureBox14.Name = "thumbnailPictureBox14";
+            thumbnailPictureBox14.Size = new Size(147, 204);
+            thumbnailPictureBox14.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox14.TabIndex = 0;
+            thumbnailPictureBox14.TabStop = false;
             // 
             // movieCardPanel15
             // 
             movieCardPanel15.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel15.Controls.Add(label30);
-            movieCardPanel15.Controls.Add(label31);
-            movieCardPanel15.Controls.Add(pictureBox15);
-            movieCardPanel15.Location = new Point(3, 734);
-            movieCardPanel15.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel15.Controls.Add(movieSeatsLabel15);
+            movieCardPanel15.Controls.Add(movieNameLabel15);
+            movieCardPanel15.Controls.Add(thumbnailPictureBox15);
+            movieCardPanel15.Location = new Point(377, 867);
             movieCardPanel15.Name = "movieCardPanel15";
-            movieCardPanel15.Size = new Size(207, 357);
+            movieCardPanel15.Size = new Size(181, 282);
             movieCardPanel15.TabIndex = 15;
             // 
-            // label30
+            // movieSeatsLabel15
             // 
-            label30.BackColor = Color.FromArgb(0, 64, 0);
-            label30.ForeColor = Color.Snow;
-            label30.Location = new Point(17, 315);
-            label30.Name = "label30";
-            label30.Size = new Size(168, 29);
-            label30.TabIndex = 2;
-            label30.Text = "20/50 Seats Available";
-            label30.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel15.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel15.ForeColor = Color.Snow;
+            movieSeatsLabel15.Location = new Point(15, 249);
+            movieSeatsLabel15.Name = "movieSeatsLabel15";
+            movieSeatsLabel15.Size = new Size(147, 23);
+            movieSeatsLabel15.TabIndex = 2;
+            movieSeatsLabel15.Text = "20/50 Seats Available";
+            movieSeatsLabel15.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label31
+            // movieNameLabel15
             // 
-            label31.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label31.ForeColor = Color.Snow;
-            label31.Location = new Point(17, 286);
-            label31.Name = "label31";
-            label31.Size = new Size(168, 29);
-            label31.TabIndex = 1;
-            label31.Text = "Some Movie Title";
-            label31.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel15.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel15.ForeColor = Color.Snow;
+            movieNameLabel15.Location = new Point(15, 226);
+            movieNameLabel15.Name = "movieNameLabel15";
+            movieNameLabel15.Size = new Size(147, 23);
+            movieNameLabel15.TabIndex = 1;
+            movieNameLabel15.Text = "Some Movie Title";
+            movieNameLabel15.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox15
+            // thumbnailPictureBox15
             // 
-            pictureBox15.Location = new Point(17, 22);
-            pictureBox15.Margin = new Padding(3, 4, 3, 4);
-            pictureBox15.Name = "pictureBox15";
-            pictureBox15.Size = new Size(168, 258);
-            pictureBox15.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox15.TabIndex = 0;
-            pictureBox15.TabStop = false;
+            thumbnailPictureBox15.Location = new Point(15, 17);
+            thumbnailPictureBox15.Name = "thumbnailPictureBox15";
+            thumbnailPictureBox15.Size = new Size(147, 204);
+            thumbnailPictureBox15.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox15.TabIndex = 0;
+            thumbnailPictureBox15.TabStop = false;
             // 
             // movieCardPanel16
             // 
             movieCardPanel16.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel16.Controls.Add(label32);
-            movieCardPanel16.Controls.Add(label33);
-            movieCardPanel16.Controls.Add(pictureBox16);
-            movieCardPanel16.Location = new Point(216, 734);
-            movieCardPanel16.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel16.Controls.Add(movieSeatsLabel16);
+            movieCardPanel16.Controls.Add(movieNameLabel16);
+            movieCardPanel16.Controls.Add(thumbnailPictureBox16);
+            movieCardPanel16.Location = new Point(564, 867);
             movieCardPanel16.Name = "movieCardPanel16";
-            movieCardPanel16.Size = new Size(207, 357);
+            movieCardPanel16.Size = new Size(181, 282);
             movieCardPanel16.TabIndex = 16;
             // 
-            // label32
+            // movieSeatsLabel16
             // 
-            label32.BackColor = Color.FromArgb(0, 64, 0);
-            label32.ForeColor = Color.Snow;
-            label32.Location = new Point(17, 315);
-            label32.Name = "label32";
-            label32.Size = new Size(168, 29);
-            label32.TabIndex = 2;
-            label32.Text = "20/50 Seats Available";
-            label32.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel16.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel16.ForeColor = Color.Snow;
+            movieSeatsLabel16.Location = new Point(15, 249);
+            movieSeatsLabel16.Name = "movieSeatsLabel16";
+            movieSeatsLabel16.Size = new Size(147, 23);
+            movieSeatsLabel16.TabIndex = 2;
+            movieSeatsLabel16.Text = "20/50 Seats Available";
+            movieSeatsLabel16.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label33
+            // movieNameLabel16
             // 
-            label33.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label33.ForeColor = Color.Snow;
-            label33.Location = new Point(17, 286);
-            label33.Name = "label33";
-            label33.Size = new Size(168, 29);
-            label33.TabIndex = 1;
-            label33.Text = "Some Movie Title";
-            label33.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel16.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel16.ForeColor = Color.Snow;
+            movieNameLabel16.Location = new Point(15, 226);
+            movieNameLabel16.Name = "movieNameLabel16";
+            movieNameLabel16.Size = new Size(147, 23);
+            movieNameLabel16.TabIndex = 1;
+            movieNameLabel16.Text = "Some Movie Title";
+            movieNameLabel16.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox16
+            // thumbnailPictureBox16
             // 
-            pictureBox16.Location = new Point(17, 22);
-            pictureBox16.Margin = new Padding(3, 4, 3, 4);
-            pictureBox16.Name = "pictureBox16";
-            pictureBox16.Size = new Size(168, 258);
-            pictureBox16.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox16.TabIndex = 0;
-            pictureBox16.TabStop = false;
+            thumbnailPictureBox16.Location = new Point(15, 17);
+            thumbnailPictureBox16.Name = "thumbnailPictureBox16";
+            thumbnailPictureBox16.Size = new Size(147, 204);
+            thumbnailPictureBox16.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox16.TabIndex = 0;
+            thumbnailPictureBox16.TabStop = false;
             // 
             // movieCardPanel17
             // 
             movieCardPanel17.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel17.Controls.Add(label34);
-            movieCardPanel17.Controls.Add(label35);
-            movieCardPanel17.Controls.Add(pictureBox17);
-            movieCardPanel17.Location = new Point(429, 734);
-            movieCardPanel17.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel17.Controls.Add(movieSeatsLabel17);
+            movieCardPanel17.Controls.Add(movieNameLabel17);
+            movieCardPanel17.Controls.Add(thumbnailPictureBox17);
+            movieCardPanel17.Location = new Point(3, 1155);
             movieCardPanel17.Name = "movieCardPanel17";
-            movieCardPanel17.Size = new Size(207, 357);
+            movieCardPanel17.Size = new Size(181, 282);
             movieCardPanel17.TabIndex = 17;
             // 
-            // label34
+            // movieSeatsLabel17
             // 
-            label34.BackColor = Color.FromArgb(0, 64, 0);
-            label34.ForeColor = Color.Snow;
-            label34.Location = new Point(17, 315);
-            label34.Name = "label34";
-            label34.Size = new Size(168, 29);
-            label34.TabIndex = 2;
-            label34.Text = "20/50 Seats Available";
-            label34.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel17.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel17.ForeColor = Color.Snow;
+            movieSeatsLabel17.Location = new Point(15, 249);
+            movieSeatsLabel17.Name = "movieSeatsLabel17";
+            movieSeatsLabel17.Size = new Size(147, 23);
+            movieSeatsLabel17.TabIndex = 2;
+            movieSeatsLabel17.Text = "20/50 Seats Available";
+            movieSeatsLabel17.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label35
+            // movieNameLabel17
             // 
-            label35.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label35.ForeColor = Color.Snow;
-            label35.Location = new Point(17, 286);
-            label35.Name = "label35";
-            label35.Size = new Size(168, 29);
-            label35.TabIndex = 1;
-            label35.Text = "Some Movie Title";
-            label35.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel17.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel17.ForeColor = Color.Snow;
+            movieNameLabel17.Location = new Point(15, 226);
+            movieNameLabel17.Name = "movieNameLabel17";
+            movieNameLabel17.Size = new Size(147, 23);
+            movieNameLabel17.TabIndex = 1;
+            movieNameLabel17.Text = "Some Movie Title";
+            movieNameLabel17.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox17
+            // thumbnailPictureBox17
             // 
-            pictureBox17.Location = new Point(17, 22);
-            pictureBox17.Margin = new Padding(3, 4, 3, 4);
-            pictureBox17.Name = "pictureBox17";
-            pictureBox17.Size = new Size(168, 258);
-            pictureBox17.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox17.TabIndex = 0;
-            pictureBox17.TabStop = false;
+            thumbnailPictureBox17.Location = new Point(15, 17);
+            thumbnailPictureBox17.Name = "thumbnailPictureBox17";
+            thumbnailPictureBox17.Size = new Size(147, 204);
+            thumbnailPictureBox17.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox17.TabIndex = 0;
+            thumbnailPictureBox17.TabStop = false;
             // 
             // movieCardPanel18
             // 
             movieCardPanel18.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel18.Controls.Add(label36);
-            movieCardPanel18.Controls.Add(label37);
-            movieCardPanel18.Controls.Add(pictureBox18);
-            movieCardPanel18.Location = new Point(642, 734);
-            movieCardPanel18.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel18.Controls.Add(movieSeatsLabel18);
+            movieCardPanel18.Controls.Add(movieNameLabel18);
+            movieCardPanel18.Controls.Add(thumbnailPictureBox18);
+            movieCardPanel18.Location = new Point(190, 1155);
             movieCardPanel18.Name = "movieCardPanel18";
-            movieCardPanel18.Size = new Size(207, 357);
+            movieCardPanel18.Size = new Size(181, 282);
             movieCardPanel18.TabIndex = 18;
             // 
-            // label36
+            // movieSeatsLabel18
             // 
-            label36.BackColor = Color.FromArgb(0, 64, 0);
-            label36.ForeColor = Color.Snow;
-            label36.Location = new Point(17, 315);
-            label36.Name = "label36";
-            label36.Size = new Size(168, 29);
-            label36.TabIndex = 2;
-            label36.Text = "20/50 Seats Available";
-            label36.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel18.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel18.ForeColor = Color.Snow;
+            movieSeatsLabel18.Location = new Point(15, 249);
+            movieSeatsLabel18.Name = "movieSeatsLabel18";
+            movieSeatsLabel18.Size = new Size(147, 23);
+            movieSeatsLabel18.TabIndex = 2;
+            movieSeatsLabel18.Text = "20/50 Seats Available";
+            movieSeatsLabel18.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label37
+            // movieNameLabel18
             // 
-            label37.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label37.ForeColor = Color.Snow;
-            label37.Location = new Point(17, 286);
-            label37.Name = "label37";
-            label37.Size = new Size(168, 29);
-            label37.TabIndex = 1;
-            label37.Text = "Some Movie Title";
-            label37.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel18.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel18.ForeColor = Color.Snow;
+            movieNameLabel18.Location = new Point(15, 226);
+            movieNameLabel18.Name = "movieNameLabel18";
+            movieNameLabel18.Size = new Size(147, 23);
+            movieNameLabel18.TabIndex = 1;
+            movieNameLabel18.Text = "Some Movie Title";
+            movieNameLabel18.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox18
+            // thumbnailPictureBox18
             // 
-            pictureBox18.Location = new Point(17, 22);
-            pictureBox18.Margin = new Padding(3, 4, 3, 4);
-            pictureBox18.Name = "pictureBox18";
-            pictureBox18.Size = new Size(168, 258);
-            pictureBox18.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox18.TabIndex = 0;
-            pictureBox18.TabStop = false;
+            thumbnailPictureBox18.Location = new Point(15, 17);
+            thumbnailPictureBox18.Name = "thumbnailPictureBox18";
+            thumbnailPictureBox18.Size = new Size(147, 204);
+            thumbnailPictureBox18.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox18.TabIndex = 0;
+            thumbnailPictureBox18.TabStop = false;
             // 
             // movieCardPanel19
             // 
             movieCardPanel19.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel19.Controls.Add(label38);
-            movieCardPanel19.Controls.Add(label39);
-            movieCardPanel19.Controls.Add(pictureBox19);
-            movieCardPanel19.Location = new Point(855, 734);
-            movieCardPanel19.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel19.Controls.Add(movieSeatsLabel19);
+            movieCardPanel19.Controls.Add(movieNameLabel19);
+            movieCardPanel19.Controls.Add(thumbnailPictureBox19);
+            movieCardPanel19.Location = new Point(377, 1155);
             movieCardPanel19.Name = "movieCardPanel19";
-            movieCardPanel19.Size = new Size(207, 357);
+            movieCardPanel19.Size = new Size(181, 282);
             movieCardPanel19.TabIndex = 19;
             // 
-            // label38
+            // movieSeatsLabel19
             // 
-            label38.BackColor = Color.FromArgb(0, 64, 0);
-            label38.ForeColor = Color.Snow;
-            label38.Location = new Point(17, 315);
-            label38.Name = "label38";
-            label38.Size = new Size(168, 29);
-            label38.TabIndex = 2;
-            label38.Text = "20/50 Seats Available";
-            label38.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel19.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel19.ForeColor = Color.Snow;
+            movieSeatsLabel19.Location = new Point(15, 249);
+            movieSeatsLabel19.Name = "movieSeatsLabel19";
+            movieSeatsLabel19.Size = new Size(147, 23);
+            movieSeatsLabel19.TabIndex = 2;
+            movieSeatsLabel19.Text = "20/50 Seats Available";
+            movieSeatsLabel19.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label39
+            // movieNameLabel19
             // 
-            label39.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label39.ForeColor = Color.Snow;
-            label39.Location = new Point(17, 286);
-            label39.Name = "label39";
-            label39.Size = new Size(168, 29);
-            label39.TabIndex = 1;
-            label39.Text = "Some Movie Title";
-            label39.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel19.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel19.ForeColor = Color.Snow;
+            movieNameLabel19.Location = new Point(15, 226);
+            movieNameLabel19.Name = "movieNameLabel19";
+            movieNameLabel19.Size = new Size(147, 23);
+            movieNameLabel19.TabIndex = 1;
+            movieNameLabel19.Text = "Some Movie Title";
+            movieNameLabel19.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox19
+            // thumbnailPictureBox19
             // 
-            pictureBox19.Location = new Point(17, 22);
-            pictureBox19.Margin = new Padding(3, 4, 3, 4);
-            pictureBox19.Name = "pictureBox19";
-            pictureBox19.Size = new Size(168, 258);
-            pictureBox19.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox19.TabIndex = 0;
-            pictureBox19.TabStop = false;
+            thumbnailPictureBox19.Location = new Point(15, 17);
+            thumbnailPictureBox19.Name = "thumbnailPictureBox19";
+            thumbnailPictureBox19.Size = new Size(147, 204);
+            thumbnailPictureBox19.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox19.TabIndex = 0;
+            thumbnailPictureBox19.TabStop = false;
             // 
             // movieCardPanel20
             // 
             movieCardPanel20.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel20.Controls.Add(label40);
-            movieCardPanel20.Controls.Add(label41);
-            movieCardPanel20.Controls.Add(pictureBox20);
-            movieCardPanel20.Location = new Point(1068, 734);
-            movieCardPanel20.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel20.Controls.Add(movieSeatsLabel20);
+            movieCardPanel20.Controls.Add(movieNameLabel20);
+            movieCardPanel20.Controls.Add(thumbnailPictureBox20);
+            movieCardPanel20.Location = new Point(564, 1155);
             movieCardPanel20.Name = "movieCardPanel20";
-            movieCardPanel20.Size = new Size(207, 357);
+            movieCardPanel20.Size = new Size(181, 282);
             movieCardPanel20.TabIndex = 20;
             // 
-            // label40
+            // movieSeatsLabel20
             // 
-            label40.BackColor = Color.FromArgb(0, 64, 0);
-            label40.ForeColor = Color.Snow;
-            label40.Location = new Point(17, 315);
-            label40.Name = "label40";
-            label40.Size = new Size(168, 29);
-            label40.TabIndex = 2;
-            label40.Text = "20/50 Seats Available";
-            label40.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel20.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel20.ForeColor = Color.Snow;
+            movieSeatsLabel20.Location = new Point(15, 249);
+            movieSeatsLabel20.Name = "movieSeatsLabel20";
+            movieSeatsLabel20.Size = new Size(147, 23);
+            movieSeatsLabel20.TabIndex = 2;
+            movieSeatsLabel20.Text = "20/50 Seats Available";
+            movieSeatsLabel20.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label41
+            // movieNameLabel20
             // 
-            label41.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label41.ForeColor = Color.Snow;
-            label41.Location = new Point(17, 286);
-            label41.Name = "label41";
-            label41.Size = new Size(168, 29);
-            label41.TabIndex = 1;
-            label41.Text = "Some Movie Title";
-            label41.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel20.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel20.ForeColor = Color.Snow;
+            movieNameLabel20.Location = new Point(15, 226);
+            movieNameLabel20.Name = "movieNameLabel20";
+            movieNameLabel20.Size = new Size(147, 23);
+            movieNameLabel20.TabIndex = 1;
+            movieNameLabel20.Text = "Some Movie Title";
+            movieNameLabel20.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox20
+            // thumbnailPictureBox20
             // 
-            pictureBox20.Location = new Point(17, 22);
-            pictureBox20.Margin = new Padding(3, 4, 3, 4);
-            pictureBox20.Name = "pictureBox20";
-            pictureBox20.Size = new Size(168, 258);
-            pictureBox20.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox20.TabIndex = 0;
-            pictureBox20.TabStop = false;
+            thumbnailPictureBox20.Location = new Point(15, 17);
+            thumbnailPictureBox20.Name = "thumbnailPictureBox20";
+            thumbnailPictureBox20.Size = new Size(147, 204);
+            thumbnailPictureBox20.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox20.TabIndex = 0;
+            thumbnailPictureBox20.TabStop = false;
             // 
             // movieCardPanel21
             // 
             movieCardPanel21.BackColor = Color.FromArgb(85, 85, 85);
-            movieCardPanel21.Controls.Add(label42);
-            movieCardPanel21.Controls.Add(label43);
-            movieCardPanel21.Controls.Add(pictureBox21);
-            movieCardPanel21.Location = new Point(1281, 734);
-            movieCardPanel21.Margin = new Padding(3, 4, 3, 4);
+            movieCardPanel21.Controls.Add(movieSeatsLabel21);
+            movieCardPanel21.Controls.Add(movieNameLabel21);
+            movieCardPanel21.Controls.Add(thumbnailPictureBox21);
+            movieCardPanel21.Location = new Point(3, 1443);
             movieCardPanel21.Name = "movieCardPanel21";
-            movieCardPanel21.Size = new Size(207, 357);
+            movieCardPanel21.Size = new Size(181, 282);
             movieCardPanel21.TabIndex = 21;
             // 
-            // label42
+            // movieSeatsLabel21
             // 
-            label42.BackColor = Color.FromArgb(0, 64, 0);
-            label42.ForeColor = Color.Snow;
-            label42.Location = new Point(17, 315);
-            label42.Name = "label42";
-            label42.Size = new Size(168, 29);
-            label42.TabIndex = 2;
-            label42.Text = "20/50 Seats Available";
-            label42.TextAlign = ContentAlignment.MiddleCenter;
+            movieSeatsLabel21.BackColor = Color.FromArgb(0, 64, 0);
+            movieSeatsLabel21.ForeColor = Color.Snow;
+            movieSeatsLabel21.Location = new Point(15, 249);
+            movieSeatsLabel21.Name = "movieSeatsLabel21";
+            movieSeatsLabel21.Size = new Size(147, 23);
+            movieSeatsLabel21.TabIndex = 2;
+            movieSeatsLabel21.Text = "20/50 Seats Available";
+            movieSeatsLabel21.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label43
+            // movieNameLabel21
             // 
-            label43.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label43.ForeColor = Color.Snow;
-            label43.Location = new Point(17, 286);
-            label43.Name = "label43";
-            label43.Size = new Size(168, 29);
-            label43.TabIndex = 1;
-            label43.Text = "Some Movie Title";
-            label43.TextAlign = ContentAlignment.MiddleCenter;
+            movieNameLabel21.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieNameLabel21.ForeColor = Color.Snow;
+            movieNameLabel21.Location = new Point(15, 226);
+            movieNameLabel21.Name = "movieNameLabel21";
+            movieNameLabel21.Size = new Size(147, 23);
+            movieNameLabel21.TabIndex = 1;
+            movieNameLabel21.Text = "Some Movie Title";
+            movieNameLabel21.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox21
+            // thumbnailPictureBox21
             // 
-            pictureBox21.Location = new Point(17, 22);
-            pictureBox21.Margin = new Padding(3, 4, 3, 4);
-            pictureBox21.Name = "pictureBox21";
-            pictureBox21.Size = new Size(168, 258);
-            pictureBox21.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox21.TabIndex = 0;
-            pictureBox21.TabStop = false;
+            thumbnailPictureBox21.Location = new Point(15, 17);
+            thumbnailPictureBox21.Name = "thumbnailPictureBox21";
+            thumbnailPictureBox21.Size = new Size(147, 204);
+            thumbnailPictureBox21.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox21.TabIndex = 0;
+            thumbnailPictureBox21.TabStop = false;
             // 
-            // manageButton
+            // TitleLabel
             // 
-            manageButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            manageButton.BackColor = Color.FromArgb(86, 135, 184);
-            manageButton.ForeColor = Color.White;
-            manageButton.Location = new Point(2717, 15);
-            manageButton.Margin = new Padding(3, 4, 3, 4);
-            manageButton.Name = "manageButton";
-            manageButton.Size = new Size(136, 42);
-            manageButton.TabIndex = 1;
-            manageButton.Text = "Manage";
-            manageButton.UseVisualStyleBackColor = false;
+            TitleLabel.AutoSize = true;
+            TitleLabel.Dock = DockStyle.Fill;
+            TitleLabel.Font = new Font("Copperplate Gothic Bold", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            TitleLabel.ForeColor = Color.White;
+            TitleLabel.Location = new Point(3, 0);
+            TitleLabel.Name = "TitleLabel";
+            TitleLabel.Size = new Size(640, 38);
+            TitleLabel.TabIndex = 5;
+            TitleLabel.Text = "Totally Real Movie Theater Solutions";
+            TitleLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // exitButton
             // 
+            exitButton.Anchor = AnchorStyles.Right;
             exitButton.BackColor = Color.Tomato;
             exitButton.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             exitButton.ForeColor = SystemColors.Control;
-            exitButton.Location = new Point(1407, 20);
+            exitButton.Location = new Point(651, 2);
+            exitButton.Margin = new Padding(3, 2, 3, 2);
             exitButton.Name = "exitButton";
-            exitButton.Size = new Size(113, 32);
-            exitButton.TabIndex = 4;
-            exitButton.Text = "EXIT";
+            exitButton.Size = new Size(135, 33);
+            exitButton.TabIndex = 6;
+            exitButton.Text = "Close";
             exitButton.UseVisualStyleBackColor = false;
+            exitButton.Click += exitButton_Click;
             // 
             // MoviesView
             // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1533, 788);
-            Controls.Add(MainPanel);
+            BackColor = Color.FromArgb(47, 47, 47);
+            ClientSize = new Size(809, 460);
+            Controls.Add(tableLayoutPanel1);
             Name = "MoviesView";
-            Text = "MoviesView";
-            MainPanel.ResumeLayout(false);
-            MainPanel.PerformLayout();
+            Padding = new Padding(10);
+            Text = "Movies";
+            Load += this.MoviesView_Load;
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             flowLayoutPanel1.ResumeLayout(false);
             movieCardPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox1).EndInit();
             movieCardPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox2).EndInit();
             movieCardPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox3).EndInit();
             movieCardPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox4).EndInit();
             movieCardPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox5).EndInit();
             movieCardPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox6).EndInit();
             movieCardPanel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox7).EndInit();
             movieCardPanel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox8).EndInit();
             movieCardPanel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox9).EndInit();
             movieCardPanel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox10).EndInit();
             movieCardPanel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox11).EndInit();
             movieCardPanel12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox12).EndInit();
             movieCardPanel13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox13).EndInit();
             movieCardPanel14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox14).EndInit();
             movieCardPanel15.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox15).EndInit();
             movieCardPanel16.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox16).EndInit();
             movieCardPanel17.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox17).EndInit();
             movieCardPanel18.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox18).EndInit();
             movieCardPanel19.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox19).EndInit();
             movieCardPanel20.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox20).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox20).EndInit();
             movieCardPanel21.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox21).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Panel MainPanel;
+        private TableLayoutPanel tableLayoutPanel1;
         private Label TitleLabel;
+        private Button exitButton;
         private FlowLayoutPanel flowLayoutPanel1;
         private Panel movieCardPanel1;
-        private Label label4;
-        private Label label5;
-        private PictureBox pictureBox2;
+        private Label movieSeatsLabel1;
+        private Label movieNameLabel1;
+        private PictureBox thumbnailPictureBox1;
         private Panel movieCardPanel2;
-        private Label label6;
-        private Label label7;
-        private PictureBox pictureBox3;
+        private Label movieSeatsLabel2;
+        private Label movieNameLabel2;
+        private PictureBox thumbnailPictureBox2;
         private Panel movieCardPanel3;
-        private Label label8;
-        private Label label9;
-        private PictureBox pictureBox4;
+        private Label movieSeatsLabel3;
+        private Label movieNameLabel3;
+        private PictureBox thumbnailPictureBox3;
         private Panel movieCardPanel4;
-        private Label label10;
-        private Label label11;
-        private PictureBox pictureBox5;
+        private Label movieSeatsLabel4;
+        private Label movieNameLabel4;
+        private PictureBox thumbnailPictureBox4;
         private Panel movieCardPanel5;
-        private Label label12;
-        private Label label13;
-        private PictureBox pictureBox6;
+        private Label movieSeatsLabel5;
+        private Label movieNameLabel5;
+        private PictureBox thumbnailPictureBox5;
         private Panel movieCardPanel6;
-        private Label label14;
-        private Label label15;
-        private PictureBox pictureBox7;
+        private Label movieSeatsLabel6;
+        private Label movieNameLabel6;
+        private PictureBox thumbnailPictureBox6;
         private Panel movieCardPanel7;
-        private Label label2;
-        private Label label3;
-        private PictureBox pictureBox1;
+        private Label movieSeatsLabel7;
+        private Label movieNameLabel7;
+        private PictureBox thumbnailPictureBox7;
         private Panel movieCardPanel8;
-        private Label label16;
-        private Label label17;
-        private PictureBox pictureBox8;
+        private Label movieSeatsLabel8;
+        private Label movieNameLabel8;
+        private PictureBox thumbnailPictureBox8;
         private Panel movieCardPanel9;
-        private Label label18;
-        private Label label19;
-        private PictureBox pictureBox9;
+        private Label movieSeatsLabel9;
+        private Label movieNameLabel9;
+        private PictureBox thumbnailPictureBox9;
         private Panel movieCardPanel10;
-        private Label label20;
-        private Label label21;
-        private PictureBox pictureBox10;
+        private Label movieSeatsLabel10;
+        private Label movieNameLabel10;
+        private PictureBox thumbnailPictureBox10;
         private Panel movieCardPanel11;
-        private Label label22;
-        private Label label23;
-        private PictureBox pictureBox11;
+        private Label movieSeatsLabel11;
+        private Label movieNameLabel11;
+        private PictureBox thumbnailPictureBox11;
         private Panel movieCardPanel12;
-        private Label label24;
-        private Label label25;
-        private PictureBox pictureBox12;
+        private Label movieSeatsLabel12;
+        private Label movieNameLabel12;
+        private PictureBox thumbnailPictureBox12;
         private Panel movieCardPanel13;
-        private Label label26;
-        private Label label27;
-        private PictureBox pictureBox13;
+        private Label movieSeatsLabel13;
+        private Label movieNameLabel13;
+        private PictureBox thumbnailPictureBox13;
         private Panel movieCardPanel14;
-        private Label label28;
-        private Label label29;
-        private PictureBox pictureBox14;
+        private Label movieSeatsLabel14;
+        private Label movieNameLabel14;
+        private PictureBox thumbnailPictureBox14;
         private Panel movieCardPanel15;
-        private Label label30;
-        private Label label31;
-        private PictureBox pictureBox15;
+        private Label movieSeatsLabel15;
+        private Label movieNameLabel15;
+        private PictureBox thumbnailPictureBox15;
         private Panel movieCardPanel16;
-        private Label label32;
-        private Label label33;
-        private PictureBox pictureBox16;
+        private Label movieSeatsLabel16;
+        private Label movieNameLabel16;
+        private PictureBox thumbnailPictureBox16;
         private Panel movieCardPanel17;
-        private Label label34;
-        private Label label35;
-        private PictureBox pictureBox17;
+        private Label movieSeatsLabel17;
+        private Label movieNameLabel17;
+        private PictureBox thumbnailPictureBox17;
         private Panel movieCardPanel18;
-        private Label label36;
-        private Label label37;
-        private PictureBox pictureBox18;
+        private Label movieSeatsLabel18;
+        private Label movieNameLabel18;
+        private PictureBox thumbnailPictureBox18;
         private Panel movieCardPanel19;
-        private Label label38;
-        private Label label39;
-        private PictureBox pictureBox19;
+        private Label movieSeatsLabel19;
+        private Label movieNameLabel19;
+        private PictureBox thumbnailPictureBox19;
         private Panel movieCardPanel20;
-        private Label label40;
-        private Label label41;
-        private PictureBox pictureBox20;
+        private Label movieSeatsLabel20;
+        private Label movieNameLabel20;
+        private PictureBox thumbnailPictureBox20;
         private Panel movieCardPanel21;
-        private Label label42;
-        private Label label43;
-        private PictureBox pictureBox21;
-        private Button manageButton;
-        private Button exitButton;
+        private Label movieSeatsLabel21;
+        private Label movieNameLabel21;
+        private PictureBox thumbnailPictureBox21;
     }
 }
