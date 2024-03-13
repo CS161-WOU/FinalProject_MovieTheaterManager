@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using CS161_FinalProject_MovieTheaterManager.Data;
 using System.Text.Json;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using CS161_FinalProject_MovieTheaterManager.Data;
-using Microsoft.VisualBasic;
 
 
 namespace CS161_FinalProject_MovieTheaterManager.Views
@@ -21,42 +11,63 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
             InitializeComponent();
         }
 
+        //Random ass method and button created for testing sakes.
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
 
 
-                TheaterDataManager.Movies MovieCollections = new TheaterDataManager.Movies();
-                List< TheaterDataManager.movie > MovieList = new List< TheaterDataManager.movie >();
+                TheaterDataManager.Movies MovieCollections = new TheaterDataManager.Movies(); // Create a new instance of our custom Movies class.
+                List< TheaterDataManager.movie > MovieList = new List< TheaterDataManager.movie >(); // Create a List instance of movies which will be saved to MoviesCollections.
 
-                for (int i = 1; i <= 10; i++)
+                for (int i = 1; i <= 10; i++) // Loop 10 times to create 10 fake movies.
                 {
-                    TheaterDataManager.movie movie = new TheaterDataManager.movie();
+                    TheaterDataManager.movie movie = new TheaterDataManager.movie(); // Creating a new instance of our movie class.
+
+                    //Setting the movie properties;
                     movie.title = "Test";
                     movie.screen = 1;
                     movie.ident = i;
-                    movie.reservations = null;
-                    movie.tumbnail = ResourceMain.TaylorSwift;
 
-                    List<DateTime> availableTimes = new List<DateTime>();
+                    //Turning our demo image into a bye array so that it can be saved as JSON. For testing sakes.
+                    byte[] imageArray = File.ReadAllBytes(@"C:\Users\River\source\repos\DeveloperSpoot\CS161_FinalProject_MovieTheaterManager\Resources\TaylorSwift.png");
+                    string base64ImageRepresentation = Convert.ToBase64String(imageArray); // Turning that array into a string for storing purposes related to the above.
 
-                    for (int j = 1; j <= 3; j++)
+                    movie.tumbnail = base64ImageRepresentation; // Setting our thumbnail that string we creating.
+                    
+
+                    List<DateTime> availableTimes = new List<DateTime>(); // Creating a list instance of available times.
+                    List<TheaterDataManager.reservation> reservationCollection = new List<TheaterDataManager.reservation>(); // Creating a list instance of reservations;
+
+                    for (int j = 1; j <= 3; j++) // Creating three fake show times and three fake reservations for testing sakes.
                     {
-                        DateTime DT = DateTime.Now;
-                        availableTimes.Add(DT);
+                        DateTime DT = DateTime.Now; // Getting the current date and time for testing sakes.
+                        availableTimes.Add(DT); // Adding said date and time to our list.
+
+                        TheaterDataManager.reservation Reservation = new TheaterDataManager.reservation(); // Creating an instance of our reservation class.
+
+                        //Setting all the reservation fields.
+                        Reservation.ScreeningTime = DT;
+                        Reservation.movieIdent = i;
+                        Reservation.name = $"John Doe {j}"; // Fake names for testing sakes.
+                        Reservation.seatColumn = j+3; // Random ass seating for testing sakes.
+                        Reservation.seatRow = j;
+
+                        reservationCollection.Add(Reservation); // Adding our new reservation to our list.
                     }
 
-                    MovieList.Add(movie);
+                    movie.reservations = reservationCollection; // Updating all the reservations for the movie to the three we just created.
+                    MovieList.Add(movie); // Adding the final movie class to our movie colleciton list.
                 }
 
 
-                MovieCollections.movies = MovieList;
+                MovieCollections.movies = MovieList; // Setting our movie collections.
 
-                string fileName = "MainData.json";
-                string jsonMovieCollections = JsonSerializer.Serialize(MovieCollections);
+                string fileName = "MainData.json"; // The filename of where we will be storing all these movies data.
+                string jsonMovieCollections = JsonSerializer.Serialize(MovieCollections); // Turning our custom classes into JSON for storing purposes.
 
-                File.WriteAllText(fileName, jsonMovieCollections);
+                File.WriteAllText(fileName, jsonMovieCollections); // Writing said JSON to our said File.
             }catch(Exception ex) { 
                 MessageBox.Show(ex.Message);
             }

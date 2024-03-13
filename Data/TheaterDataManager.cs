@@ -1,14 +1,8 @@
-﻿using Microsoft.VisualBasic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CS161_FinalProject_MovieTheaterManager.Data
+﻿namespace CS161_FinalProject_MovieTheaterManager.Data
 {
     internal class TheaterDataManager
     {
+
         public class Movies
         {
 
@@ -23,7 +17,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Data
             public List<DateTime> availablity { get; set; }
             public int screen { get; set; }
             public List<reservation>? reservations { get; set; }
-            public Image tumbnail { get; set; }
+            public string tumbnail { get; set; }
         }
 
         public class reservation
@@ -35,7 +29,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Data
 
             public int movieIdent { get; set; }
 
-            public DateAndTime ScreeningTime { get; set; }
+            public DateTime ScreeningTime { get; set; }
 
         }
     }
