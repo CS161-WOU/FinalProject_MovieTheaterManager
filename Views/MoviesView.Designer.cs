@@ -255,6 +255,7 @@
             thumbnailPictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox1.TabIndex = 0;
             thumbnailPictureBox1.TabStop = false;
+            thumbnailPictureBox1.Click += ShowSeating;
             // 
             // movieCardPanel2
             // 
@@ -297,6 +298,7 @@
             thumbnailPictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox2.TabIndex = 0;
             thumbnailPictureBox2.TabStop = false;
+            thumbnailPictureBox2.Click += ShowSeating;
             // 
             // movieCardPanel3
             // 
@@ -339,6 +341,7 @@
             thumbnailPictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox3.TabIndex = 0;
             thumbnailPictureBox3.TabStop = false;
+            thumbnailPictureBox3.Click += ShowSeating;
             // 
             // movieCardPanel4
             // 
@@ -381,6 +384,7 @@
             thumbnailPictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox4.TabIndex = 0;
             thumbnailPictureBox4.TabStop = false;
+            thumbnailPictureBox4.Click += ShowSeating;
             // 
             // movieCardPanel5
             // 
@@ -423,6 +427,7 @@
             thumbnailPictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox5.TabIndex = 0;
             thumbnailPictureBox5.TabStop = false;
+            thumbnailPictureBox5.Click += ShowSeating;
             // 
             // movieCardPanel6
             // 
@@ -465,6 +470,7 @@
             thumbnailPictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox6.TabIndex = 0;
             thumbnailPictureBox6.TabStop = false;
+            thumbnailPictureBox6.Click += ShowSeating;
             // 
             // movieCardPanel7
             // 
@@ -507,6 +513,7 @@
             thumbnailPictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox7.TabIndex = 0;
             thumbnailPictureBox7.TabStop = false;
+            thumbnailPictureBox7.Click += ShowSeating;
             // 
             // movieCardPanel8
             // 
@@ -549,6 +556,7 @@
             thumbnailPictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox8.TabIndex = 0;
             thumbnailPictureBox8.TabStop = false;
+            thumbnailPictureBox8.Click += ShowSeating;
             // 
             // movieCardPanel9
             // 
@@ -591,6 +599,7 @@
             thumbnailPictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox9.TabIndex = 0;
             thumbnailPictureBox9.TabStop = false;
+            thumbnailPictureBox9.Click += ShowSeating;
             // 
             // movieCardPanel10
             // 
@@ -633,6 +642,7 @@
             thumbnailPictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox10.TabIndex = 0;
             thumbnailPictureBox10.TabStop = false;
+            thumbnailPictureBox10.Click += ShowSeating;
             // 
             // movieCardPanel11
             // 
@@ -675,6 +685,7 @@
             thumbnailPictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox11.TabIndex = 0;
             thumbnailPictureBox11.TabStop = false;
+            thumbnailPictureBox11.Click += ShowSeating;
             // 
             // movieCardPanel12
             // 
@@ -717,6 +728,7 @@
             thumbnailPictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox12.TabIndex = 0;
             thumbnailPictureBox12.TabStop = false;
+            thumbnailPictureBox12.Click += ShowSeating;
             // 
             // movieCardPanel13
             // 
@@ -759,6 +771,7 @@
             thumbnailPictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox13.TabIndex = 0;
             thumbnailPictureBox13.TabStop = false;
+            thumbnailPictureBox13.Click += ShowSeating;
             // 
             // movieCardPanel14
             // 
@@ -801,6 +814,7 @@
             thumbnailPictureBox14.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox14.TabIndex = 0;
             thumbnailPictureBox14.TabStop = false;
+            thumbnailPictureBox14.Click += ShowSeating;
             // 
             // movieCardPanel15
             // 
@@ -843,6 +857,7 @@
             thumbnailPictureBox15.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox15.TabIndex = 0;
             thumbnailPictureBox15.TabStop = false;
+            thumbnailPictureBox15.Click += ShowSeating;
             // 
             // movieCardPanel16
             // 
@@ -885,6 +900,7 @@
             thumbnailPictureBox16.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox16.TabIndex = 0;
             thumbnailPictureBox16.TabStop = false;
+            thumbnailPictureBox16.Click += ShowSeating;
             // 
             // movieCardPanel17
             // 
@@ -927,6 +943,7 @@
             thumbnailPictureBox17.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox17.TabIndex = 0;
             thumbnailPictureBox17.TabStop = false;
+            thumbnailPictureBox17.Click += ShowSeating;
             // 
             // movieCardPanel18
             // 
@@ -969,6 +986,7 @@
             thumbnailPictureBox18.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox18.TabIndex = 0;
             thumbnailPictureBox18.TabStop = false;
+            thumbnailPictureBox18.Click += ShowSeating;
             // 
             // movieCardPanel19
             // 
@@ -1011,6 +1029,7 @@
             thumbnailPictureBox19.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox19.TabIndex = 0;
             thumbnailPictureBox19.TabStop = false;
+            thumbnailPictureBox19.Click += ShowSeating;
             // 
             // movieCardPanel20
             // 
@@ -1053,6 +1072,7 @@
             thumbnailPictureBox20.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox20.TabIndex = 0;
             thumbnailPictureBox20.TabStop = false;
+            thumbnailPictureBox20.Click += ShowSeating;
             // 
             // movieCardPanel21
             // 
@@ -1095,6 +1115,7 @@
             thumbnailPictureBox21.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox21.TabIndex = 0;
             thumbnailPictureBox21.TabStop = false;
+            thumbnailPictureBox21.Click += ShowSeating;
             // 
             // TitleLabel
             // 
@@ -1134,7 +1155,7 @@
             Name = "MoviesView";
             Padding = new Padding(10);
             Text = "Movies";
-            Load += this.MoviesView_Load;
+            Load += MoviesView_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             flowLayoutPanel1.ResumeLayout(false);

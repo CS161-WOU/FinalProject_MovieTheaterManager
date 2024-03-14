@@ -11,6 +11,21 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
             InitializeComponent();
         }
 
+        private void ShowSeating(object sender, EventArgs e)
+        {
+            try
+            {
+                PictureBox movieThumbnail = (PictureBox)sender;
+                Form SeatingWindow = new MovieSeating(int.Parse(movieThumbnail.AccessibleDescription));
+                SeatingWindow.Show();
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
         //Method that gets triggered when the movies form is loaded.
         private void MoviesView_Load(object sender, EventArgs e)
         {
@@ -46,7 +61,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 
                     //Setting the Movie thumbnail.
                    ((PictureBox)this.Controls.Find($"thumbnailPictureBox{movie.ident}", true)[0]).Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(movie.tumbnail))); //Populating the movie thumbnail and turning our image string back to an image.
-
+                    ((PictureBox)this.Controls.Find($"thumbnailPictureBox{movie.ident}", true)[0]).AccessibleDescription = movie.ident.ToString();
 
                     ((Label)this.Controls.Find($"movieNameLabel{movie.ident}", true)[0]).Text = movie.title; // Populating the movie title.
 

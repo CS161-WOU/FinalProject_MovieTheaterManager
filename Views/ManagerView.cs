@@ -31,7 +31,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                     movie.ident = i;
 
                     //Turning our demo image into a bye array so that it can be saved as JSON. For testing sakes.
-                    byte[] imageArray = File.ReadAllBytes(@"C:\Users\River\source\repos\DeveloperSpoot\CS161_FinalProject_MovieTheaterManager\Resources\TaylorSwift.png");
+                    byte[] imageArray = File.ReadAllBytes(@"C:\Users\nrivera23\source\repos\CS161_FinalProject_MovieTheaterManager\Resources\TaylorSwift.png");
                     string base64ImageRepresentation = Convert.ToBase64String(imageArray); // Turning that array into a string for storing purposes related to the above.
 
                     movie.tumbnail = base64ImageRepresentation; // Setting our thumbnail that string we creating.
