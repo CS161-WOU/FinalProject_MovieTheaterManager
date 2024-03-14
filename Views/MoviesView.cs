@@ -11,17 +11,18 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
             InitializeComponent();
         }
 
+        //Method that handles a click event froma movie thumbnail, when triggered displays the seating window.
         private void ShowSeating(object sender, EventArgs e)
         {
             try
             {
-                PictureBox movieThumbnail = (PictureBox)sender;
-                Form SeatingWindow = new MovieSeating(int.Parse(movieThumbnail.AccessibleDescription));
-                SeatingWindow.Show();
+                PictureBox movieThumbnail = (PictureBox)sender; // Getting the specific movie tumbnail that triggered the event.
+                Form SeatingWindow = new MovieSeating(int.Parse(movieThumbnail.AccessibleDescription)); // Passing the movie ID to the mmovie seating window.
+                SeatingWindow.Show(); // Showing the seating window.
 
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message); // Displaying any errors.
             }
 
         }
@@ -32,11 +33,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
             clearMoviesList(); // Hide all the movie cards since they aren't hidden by default.
 
             bool laodedMovies = loadMovies(); // Load movies.
-            if(laodedMovies) // Check if the movies were loaded.
-            {
-                MessageBox.Show("Should have worked.");
-            }
-            else
+            if(!laodedMovies) // Check if the movies were NOT loaded.
             {
                 MessageBox.Show("There was a problem loading the movies.");
             }
@@ -57,21 +54,25 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                 MovieColelctions.movies.ForEach(movie => //Foreach movie
                 {
                     Panel moviePanel = (Panel)this.Controls.Find($"movieCardPanel{movie.ident}", true)[0]; // retreieving the indexed Panel.
-
+                    PictureBox movieThumbnail = (PictureBox)this.Controls.Find($"thumbnailPictureBox{movie.ident}", true)[0]; // retreiveing the movie picture box.
 
                     //Setting the Movie thumbnail.
-                   ((PictureBox)this.Controls.Find($"thumbnailPictureBox{movie.ident}", true)[0]).Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(movie.tumbnail))); //Populating the movie thumbnail and turning our image string back to an image.
-                    ((PictureBox)this.Controls.Find($"thumbnailPictureBox{movie.ident}", true)[0]).AccessibleDescription = movie.ident.ToString();
+                    movieThumbnail.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(movie.tumbnail))); //Populating the movie thumbnail and turning our image string back to an image.
+                    movieThumbnail.AccessibleDescription = movie.ident.ToString();
 
                     ((Label)this.Controls.Find($"movieNameLabel{movie.ident}", true)[0]).Text = movie.title; // Populating the movie title.
+                   
+                    //Checking if a movie is sold out. 
+                    if(movie.reservations.Count == 44)
+                    {
+                        ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).Text = "SOLD OUT"; // Updating label to display such case.
+                        ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).BackColor = Color.DarkRed; // Updating color to Dark Red.
 
-                    //Showing the number of seats available based on reservations.
-
-                    /*
-                     * <<<<<<< NOTE >>>>>>>>>>>
-                     * Should ADD an if statement to check if there are no seats. Which in said case label should be DarkRed and text should say "SOLD OUT".
-                     */
-                    ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).Text = $"{50-(movie.reservations.Count)}/50";
+                    }
+                    else
+                    {
+                        ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).Text = $"{50-(movie.reservations.Count)}/44"; // Otherwise displaying the number of seats available based on reservations..
+                    }
 
                     moviePanel.Visible = true; // Revealing our movie card.
 
