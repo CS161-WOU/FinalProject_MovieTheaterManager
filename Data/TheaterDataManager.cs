@@ -1,4 +1,6 @@
-﻿namespace CS161_FinalProject_MovieTheaterManager.Data
+﻿using System.Text.Json;
+
+namespace CS161_FinalProject_MovieTheaterManager.Data
 {
     internal class TheaterDataManager
     {
@@ -24,13 +26,36 @@
         {
             public int ident { get; set; }
             public string name { get; set; }
-            public int seatRow { get; set; }
-            public int seatColumn { get; set; }
-
+            public string seatPosition { get; set; }
             public int movieIdent { get; set; }
 
             public DateTime ScreeningTime { get; set; }
 
         }
+
+        public bool Save(Movies moviesCollection) {
+
+            bool successFull = false;
+            try
+            {
+                string fileName = "MainData.json"; // The filename of where we will be storing all these movies data.
+                string jsonMovieCollections = JsonSerializer.Serialize(moviesCollection); // Turning our custom classes into JSON for storing purposes.
+
+                File.WriteAllText(fileName, jsonMovieCollections); // Writing said JSON to our said File.
+                successFull = true;
+            }
+            catch(Exception ex)
+            {
+                successFull = false;
+                MessageBox.Show(ex.Message);
+            }
+            return successFull;
+        }
+
+        //TODO TODO TODO add method for retreiving data.
+      //  public Movies Retreieve()
+      //  {
+         
+       // }
     }
 }
