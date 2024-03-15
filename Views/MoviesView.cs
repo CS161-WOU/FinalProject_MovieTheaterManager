@@ -26,7 +26,8 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
         }
 
         //Method to load all movie cards for each available movie.
-        private bool loadMovies()
+        //NOTE This method was made public, it was made public so that we could call to refresh the movies (paricular for refreshing seat availability), whenver another window updated the movies data.
+        public bool loadMovies()
         {
             bool successful = false; // Flag to track if we sucessfully load movies or not.
 
@@ -88,7 +89,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
             try
             {
                 PictureBox movieThumbnail = (PictureBox)sender; // Getting the specific movie tumbnail that triggered the event.
-                Form SeatingWindow = new MovieSeating(int.Parse(movieThumbnail.AccessibleDescription)); // Passing the movie ID to the mmovie seating window.
+                Form SeatingWindow = new MovieSeating(int.Parse(movieThumbnail.AccessibleDescription), this); // Passing the movie ID to the mmovie seating window.
                 SeatingWindow.Show(); // Showing the seating window.
 
             }catch(Exception ex)

@@ -7,12 +7,15 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
     public partial class MovieSeating : Form
     {
         int movieIndex; // The movies index;
-        public MovieSeating(int movieIndex) // Adding a paramater to our seating form, to pass the selected movies ID.
+        MoviesView movieView;
+        public MovieSeating(int movieIndex, MoviesView currentMoviesView) // Adding a paramater to our seating form, to pass the selected movies ID.
         {
             this.movieIndex = movieIndex; // Setting the movide index in movie collections.
+            this.movieView = currentMoviesView;
             InitializeComponent();
         }
 
+        TheaterDataManager theaterDataManager = new TheaterDataManager(); // New Instance of our custom class.
         TheaterDataManager.Movies MovieCollections = new TheaterDataManager.Movies(); // Getting our custom movie manager class.
     
         const int TICKET_PRICE = 15;
@@ -28,7 +31,6 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
         private void MovieSeating_Load(object sender, EventArgs e)
         {
             //Get our current movies and reservations.
-            TheaterDataManager theaterDataManager = new TheaterDataManager(); // New Instance of our custom class.
 
             MovieCollections = theaterDataManager.Retreieve(); // Retreieving Movies.
 
@@ -45,10 +47,28 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
         //Our LoadSeats method.
         private void loadSeats()
         {
-            
+            MovieCollections = theaterDataManager.Retreieve();
             List<reservation> reservedSeats = MovieCollections.movies[movieIndex].reservations; // Getting our reservations.
 
-            clearCartButton_Click(this, new EventArgs()); // Resetting everything.
+            clearCartButton_Click(this, new EventArgs()); // Resetting Cart.
+
+            for(int column = 1; column < 11; column++) { 
+            
+                for(int row = 1; row < 6; row++)
+                {
+                    Control[] foundControls = (Control[])this.Controls.Find($"seatC{column}R{row}_Label", true); //Getting the current seat Label object.
+
+                    if(foundControls.Length == 0)
+                    {
+                        continue;
+                    }
+
+                    Label seatLabel = (Label)foundControls[0];
+                   
+
+                    seatLabel.BackColor = Color.CornflowerBlue;
+                }
+            }
 
             int seatIndex = 1; // Index vairbale to track the current seat.
 
@@ -62,8 +82,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
             reservedSeats.ForEach(seat =>
             {
                 Label seatLabel = (Label)this.Controls.Find($"seat{seat.seatPosition}_Label", true)[0]; //Getting the current seat Label object.
-                seatLabel.BackColor = Color.CornflowerBlue;
-
+        
                 if(seat.ScreeningTime == selectedShowTime) // Checking the reservation is for the selected showtime.
                 {
                     seatLabel.BackColor = Color.Tomato; //Setting the seat to be tomato color sinces it's reserved.
@@ -209,12 +228,11 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 
                 MovieCollections.movies[movieIndex].reservations = reservedSeats;
                 seatsPicked.Clear();
-               
-                loadSeats(); // Reload the seats.
-
-                TheaterDataManager theaterDataManager = new TheaterDataManager(); // Create one last instance of our custom class.
+         
                 theaterDataManager.Save(MovieCollections); // Call our save method to actually save stuff to the file.
 
+                movieView.loadMovies();
+                loadSeats(); // Reload the seats.
                 MessageBox.Show($"Your seats are reserved, your confirmation code is {reservationIDENT}. Please keep this code for check in.");
             }catch {
 
