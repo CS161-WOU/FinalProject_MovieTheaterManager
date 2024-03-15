@@ -16,8 +16,6 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 
         TheaterDataManager.Movies MovieCollections = new TheaterDataManager.Movies(); // Getting our custom movie manager class.
     
-        List<Label> seatsPicked = new List<Label>(); // Creating a list to track all the selcted seats.
-
         const int TICKET_PRICE = 15;
         int totalCost = 0; //Vairable to track the total.
 
@@ -25,13 +23,15 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 
         DateTime? selectedShowTime = null; // vairable to track the currently selected showtime.
 
+        List<Label> seatsPicked = new List<Label>(); // Creating a list to track all the selcted seats.
 
         //Window load method, when the window is opened do....
         private void MovieSeating_Load(object sender, EventArgs e)
         {
             //Get our current movies and reservations.
-            string jsonString = File.ReadAllText("MainData.json"); // Retreiving out JSON data file that contains all fo the movies data.
-            MovieCollections = JsonSerializer.Deserialize<TheaterDataManager.Movies?>(jsonString); // Turning our json data back into our custom movies class.
+            TheaterDataManager theaterDataManager = new TheaterDataManager(); // New Instance of our custom class.
+
+            MovieCollections = theaterDataManager.Retreieve(); // Retreieving Movies.
 
             movieTumbnail_PictureBox.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(MovieCollections.movies[movieIDENT].tumbnail))); // Set our movie thumbnail.
             movieTitle_Label.Text = MovieCollections.movies[movieIDENT].title; // Set the movie title.
@@ -180,6 +180,18 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
             {
                 string reservationName = reservationName_TextBox.Text; // Get the name entered in the name textBox.
                 int reservationIDENT = generateReservationIDENT(); // Get a new reservation IDENT.
+
+                if(reservationName.Length == 0)
+                {
+                    MessageBox.Show("Please enter a name for the reservation.");
+                    return;
+                }
+
+                if(seatsPicked.Count == 0)
+                {
+                    MessageBox.Show("Please select the seats you would like to reserve.");
+                    return;
+                }
 
                 //For each seat in the seatsPicked list create a new reservation.
                 seatsPicked.ForEach(seat =>

@@ -11,21 +11,6 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
             InitializeComponent();
         }
 
-        //Method that handles a click event froma movie thumbnail, when triggered displays the seating window.
-        private void ShowSeating(object sender, EventArgs e)
-        {
-            try
-            {
-                PictureBox movieThumbnail = (PictureBox)sender; // Getting the specific movie tumbnail that triggered the event.
-                Form SeatingWindow = new MovieSeating(int.Parse(movieThumbnail.AccessibleDescription)); // Passing the movie ID to the mmovie seating window.
-                SeatingWindow.Show(); // Showing the seating window.
-
-            }catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message); // Displaying any errors.
-            }
-
-        }
 
         //Method that gets triggered when the movies form is loaded.
         private void MoviesView_Load(object sender, EventArgs e)
@@ -47,9 +32,16 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 
             try // Try catch to catch any dumbasses mistakes.
             {
-                string jsonString =File.ReadAllText("MainData.json"); // Retreiving out JSON data file that contains all fo the movies data.
-                TheaterDataManager.Movies? MovieColelctions = JsonSerializer.Deserialize<TheaterDataManager.Movies?>(jsonString); // Turning our json data back into our custom movies class.
+                TheaterDataManager theaterDataManager = new TheaterDataManager(); // New Instance of our custom class.
+               
+                TheaterDataManager.Movies? MovieColelctions = theaterDataManager.Retreieve(); // Retreieving Movies.
+                if(MovieColelctions == null)
+                {
+                    MessageBox.Show("Unable to load movies, there are no movies");
+                    return false;
+                }
 
+                int movieIndex = 0; // Movie index tracker.
                 //Looping through all saved movies to populate the movie cards.
                 MovieColelctions.movies.ForEach(movie => //Foreach movie
                 {
@@ -61,9 +53,11 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                     movieThumbnail.AccessibleDescription = movie.ident.ToString();
 
                     ((Label)this.Controls.Find($"movieNameLabel{movie.ident}", true)[0]).Text = movie.title; // Populating the movie title.
-                   
+
+                    int seatsPossible = movie.availablity.Count * 44; // Variable to calculate the total number of seat options avialable per movie.
+
                     //Checking if a movie is sold out. 
-                    if(movie.reservations.Count == 44)
+                    if(movie.reservations.Count == seatsPossible)
                     {
                         ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).Text = "SOLD OUT"; // Updating label to display such case.
                         ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).BackColor = Color.DarkRed; // Updating color to Dark Red.
@@ -71,11 +65,11 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                     }
                     else
                     {
-                        ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).Text = $"{50-(movie.reservations.Count)}/44"; // Otherwise displaying the number of seats available based on reservations..
+                        ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).Text = $"{(seatsPossible - movie.reservations.Count)}/{seatsPossible}"; // Otherwise displaying the number of seats available based on reservations..
                     }
 
                     moviePanel.Visible = true; // Revealing our movie card.
-
+                    movieIndex++; // Advance index.
                 });
                 successful = true; // Setting our successful flag to true.
             }catch (Exception ex)
@@ -84,7 +78,24 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                 MessageBox.Show(ex.Message);
             }
 
+   
             return successful; //Returning our flag.
+        }
+
+        //Method that handles a click event froma movie thumbnail, when triggered displays the seating window.
+        private void ShowSeating(object sender, EventArgs e)
+        {
+            try
+            {
+                PictureBox movieThumbnail = (PictureBox)sender; // Getting the specific movie tumbnail that triggered the event.
+                Form SeatingWindow = new MovieSeating(int.Parse(movieThumbnail.AccessibleDescription)); // Passing the movie ID to the mmovie seating window.
+                SeatingWindow.Show(); // Showing the seating window.
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message); // Displaying any errors.
+            }
+
         }
 
         //Method that hides all movie cards from the movies view form and resets them.
