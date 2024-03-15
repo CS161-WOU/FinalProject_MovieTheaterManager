@@ -36,9 +36,9 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
             movieTitle_Label.Text = MovieCollections.movies[movieIndex].title; // Set the movie title.
             movieScreen_Label.Text = $"SCREEN {MovieCollections.movies[movieIndex].screen}"; // State which screen it's playing on.
 
+            loadShowTimes(); // Calling our loadShowTimes method, which displays all avialable show times.
             loadSeats(); // Calling our loadSeats method, which checks for reservations.
 
-            loadShowTimes(); // Calling our loadShowTimes method, which displays all avialable show times.
 
         }
 
@@ -208,8 +208,8 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                 });
 
                 MovieCollections.movies[movieIndex].reservations = reservedSeats;
-                
-                clearCartButton_Click(sender, e); // Clear everything.
+                seatsPicked.Clear();
+               
                 loadSeats(); // Reload the seats.
 
                 TheaterDataManager theaterDataManager = new TheaterDataManager(); // Create one last instance of our custom class.
