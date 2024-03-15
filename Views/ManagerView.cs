@@ -12,14 +12,14 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
         }
 
         //Random ass method and button created for testing sakes.
-        private void button1_Click(object sender, EventArgs e)
+        private void makeShitUp(object sender, EventArgs e)
         {
             try
             {
 
-
+                TheaterDataManager theaterDataManager = new TheaterDataManager();
                 TheaterDataManager.Movies MovieCollections = new TheaterDataManager.Movies(); // Create a new instance of our custom Movies class.
-                List< TheaterDataManager.movie > MovieList = new List< TheaterDataManager.movie >(); // Create a List instance of movies which will be saved to MoviesCollections.
+                List<TheaterDataManager.movie> MovieList = new List<TheaterDataManager.movie>(); // Create a List instance of movies which will be saved to MoviesCollections.
 
                 for (int i = 1; i <= 10; i++) // Loop 10 times to create 10 fake movies.
                 {
@@ -32,11 +32,9 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                     movie.index = i - 1;
 
                     //Turning our demo image into a bye array so that it can be saved as JSON. For testing sakes.
-                    byte[] imageArray = File.ReadAllBytes(@"C:\Users\River\source\repos\DeveloperSpoot\CS161_FinalProject_MovieTheaterManager\Resources\TaylorSwift.png");
-                    string base64ImageRepresentation = Convert.ToBase64String(imageArray); // Turning that array into a string for storing purposes related to the above.
 
-                    movie.tumbnail = base64ImageRepresentation; // Setting our thumbnail that string we creating.
-                    
+                    movie.tumbnail = theaterDataManager.convertImageToBas64String(@"C:\Users\nrivera23\Source\Repos\DeveloperSpoot\CS161_FinalProject_MovieTheaterManager\Resources\TaylorSwift.png"); // Setting our thumbnail that string we creating.
+
 
                     List<DateTime> availableTimes = new List<DateTime>(); // Creating a list instance of available times.
                     List<TheaterDataManager.reservation> reservationCollection = new List<TheaterDataManager.reservation>(); // Creating a list instance of reservations;
@@ -69,10 +67,17 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                 string jsonMovieCollections = JsonSerializer.Serialize(MovieCollections); // Turning our custom classes into JSON for storing purposes.
 
                 File.WriteAllText(fileName, jsonMovieCollections); // Writing said JSON to our said File.
-            }catch(Exception ex) { 
+            }
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

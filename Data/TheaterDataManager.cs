@@ -56,7 +56,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Data
         //TODO TODO TODO add method for retreiving data.
         public Movies? Retreieve()
         {
-            if (!File.Exists("MainData.json"))
+            if (!File.Exists("MainData.json")) // Checking if the data file exists, if not return null, abort retreieving movies.
             {
                 MessageBox.Show("There is no data to load.");
                 return null;
@@ -64,5 +64,12 @@ namespace CS161_FinalProject_MovieTheaterManager.Data
             string jsonString = File.ReadAllText("MainData.json"); // Retreiving out JSON data file that contains all fo the movies data.
             return  JsonSerializer.Deserialize<Movies>(jsonString); // Turning our json data back into our custom movies class.
         }
+
+        public string? convertImageToBas64String(string filename)
+        {
+            byte[] imageByteArray = File.ReadAllBytes(filename);
+
+            return Convert.ToBase64String(imageByteArray);
+        }                                                                                                   
     }
 }
