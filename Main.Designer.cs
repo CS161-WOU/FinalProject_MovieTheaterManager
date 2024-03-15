@@ -41,7 +41,7 @@
             TitleLabel.AutoSize = true;
             TitleLabel.Font = new Font("Copperplate Gothic Bold", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             TitleLabel.ForeColor = Color.White;
-            TitleLabel.Location = new Point(160, 29);
+            TitleLabel.Location = new Point(117, 23);
             TitleLabel.Name = "TitleLabel";
             TitleLabel.Size = new Size(424, 21);
             TitleLabel.TabIndex = 2;
@@ -57,8 +57,9 @@
             MainPanel.Controls.Add(exitButton);
             MainPanel.Controls.Add(TitleLabel);
             MainPanel.Location = new Point(0, 0);
+            MainPanel.Margin = new Padding(3, 2, 3, 2);
             MainPanel.Name = "MainPanel";
-            MainPanel.Size = new Size(717, 323);
+            MainPanel.Size = new Size(627, 255);
             MainPanel.TabIndex = 4;
             // 
             // managerButton
@@ -66,10 +67,9 @@
             managerButton.BackColor = Color.DimGray;
             managerButton.FlatStyle = FlatStyle.Flat;
             managerButton.ForeColor = SystemColors.Control;
-            managerButton.Location = new Point(265, 182);
-            managerButton.Margin = new Padding(3, 4, 3, 4);
+            managerButton.Location = new Point(232, 144);
             managerButton.Name = "managerButton";
-            managerButton.Size = new Size(208, 47);
+            managerButton.Size = new Size(182, 37);
             managerButton.TabIndex = 7;
             managerButton.Text = "Manager View";
             managerButton.UseVisualStyleBackColor = false;
@@ -80,10 +80,9 @@
             getMoviesButton.BackColor = Color.DimGray;
             getMoviesButton.FlatStyle = FlatStyle.Flat;
             getMoviesButton.ForeColor = SystemColors.Control;
-            getMoviesButton.Location = new Point(265, 101);
-            getMoviesButton.Margin = new Padding(3, 4, 3, 4);
+            getMoviesButton.Location = new Point(232, 80);
             getMoviesButton.Name = "getMoviesButton";
-            getMoviesButton.Size = new Size(208, 47);
+            getMoviesButton.Size = new Size(182, 37);
             getMoviesButton.TabIndex = 6;
             getMoviesButton.Text = "Get Movie Tickets";
             getMoviesButton.UseVisualStyleBackColor = false;
@@ -94,9 +93,10 @@
             exitButton.BackColor = Color.Tomato;
             exitButton.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             exitButton.ForeColor = SystemColors.Control;
-            exitButton.Location = new Point(313, 253);
+            exitButton.Location = new Point(274, 200);
+            exitButton.Margin = new Padding(3, 2, 3, 2);
             exitButton.Name = "exitButton";
-            exitButton.Size = new Size(113, 32);
+            exitButton.Size = new Size(99, 25);
             exitButton.TabIndex = 5;
             exitButton.Text = "EXIT";
             exitButton.UseVisualStyleBackColor = false;
@@ -104,14 +104,14 @@
             // 
             // Main
             // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(47, 47, 47);
-            ClientSize = new Size(717, 323);
+            ClientSize = new Size(627, 255);
             Controls.Add(MainPanel);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Main";
             Text = "Main";
+            WindowState = FormWindowState.Maximized;
             MainPanel.ResumeLayout(false);
             MainPanel.PerformLayout();
             ResumeLayout(false);

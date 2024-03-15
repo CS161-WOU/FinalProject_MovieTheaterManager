@@ -1314,6 +1314,7 @@
             Controls.Add(tableLayoutPanel1);
             Name = "MovieSeating";
             Text = "MovieSeating";
+            WindowState = FormWindowState.Maximized;
             Load += MovieSeating_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();

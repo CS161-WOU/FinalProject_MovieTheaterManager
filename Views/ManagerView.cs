@@ -33,7 +33,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 
                     //Turning our demo image into a bye array so that it can be saved as JSON. For testing sakes.
 
-                    movie.tumbnail = theaterDataManager.convertImageToBas64String(@"C:\Users\nrivera23\Source\Repos\DeveloperSpoot\CS161_FinalProject_MovieTheaterManager\Resources\TaylorSwift.png"); // Setting our thumbnail that string we creating.
+                    movie.tumbnail = theaterDataManager.convertImageToBas64String(@"C:\Users\nrivera23\source\repos\CS161_FinalProject_MovieTheaterManager\Resources\TaylorSwift.png"); // Setting our thumbnail that string we creating.
 
 
                     List<DateTime> availableTimes = new List<DateTime>(); // Creating a list instance of available times.

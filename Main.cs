@@ -22,8 +22,8 @@ namespace CS161_FinalProject_MovieTheaterManager
 
         private void managerButton_Click(object sender, EventArgs e)
         {
-            Form managerForm = new ManagerView();
-            managerForm.Show();
+            Form securityForm = new SecurityView();
+            securityForm.Show();
         }
     }
 }

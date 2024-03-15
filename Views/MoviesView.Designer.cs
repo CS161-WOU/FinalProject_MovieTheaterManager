@@ -1155,6 +1155,7 @@
             Name = "MoviesView";
             Padding = new Padding(10);
             Text = "Movies";
+            WindowState = FormWindowState.Maximized;
             Load += MoviesView_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();

@@ -106,7 +106,7 @@
             // 
             // button1
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            button1.Anchor = AnchorStyles.Right;
             button1.BackColor = Color.LightSeaGreen;
             tableLayoutPanel1.SetColumnSpan(button1, 2);
             button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -165,6 +165,7 @@
             Controls.Add(tableLayoutPanel1);
             Name = "ManagerView";
             Text = "ManagerView";
+            WindowState = FormWindowState.Maximized;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             flowLayoutPanel1.ResumeLayout(false);
