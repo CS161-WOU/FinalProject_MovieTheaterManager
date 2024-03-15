@@ -26,14 +26,14 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                     TheaterDataManager.movie movie = new TheaterDataManager.movie(); // Creating a new instance of our movie class.
 
                     //Setting the movie properties;
-                    movie.title = "Test";
+                    movie.title = "The Eras Tour "+i;
                     movie.screen = 1;
                     movie.ident = i;
                     movie.index = i - 1;
 
                     //Turning our demo image into a bye array so that it can be saved as JSON. For testing sakes.
 
-                    movie.tumbnail = theaterDataManager.convertImageToBas64String(@"C:\Users\nrivera23\source\repos\CS161_FinalProject_MovieTheaterManager\Resources\TaylorSwift.png"); // Setting our thumbnail that string we creating.
+                    movie.tumbnail = theaterDataManager.convertImageToBas64String(@"C:\Users\nrivera23\source\repos\CS161_FinalProject_MovieTheaterManager\MovieThumbnails\taylor-swift-the-eras-tour-movie-poster.png"); // Setting our thumbnail that string we creating.
 
 
                     List<DateTime> availableTimes = new List<DateTime>(); // Creating a list instance of available times.
@@ -67,6 +67,8 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                 string jsonMovieCollections = JsonSerializer.Serialize(MovieCollections); // Turning our custom classes into JSON for storing purposes.
 
                 File.WriteAllText(fileName, jsonMovieCollections); // Writing said JSON to our said File.
+
+                MessageBox.Show("Shit was made up");
             }
             catch (Exception ex)
             {

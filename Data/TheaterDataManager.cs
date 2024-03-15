@@ -2,38 +2,42 @@
 
 namespace CS161_FinalProject_MovieTheaterManager.Data
 {
+    //Our custom Theater Manager class.
     internal class TheaterDataManager
     {
-
+        //List of movies that incporates all the sub classes below.
         public class Movies
         {
 
-            public List<movie> movies { get; set; }
+            public List<movie> movies { get; set; } // Movies list.
 
         }
 
+        //Movie class.
         public class movie
         {
-            public int ident { get; set; }
-            public string title { get; set; }
-            public List<DateTime> availablity { get; set; }
-            public int screen { get; set; }
-            public List<reservation>? reservations { get; set; }
-            public string tumbnail { get; set; }
-            public int index;
+            public int ident { get; set; } //Movie ID, I like to call ID IDENT.
+            public string title { get; set; } // Title for said movie.
+            public List<DateTime> availablity { get; set; } // Showtimes.
+            public int screen { get; set; } // The screen the movie will be playing on.
+            public List<reservation>? reservations { get; set; } // ALl reservations for said movie.
+            public string tumbnail { get; set; } // The movie thumbnail/Image that us shown in MoviesView and SeatingView.
+            public int index; // The index of said movie in the movies list.
         }
 
-        public class reservation
+        //Reservation class.
+        public class reservation 
         {
-            public int ident { get; set; }
-            public string name { get; set; }
-            public string seatPosition { get; set; }
-            public int movieIdent { get; set; }
+            public int ident { get; set; } // The IDENT of the reservation, which is less of an ID in this case and more of a confirmation code holder.
+            public string name { get; set; } // The name of whomever reserved.
+            public string seatPosition { get; set; } // The exact seat being reserved.
+            public int movieIdent { get; set; } // The movie IDENT.
 
-            public DateTime ScreeningTime { get; set; }
+            public DateTime ScreeningTime { get; set; } // The exact showtime for the reserved seat.
 
         }
 
+        //Save method to save the data.
         public bool Save(Movies moviesCollection) {
 
             bool successFull = false;
@@ -53,7 +57,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Data
             return successFull;
         }
 
-        //TODO TODO TODO add method for retreiving data.
+        //Retreieve method for getting our data.
         public Movies? Retreieve()
         {
             if (!File.Exists("MainData.json")) // Checking if the data file exists, if not return null, abort retreieving movies.
@@ -65,11 +69,12 @@ namespace CS161_FinalProject_MovieTheaterManager.Data
             return  JsonSerializer.Deserialize<Movies>(jsonString); // Turning our json data back into our custom movies class.
         }
 
+        //Method to convert an image into a string to save it in our json file.
         public string? convertImageToBas64String(string filename)
         {
-            byte[] imageByteArray = File.ReadAllBytes(filename);
+            byte[] imageByteArray = File.ReadAllBytes(filename); // Turning the image into an array of bytes.
 
-            return Convert.ToBase64String(imageByteArray);
+            return Convert.ToBase64String(imageByteArray); // Turning said array of bytes into a base 64 string and returning said string.
         }                                                                                                   
     }
 }
