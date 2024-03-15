@@ -29,6 +29,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                     movie.title = "Test";
                     movie.screen = 1;
                     movie.ident = i;
+                    movie.index = i - 1;
 
                     //Turning our demo image into a bye array so that it can be saved as JSON. For testing sakes.
                     byte[] imageArray = File.ReadAllBytes(@"C:\Users\River\source\repos\DeveloperSpoot\CS161_FinalProject_MovieTheaterManager\Resources\TaylorSwift.png");

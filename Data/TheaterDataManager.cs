@@ -20,6 +20,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Data
             public int screen { get; set; }
             public List<reservation>? reservations { get; set; }
             public string tumbnail { get; set; }
+            public int index;
         }
 
         public class reservation

@@ -50,7 +50,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 
                     //Setting the Movie thumbnail.
                     movieThumbnail.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(movie.tumbnail))); //Populating the movie thumbnail and turning our image string back to an image.
-                    movieThumbnail.AccessibleDescription = movie.ident.ToString();
+                    movieThumbnail.AccessibleDescription = movieIndex.ToString();
 
                     ((Label)this.Controls.Find($"movieNameLabel{movie.ident}", true)[0]).Text = movie.title; // Populating the movie title.
 

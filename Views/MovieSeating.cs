@@ -6,11 +6,10 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 {
     public partial class MovieSeating : Form
     {
-
-        int movieIDENT; // The movie ID.
-        public MovieSeating(int movieIdent) // Adding a paramater to our seating form, to pass the selected movies ID.
+        int movieIndex; // The movies index;
+        public MovieSeating(int movieIndex) // Adding a paramater to our seating form, to pass the selected movies ID.
         {
-            this.movieIDENT = movieIdent; // Setting the movieID so that it can be used in the rest of the code.
+            this.movieIndex = movieIndex; // Setting the movide index in movie collections.
             InitializeComponent();
         }
 
@@ -33,9 +32,9 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 
             MovieCollections = theaterDataManager.Retreieve(); // Retreieving Movies.
 
-            movieTumbnail_PictureBox.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(MovieCollections.movies[movieIDENT].tumbnail))); // Set our movie thumbnail.
-            movieTitle_Label.Text = MovieCollections.movies[movieIDENT].title; // Set the movie title.
-            movieScreen_Label.Text = $"SCREEN {MovieCollections.movies[movieIDENT].screen}"; // State which screen it's playing on.
+            movieTumbnail_PictureBox.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(MovieCollections.movies[movieIndex].tumbnail))); // Set our movie thumbnail.
+            movieTitle_Label.Text = MovieCollections.movies[movieIndex].title; // Set the movie title.
+            movieScreen_Label.Text = $"SCREEN {MovieCollections.movies[movieIndex].screen}"; // State which screen it's playing on.
 
             loadSeats(); // Calling our loadSeats method, which checks for reservations.
 
@@ -47,7 +46,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
         private void loadSeats()
         {
             
-            List<reservation> reservedSeats = MovieCollections.movies[movieIDENT].reservations; // Getting our reservations.
+            List<reservation> reservedSeats = MovieCollections.movies[movieIndex].reservations; // Getting our reservations.
 
             clearCartButton_Click(this, new EventArgs()); // Resetting everything.
 
@@ -88,12 +87,12 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                 }
 
                 //Checking if there are any showtimes. Which to be fair there should always be, but just in case....
-                if (MovieCollections.movies[movieIDENT].availablity == null)
+                if (MovieCollections.movies[movieIndex].availablity == null)
                 {
                     return;
                 }
 
-                List<DateTime> showTimes = MovieCollections.movies[movieIDENT].availablity; //DateTime List to hold all our showTimes.
+                List<DateTime> showTimes = MovieCollections.movies[movieIndex].availablity; //DateTime List to hold all our showTimes.
                 
                 int showTimeIndex = 1; // Inde to track the current showtime.
 
@@ -139,7 +138,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
         {
             Label seatLabel = (Label)sender; // Getting the selected seat object, which happens to be a label.
 
-            string cartText = "M" + movieIDENT + "-" + seatLabel.Text + $" ${TICKET_PRICE}"; // Cart item format.
+            string cartText = "M" + MovieCollections.movies[movieIndex].ident + "-" + seatLabel.Text + $" ${TICKET_PRICE}"; // Cart item format.
 
             if(selectedShowTime == null)
             {
@@ -193,6 +192,8 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                     return;
                 }
 
+                List<reservation> reservedSeats = MovieCollections.movies[movieIndex].reservations;
+
                 //For each seat in the seatsPicked list create a new reservation.
                 seatsPicked.ForEach(seat =>
                 {
@@ -200,11 +201,13 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                     newReservation.ident = reservationIDENT; // Setting the reservation id to the generated IDENT. Serves a confirmation code ish.
                     newReservation.name = Name; // Setting the customers name for the reservations.
                     newReservation.seatPosition = seat.Text; // Setting the seat position for the rservation.
-                    newReservation.movieIdent = movieIDENT; // And setting the movie ID for the rservation.
+                    newReservation.movieIdent = MovieCollections.movies[movieIndex].ident; // And setting the movie ID for the rservation.
                     newReservation.ScreeningTime = (DateTime)selectedShowTime; // Set the showtime for the reservation.
 
-                    MovieCollections.movies[movieIDENT].reservations.Add(newReservation); // adding the new reservations to our movie class.
+                    reservedSeats.Add(newReservation); // adding the new reservations to our movie class.
                 });
+
+                MovieCollections.movies[movieIndex].reservations = reservedSeats;
                 
                 clearCartButton_Click(sender, e); // Clear everything.
                 loadSeats(); // Reload the seats.
