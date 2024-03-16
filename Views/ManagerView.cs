@@ -130,20 +130,20 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                     movieThumbnail.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(movie.tumbnail))); //Populating the movie thumbnail and turning our image string back to an image.
                     movieThumbnail.AccessibleDescription = movieIndex.ToString();
 
-                   // ((Label)this.Controls.Find($"movieNameLabel{movie.index + 1}", true)[0]).Text = movie.title; // Populating the movie title.
+                  // ((Label)this.Controls.Find($"movieNameLabel{movie.ident}", true)[0]).Text = movie.title; // Populating the movie title.
 
                     int seatsPossible = movie.availablity.Count * 44; // Variable to calculate the total number of seat options avialable per movie.
 
                     //Checking if a movie is sold out. 
                     if (movie.reservations.Count == seatsPossible)
                     {
-                        //((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).Text = "SOLD OUT"; // Updating label to display such case.
-                       // ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).BackColor = Color.DarkRed; // Updating color to Dark Red.
+                        ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).Text = "SOLD OUT"; // Updating label to display such case.
+                        ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).BackColor = Color.DarkRed; // Updating color to Dark Red.
 
                     }
                     else
                     {
-                       // ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).Text = $"{(seatsPossible - movie.reservations.Count)}/{seatsPossible}"; // Otherwise displaying the number of seats available based on reservations..
+                        ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).Text = $"{(seatsPossible - movie.reservations.Count)}/{seatsPossible}"; // Otherwise displaying the number of seats available based on reservations..
                     }
 
                     moviePanel.Visible = true; // Revealing our movie card.
