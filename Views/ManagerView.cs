@@ -130,7 +130,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                     movieThumbnail.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(movie.tumbnail))); //Populating the movie thumbnail and turning our image string back to an image.
                     movieThumbnail.AccessibleDescription = movieIndex.ToString();
 
-                  // ((Label)this.Controls.Find($"movieNameLabel{movie.ident}", true)[0]).Text = movie.title; // Populating the movie title.
+                  ((Label)this.Controls.Find($"movieNameLabel{movie.ident}", true)[0]).Text = movie.title; // Populating the movie title.
 
                     int seatsPossible = movie.availablity.Count * 44; // Variable to calculate the total number of seat options avialable per movie.
 
