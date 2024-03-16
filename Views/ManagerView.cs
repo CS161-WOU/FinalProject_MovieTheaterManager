@@ -26,7 +26,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                     TheaterDataManager.movie movie = new TheaterDataManager.movie(); // Creating a new instance of our movie class.
 
                     //Setting the movie properties;
-                    movie.title = "The Eras Tour "+i;
+                    movie.title = "The Eras Tour " + i;
                     movie.screen = 1;
                     movie.ident = i;
                     movie.index = i - 1;
@@ -80,6 +80,79 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ManagerViewResized(object sender, EventArgs e)
+        {
+            titleMoviePanel.Width = (flowLayoutPanel1.Width - 20);
+            for (int i = 1; i < 22; i++) {
+                ((TableLayoutPanel)this.Controls.Find($"movieCard_TableLayoutPanel{i}", true)[0]).Width = (flowLayoutPanel1.Width - 20);
+                ((TableLayoutPanel)this.Controls.Find($"movieCard_TableLayoutPanel{i}", true)[0]).Height = (flowLayoutPanel1.Width) / 3;
+
+            }
+        }
+
+        public bool loadMovies()
+        {
+            bool successful = false; // Flag to track if we sucessfully load movies or not.
+
+            try // Try catch to catch any dumbasses mistakes.
+            {
+                for (int i = 1; i < 22; i++)
+                {
+                    ((TableLayoutPanel)this.Controls.Find($"movieCard_TableLayoutPanel{i}", true)[0]).Visible = false;
+                }
+
+                TheaterDataManager theaterDataManager = new TheaterDataManager(); // New Instance of our custom class.
+
+                TheaterDataManager.Movies? MovieColelctions = theaterDataManager.Retreieve(); // Retreieving Movies.
+                if (MovieColelctions == null)
+                {
+                    MessageBox.Show("Unable to load movies, there are no movies");
+                    return false;
+                }
+
+                int movieIndex = 0; // Movie index tracker.
+                //Looping through all saved movies to populate the movie cards.
+                MovieColelctions.movies.ForEach(movie => //Foreach movie
+                {
+                    TableLayoutPanel moviePanel = (TableLayoutPanel) this.Controls.Find($"movieCard_TableLayoutPanel{movie.index+1}", true)[0];
+                    
+                    PictureBox movieThumbnail = (PictureBox)this.Controls.Find($"thumbnailPictureBox{movie.index + 1}", true)[0]; // retreiveing the movie picture box.
+
+                    //Setting the Movie thumbnail.
+                    movieThumbnail.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(movie.tumbnail))); //Populating the movie thumbnail and turning our image string back to an image.
+                    movieThumbnail.AccessibleDescription = movieIndex.ToString();
+
+                    ((Label)this.Controls.Find($"movieNameLabel{movie.index + 1}", true)[0]).Text = movie.title; // Populating the movie title.
+
+                    int seatsPossible = movie.availablity.Count * 44; // Variable to calculate the total number of seat options avialable per movie.
+
+                    //Checking if a movie is sold out. 
+                    if (movie.reservations.Count == seatsPossible)
+                    {
+                        ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).Text = "SOLD OUT"; // Updating label to display such case.
+                        ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).BackColor = Color.DarkRed; // Updating color to Dark Red.
+
+                    }
+                    else
+                    {
+                        ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).Text = $"{(seatsPossible - movie.reservations.Count)}/{seatsPossible}"; // Otherwise displaying the number of seats available based on reservations..
+                    }
+
+                    moviePanel.Visible = true; // Revealing our movie card.
+                    movieIndex++; // Advance index.
+                });
+                successful = true; // Setting our successful flag to true.
+            }
+            catch (Exception ex)
+            {
+                successful = false;
+                MessageBox.Show(ex.Message);
+            }
+
+
+            return successful; //Returning our flag.
         }
     }
 }
