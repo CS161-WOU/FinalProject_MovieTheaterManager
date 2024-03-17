@@ -119,7 +119,6 @@
             thumbnailPictureBox21 = new PictureBox();
             movieNameLabel21 = new Label();
             movieSeatsLabel21 = new Label();
-            fileSystemWatcher1 = new FileSystemWatcher();
             movieCard_TableLayoutPanel25 = new TableLayoutPanel();
             thumbnailPictureBox25 = new PictureBox();
             label11 = new Label();
@@ -168,7 +167,6 @@
             ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox20).BeginInit();
             movieCard_TableLayoutPanel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox21).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             movieCard_TableLayoutPanel25.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox25).BeginInit();
             SuspendLayout();
@@ -1700,11 +1698,6 @@
             movieSeatsLabel21.Text = "label43";
             movieSeatsLabel21.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // fileSystemWatcher1
-            // 
-            fileSystemWatcher1.EnableRaisingEvents = true;
-            fileSystemWatcher1.SynchronizingObject = this;
-            // 
             // movieCard_TableLayoutPanel25
             // 
             movieCard_TableLayoutPanel25.Anchor = AnchorStyles.None;
@@ -1827,7 +1820,6 @@
             movieCard_TableLayoutPanel21.ResumeLayout(false);
             movieCard_TableLayoutPanel21.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox21).EndInit();
-            ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             movieCard_TableLayoutPanel25.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox25).EndInit();
             ResumeLayout(false);
@@ -1846,7 +1838,6 @@
         private PictureBox thumbnailPictureBox1;
         private Label movieNameLabel1;
         private Label movieSeatsLabel1;
-        private FileSystemWatcher fileSystemWatcher1;
         private TableLayoutPanel movieCard_TableLayoutPanel3;
         private PictureBox thumbnailPictureBox2;
         private Label movieNameLabel2;
