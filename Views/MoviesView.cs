@@ -58,7 +58,11 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                     int seatsPossible = movie.availablity.Count * 44; // Variable to calculate the total number of seat options avialable per movie.
 
                     //Checking if a movie is sold out. 
-                    if(movie.reservations.Count == seatsPossible)
+                    if (movie.reservations == null)
+                    {
+                        ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).Text = $"{seatsPossible}/{seatsPossible}";
+                    }
+                    else if (movie.reservations.Count == seatsPossible)  //Checking if a movie is sold out. 
                     {
                         ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).Text = "SOLD OUT"; // Updating label to display such case.
                         ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).BackColor = Color.DarkRed; // Updating color to Dark Red.

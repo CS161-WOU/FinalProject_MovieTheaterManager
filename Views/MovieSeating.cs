@@ -50,6 +50,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
             MovieCollections = theaterDataManager.Retreieve();
             List<reservation> reservedSeats = MovieCollections.movies[movieIndex].reservations; // Getting our reservations.
 
+
             clearCartButton_Click(this, new EventArgs()); // Resetting Cart.
 
             for(int column = 1; column < 11; column++) { 
@@ -69,6 +70,8 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                     seatLabel.BackColor = Color.CornflowerBlue;
                 }
             }
+
+            if(MovieCollections.movies[movieIndex].reservations == null || MovieCollections.movies[movieIndex].reservations.Count == 0) { return; } // If there no reservations stop loading reservations.
 
             int seatIndex = 1; // Index vairbale to track the current seat.
 

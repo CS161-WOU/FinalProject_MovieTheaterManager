@@ -22,7 +22,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Data
             public int screen { get; set; } // The screen the movie will be playing on.
             public List<reservation>? reservations { get; set; } // ALl reservations for said movie.
             public string tumbnail { get; set; } // The movie thumbnail/Image that us shown in MoviesView and SeatingView.
-            public int index; // The index of said movie in the movies list.
+            public int index { get; set; } // The index of said movie in the movies list.
         }
 
         //Reservation class.

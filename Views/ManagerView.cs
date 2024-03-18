@@ -1,6 +1,7 @@
 ﻿using CS161_FinalProject_MovieTheaterManager.Data;
 using System.Reflection.Metadata.Ecma335;
 using System.Text.Json;
+using static CS161_FinalProject_MovieTheaterManager.Data.TheaterDataManager;
 
 
 namespace CS161_FinalProject_MovieTheaterManager.Views
@@ -136,8 +137,11 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 
                     int seatsPossible = movie.availablity.Count * 44; // Variable to calculate the total number of seat options avialable per movie.
 
-                    //Checking if a movie is sold out. 
-                    if (movie.reservations.Count == seatsPossible)
+                    if (movie.reservations == null)
+                    {
+                        ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).Text = $"{seatsPossible}/{seatsPossible}";
+                    }
+                    else if (movie.reservations.Count == seatsPossible)  //Checking if a movie is sold out. 
                     {
                         ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).Text = "SOLD OUT"; // Updating label to display such case.
                         ((Label)this.Controls.Find($"movieSeatsLabel{movie.ident}", true)[0]).BackColor = Color.DarkRed; // Updating color to Dark Red.
@@ -163,37 +167,218 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
             return successful; //Returning our flag.
         }
 
+        /// 
+        /// Movie Editor Stuff.
+        /// 
+        TheaterDataManager.movie? selectedMovie = null;
         List<DateTime> movieEditor_DateTimes = new List<DateTime>();
 
         private void movieAddDate_Button_Click(object sender, EventArgs e)
         {
-            DateTimePicker movieDatePicker = movieDate_DateTimePicker;
-
-            bool? warningAnswer = null;
-            if(movieDatePicker.Value < DateTime.Now) {
-               DialogResult warningResault =  MessageBox.Show("Mmmm... You sure about that?. You are adding a date and time that is in the past", "Warrning", MessageBoxButtons.YesNo);
-
-                if(warningResault.Equals(DialogResult.No)) {
-                    warningAnswer = false;
-                }
-                else
-                {
-                    warningAnswer = true;
-                }
-            }
-
-            if(warningAnswer == false)
+            try
             {
-                return;
-            }
 
-            movieEditor_DateTimes.Add(movieDatePicker.Value);
-            movieDateTimes_Listbox.Items.Add(movieDatePicker.Value);
+                DateTimePicker movieDatePicker = movieDate_DateTimePicker;
+
+                if (movieEditor_DateTimes.Count >= 5)
+                {
+                    MessageBox.Show("You may not exceed more than 5 showtimes. Womp Womp.");
+                    return;
+                }
+
+                bool? warningAnswer = null;
+                if (movieDatePicker.Value < DateTime.Now)
+                {
+                    DialogResult warningResault = MessageBox.Show("Mmmm... You sure about that?. You are adding a date and time that is in the past", "Warrning", MessageBoxButtons.YesNo);
+
+                    if (warningResault.Equals(DialogResult.No))
+                    {
+                        warningAnswer = false;
+                    }
+                    else
+                    {
+                        warningAnswer = true;
+                    }
+                }
+
+                if (warningAnswer == false)
+                {
+                    return;
+                }
+
+                movieEditor_DateTimes.Add(movieDatePicker.Value);
+                movieDateTimes_Listbox.Items.Add(movieDatePicker.Value);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void movieRemoveDateButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (movieDateTimes_Listbox.SelectedItem == null) { MessageBox.Show("Mmmmm. Try selecting a time to remove first."); return; }
 
+                DateTime selectedDate = (DateTime)movieDateTimes_Listbox.SelectedItem;
+                movieEditor_DateTimes.Remove(selectedDate);
+                movieDateTimes_Listbox.Items.Remove(selectedDate);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void movieThumbnail_PictureBox_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    string imageFileName = openFileDialog1.FileName;
+                    movieThumbnail_PictureBox.Image = new Bitmap(imageFileName);
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
+        }
+
+        private void movieAdd_Button_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                TheaterDataManager theaterDataManager = new TheaterDataManager(); // New Instance of our custom class.
+
+                TheaterDataManager.Movies? MovieCollections = theaterDataManager.Retreieve(); // Retreieving Movies.
+
+                if (MovieCollections == null)
+                {
+                    MovieCollections = new TheaterDataManager.Movies();
+                    MovieCollections.movies = new List<TheaterDataManager.movie>();
+                }
+
+                TheaterDataManager.movie newMovie = new TheaterDataManager.movie();
+
+                Random rand = new Random();
+                string title = movieTitle_TextBox.Text;
+                if (title == null || title == "")
+                {
+                    MessageBox.Show("Please enter a movie title.");
+                    return;
+                }
+
+                if (movieEditor_DateTimes.Count == 0)
+                {
+                    MessageBox.Show("Please add screening times.");
+                    return;
+                }
+
+                if (openFileDialog1.FileName == null || movieThumbnail_PictureBox.Image == null || openFileDialog1.FileName == string.Empty)
+                {
+                    MessageBox.Show("Please upload a movie thumbnail.");
+                    return;
+                }
+
+                newMovie.title = movieTitle_TextBox.Text;
+                newMovie.availablity = movieEditor_DateTimes;
+                newMovie.screen = rand.Next(1, 11);
+                newMovie.tumbnail = theaterDataManager.convertImageToBas64String(openFileDialog1.FileName);
+                newMovie.reservations = new List<TheaterDataManager.reservation>();
+                newMovie.index = MovieCollections.movies.Count;
+                newMovie.ident = MovieCollections.movies.Count + 1;
+
+                MovieCollections.movies.Add(newMovie);
+
+                theaterDataManager.Save(MovieCollections);
+                loadMovies();
+                MessageBox.Show("Movie added.");
+                openFileDialog1.FileName = string.Empty;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void loadSelectedMovie(object sender, EventArgs e)
+        {
+            movieEditor_DateTimes.Clear();
+            movieDateTimes_Listbox.Items.Clear();
+
+            TheaterDataManager theaterDataManager = new TheaterDataManager(); // New Instance of our custom class.
+
+            TheaterDataManager.Movies? MovieCollections = theaterDataManager.Retreieve(); // Retreieving Movies.
+            PictureBox selectexPictureBox = (PictureBox)sender;
+            selectedMovie = MovieCollections.movies[int.Parse(selectexPictureBox.AccessibleDescription)];
+
+            movieThumbnail_PictureBox.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(selectedMovie.tumbnail)));
+            movieTitle_TextBox.Text = selectedMovie.title;
+            selectedMovie.availablity.ForEach(showtime =>
+            {
+                movieDateTimes_Listbox.Items.Add(showtime);
+                movieEditor_DateTimes.Add(showtime);
+            });
+        }
+
+        private void movieSave_Button_Click(object sender, EventArgs e)
+        {
+           try
+            {
+                if(selectedMovie == null)
+                {
+                    MessageBox.Show("Please select a movie to edit first.");
+                    return;
+                }
+                TheaterDataManager theaterDataManager = new TheaterDataManager(); // New Instance of our custom class.
+
+                TheaterDataManager.Movies? MovieCollections = theaterDataManager.Retreieve(); // Retreieving Movies.
+
+                if (MovieCollections == null)
+                {
+                    MovieCollections = new TheaterDataManager.Movies();
+                    MovieCollections.movies = new List<TheaterDataManager.movie>();
+                }
+
+                TheaterDataManager.movie editedMovie = MovieCollections.movies[selectedMovie.index];
+               
+                string title = movieTitle_TextBox.Text;
+                if (title == null || title == "")
+                {
+                    MessageBox.Show("Please enter a movie title.");
+                    return;
+                }
+
+                if (movieEditor_DateTimes.Count == 0)
+                {
+                    MessageBox.Show("Please add screening times.");
+                    return;
+                }
+                
+                if(openFileDialog1.FileName == string.Empty || openFileDialog1.FileName == null || openFileDialog1.FileName == "") {
+                    MessageBox.Show("Just to let you know, the thumbnail has not been changed because you didn't upload a new one.");
+                }
+                else
+                {
+                    editedMovie.tumbnail = theaterDataManager.convertImageToBas64String(openFileDialog1.FileName);
+                }
+
+                editedMovie.title = title;
+                editedMovie.availablity = movieEditor_DateTimes;
+                MovieCollections.movies[selectedMovie.index] = editedMovie;
+
+                theaterDataManager.Save(MovieCollections);
+                loadMovies();
+
+                MessageBox.Show("Movie has been edited.");
+                selectedMovie = null;
+                openFileDialog1.FileName = string.Empty;
+            }
+           catch(Exception ex) {  MessageBox.Show(ex.Message); }
         }
     }
 }

@@ -137,6 +137,7 @@
             movieCard_TableLayoutPanel25 = new TableLayoutPanel();
             thumbnailPictureBox25 = new PictureBox();
             label11 = new Label();
+            openFileDialog1 = new OpenFileDialog();
             managerView_TableLayout.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             titleMoviePanel.SuspendLayout();
@@ -369,6 +370,7 @@
             thumbnailPictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox1.TabIndex = 0;
             thumbnailPictureBox1.TabStop = false;
+            thumbnailPictureBox1.Click += loadSelectedMovie;
             // 
             // movieNameLabel1
             // 
@@ -435,6 +437,7 @@
             thumbnailPictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox2.TabIndex = 0;
             thumbnailPictureBox2.TabStop = false;
+            thumbnailPictureBox2.Click += loadSelectedMovie;
             // 
             // movieNameLabel2
             // 
@@ -500,6 +503,7 @@
             thumbnailPictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox3.TabIndex = 0;
             thumbnailPictureBox3.TabStop = false;
+            thumbnailPictureBox3.Click += loadSelectedMovie;
             // 
             // movieNameLabel3
             // 
@@ -565,6 +569,7 @@
             thumbnailPictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox4.TabIndex = 0;
             thumbnailPictureBox4.TabStop = false;
+            thumbnailPictureBox4.Click += loadSelectedMovie;
             // 
             // movieNameLabel4
             // 
@@ -631,6 +636,7 @@
             thumbnailPictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox5.TabIndex = 0;
             thumbnailPictureBox5.TabStop = false;
+            thumbnailPictureBox5.Click += loadSelectedMovie;
             // 
             // movieNameLabel5
             // 
@@ -697,6 +703,7 @@
             thumbnailPictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox6.TabIndex = 0;
             thumbnailPictureBox6.TabStop = false;
+            thumbnailPictureBox6.Click += loadSelectedMovie;
             // 
             // movieNameLabel6
             // 
@@ -763,6 +770,7 @@
             thumbnailPictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox7.TabIndex = 0;
             thumbnailPictureBox7.TabStop = false;
+            thumbnailPictureBox7.Click += loadSelectedMovie;
             // 
             // movieNameLabel7
             // 
@@ -829,6 +837,7 @@
             thumbnailPictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox8.TabIndex = 0;
             thumbnailPictureBox8.TabStop = false;
+            thumbnailPictureBox8.Click += loadSelectedMovie;
             // 
             // movieNameLabel8
             // 
@@ -895,6 +904,7 @@
             thumbnailPictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox9.TabIndex = 0;
             thumbnailPictureBox9.TabStop = false;
+            thumbnailPictureBox9.Click += loadSelectedMovie;
             // 
             // movieNameLabel9
             // 
@@ -961,6 +971,7 @@
             thumbnailPictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox10.TabIndex = 0;
             thumbnailPictureBox10.TabStop = false;
+            thumbnailPictureBox10.Click += loadSelectedMovie;
             // 
             // movieNameLabel10
             // 
@@ -1027,6 +1038,7 @@
             thumbnailPictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox11.TabIndex = 0;
             thumbnailPictureBox11.TabStop = false;
+            thumbnailPictureBox11.Click += loadSelectedMovie;
             // 
             // movieNameLabel11
             // 
@@ -1093,6 +1105,7 @@
             thumbnailPictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox12.TabIndex = 0;
             thumbnailPictureBox12.TabStop = false;
+            thumbnailPictureBox12.Click += loadSelectedMovie;
             // 
             // movieNameLabel12
             // 
@@ -1159,6 +1172,7 @@
             thumbnailPictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox13.TabIndex = 0;
             thumbnailPictureBox13.TabStop = false;
+            thumbnailPictureBox13.Click += loadSelectedMovie;
             // 
             // movieNameLabel13
             // 
@@ -1225,6 +1239,7 @@
             thumbnailPictureBox14.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox14.TabIndex = 0;
             thumbnailPictureBox14.TabStop = false;
+            thumbnailPictureBox14.Click += loadSelectedMovie;
             // 
             // movieNameLabel14
             // 
@@ -1291,6 +1306,7 @@
             thumbnailPictureBox15.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox15.TabIndex = 0;
             thumbnailPictureBox15.TabStop = false;
+            thumbnailPictureBox15.Click += loadSelectedMovie;
             // 
             // movieNameLabel15
             // 
@@ -1357,6 +1373,7 @@
             thumbnailPictureBox16.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox16.TabIndex = 0;
             thumbnailPictureBox16.TabStop = false;
+            thumbnailPictureBox16.Click += loadSelectedMovie;
             // 
             // movieNameLabel16
             // 
@@ -1423,6 +1440,7 @@
             thumbnailPictureBox17.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox17.TabIndex = 0;
             thumbnailPictureBox17.TabStop = false;
+            thumbnailPictureBox17.Click += loadSelectedMovie;
             // 
             // movieNameLabel17
             // 
@@ -1489,6 +1507,7 @@
             thumbnailPictureBox18.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox18.TabIndex = 0;
             thumbnailPictureBox18.TabStop = false;
+            thumbnailPictureBox18.Click += loadSelectedMovie;
             // 
             // movieNameLabel18
             // 
@@ -1555,6 +1574,7 @@
             thumbnailPictureBox19.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox19.TabIndex = 0;
             thumbnailPictureBox19.TabStop = false;
+            thumbnailPictureBox19.Click += loadSelectedMovie;
             // 
             // movieNameLabel19
             // 
@@ -1621,6 +1641,7 @@
             thumbnailPictureBox20.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox20.TabIndex = 0;
             thumbnailPictureBox20.TabStop = false;
+            thumbnailPictureBox20.Click += loadSelectedMovie;
             // 
             // movieNameLabel20
             // 
@@ -1685,6 +1706,7 @@
             thumbnailPictureBox21.SizeMode = PictureBoxSizeMode.StretchImage;
             thumbnailPictureBox21.TabIndex = 0;
             thumbnailPictureBox21.TabStop = false;
+            thumbnailPictureBox21.Click += loadSelectedMovie;
             // 
             // movieNameLabel21
             // 
@@ -1889,8 +1911,10 @@
             movieThumbnail_PictureBox.Name = "movieThumbnail_PictureBox";
             tableLayoutPanel1.SetRowSpan(movieThumbnail_PictureBox, 4);
             movieThumbnail_PictureBox.Size = new Size(134, 230);
+            movieThumbnail_PictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             movieThumbnail_PictureBox.TabIndex = 22;
             movieThumbnail_PictureBox.TabStop = false;
+            movieThumbnail_PictureBox.Click += movieThumbnail_PictureBox_Click;
             // 
             // movieTitle_TextBox
             // 
@@ -1946,6 +1970,7 @@
             movieAdd_Button.TabIndex = 33;
             movieAdd_Button.Text = "Add";
             movieAdd_Button.UseVisualStyleBackColor = false;
+            movieAdd_Button.Click += movieAdd_Button_Click;
             // 
             // movieDelete_Button
             // 
@@ -1976,6 +2001,7 @@
             movieSave_Button.TabIndex = 35;
             movieSave_Button.Text = "Save";
             movieSave_Button.UseVisualStyleBackColor = false;
+            movieSave_Button.Click += movieSave_Button_Click;
             // 
             // movieCard_TableLayoutPanel25
             // 
@@ -2019,6 +2045,10 @@
             label11.TabIndex = 1;
             label11.Text = "Some Movie Title";
             label11.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
             // 
             // ManagerView
             // 
@@ -2223,5 +2253,6 @@
         private Button movieDelete_Button;
         private Button movieAdd_Button;
         private Button movieSave_Button;
+        private OpenFileDialog openFileDialog1;
     }
 }
