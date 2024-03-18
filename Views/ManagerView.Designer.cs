@@ -119,6 +119,21 @@
             thumbnailPictureBox21 = new PictureBox();
             movieNameLabel21 = new Label();
             movieSeatsLabel21 = new Label();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            movieRemoveDateButton = new Button();
+            movieDateTimes_Listbox = new ListBox();
+            label9 = new Label();
+            label5 = new Label();
+            movieDate_DateTimePicker = new DateTimePicker();
+            label8 = new Label();
+            label6 = new Label();
+            movieThumbnail_PictureBox = new PictureBox();
+            movieTitle_TextBox = new TextBox();
+            label7 = new Label();
+            movieAddDate_Button = new Button();
+            movieAdd_Button = new Button();
+            movieDelete_Button = new Button();
+            movieSave_Button = new Button();
             movieCard_TableLayoutPanel25 = new TableLayoutPanel();
             thumbnailPictureBox25 = new PictureBox();
             label11 = new Label();
@@ -167,6 +182,8 @@
             ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox20).BeginInit();
             movieCard_TableLayoutPanel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox21).BeginInit();
+            tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)movieThumbnail_PictureBox).BeginInit();
             movieCard_TableLayoutPanel25.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox25).BeginInit();
             SuspendLayout();
@@ -188,10 +205,11 @@
             managerView_TableLayout.Controls.Add(exitButton, 9, 0);
             managerView_TableLayout.Controls.Add(button1, 7, 0);
             managerView_TableLayout.Controls.Add(flowLayoutPanel1, 0, 1);
+            managerView_TableLayout.Controls.Add(tableLayoutPanel1, 2, 1);
             managerView_TableLayout.Dock = DockStyle.Fill;
             managerView_TableLayout.Location = new Point(0, 0);
             managerView_TableLayout.Name = "managerView_TableLayout";
-            managerView_TableLayout.Padding = new Padding(10, 10, 10, 10);
+            managerView_TableLayout.Padding = new Padding(10);
             managerView_TableLayout.RowCount = 10;
             managerView_TableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             managerView_TableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
@@ -203,7 +221,7 @@
             managerView_TableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             managerView_TableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             managerView_TableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            managerView_TableLayout.Size = new Size(1132, 591);
+            managerView_TableLayout.Size = new Size(1631, 982);
             managerView_TableLayout.TabIndex = 0;
             // 
             // TitleLabel
@@ -214,9 +232,9 @@
             TitleLabel.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             TitleLabel.ForeColor = Color.White;
             TitleLabel.Location = new Point(16, 16);
-            TitleLabel.Margin = new Padding(6, 6, 6, 6);
+            TitleLabel.Margin = new Padding(6);
             TitleLabel.Name = "TitleLabel";
-            TitleLabel.Size = new Size(543, 45);
+            TitleLabel.Size = new Size(793, 84);
             TitleLabel.TabIndex = 7;
             TitleLabel.Text = "Totally Real Movie Theater Solutions";
             TitleLabel.TextAlign = ContentAlignment.MiddleLeft;
@@ -227,8 +245,8 @@
             exitButton.BackColor = Color.Tomato;
             exitButton.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             exitButton.ForeColor = SystemColors.Control;
-            exitButton.Location = new Point(1019, 22);
-            exitButton.Margin = new Padding(6, 6, 6, 6);
+            exitButton.Location = new Point(1518, 41);
+            exitButton.Margin = new Padding(6);
             exitButton.Name = "exitButton";
             exitButton.Size = new Size(97, 33);
             exitButton.TabIndex = 8;
@@ -243,8 +261,8 @@
             managerView_TableLayout.SetColumnSpan(button1, 2);
             button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(803, 26);
-            button1.Margin = new Padding(16, 16, 16, 16);
+            button1.Location = new Point(1253, 45);
+            button1.Margin = new Padding(16);
             button1.Name = "button1";
             button1.Size = new Size(190, 25);
             button1.TabIndex = 9;
@@ -257,7 +275,7 @@
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.AutoScrollMargin = new Size(10, 10);
             flowLayoutPanel1.BackColor = Color.FromArgb(40, 40, 40);
-            managerView_TableLayout.SetColumnSpan(flowLayoutPanel1, 3);
+            managerView_TableLayout.SetColumnSpan(flowLayoutPanel1, 2);
             flowLayoutPanel1.Controls.Add(titleMoviePanel);
             flowLayoutPanel1.Controls.Add(movieCard_TableLayoutPanel1);
             flowLayoutPanel1.Controls.Add(movieCard_TableLayoutPanel2);
@@ -282,12 +300,12 @@
             flowLayoutPanel1.Controls.Add(movieCard_TableLayoutPanel21);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(10, 67);
+            flowLayoutPanel1.Location = new Point(10, 106);
             flowLayoutPanel1.Margin = new Padding(0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Padding = new Padding(10, 0, 10, 0);
             managerView_TableLayout.SetRowSpan(flowLayoutPanel1, 9);
-            flowLayoutPanel1.Size = new Size(333, 514);
+            flowLayoutPanel1.Size = new Size(322, 866);
             flowLayoutPanel1.TabIndex = 10;
             flowLayoutPanel1.WrapContents = false;
             flowLayoutPanel1.SizeChanged += ManagerViewResized;
@@ -300,7 +318,7 @@
             titleMoviePanel.Margin = new Padding(0);
             titleMoviePanel.MinimumSize = new Size(313, 47);
             titleMoviePanel.Name = "titleMoviePanel";
-            titleMoviePanel.Padding = new Padding(10, 10, 10, 10);
+            titleMoviePanel.Padding = new Padding(10);
             titleMoviePanel.Size = new Size(313, 47);
             titleMoviePanel.TabIndex = 0;
             // 
@@ -311,7 +329,7 @@
             movieShowtimes_Label.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             movieShowtimes_Label.ForeColor = SystemColors.ControlLightLight;
             movieShowtimes_Label.Location = new Point(10, 10);
-            movieShowtimes_Label.Margin = new Padding(10, 10, 10, 10);
+            movieShowtimes_Label.Margin = new Padding(10);
             movieShowtimes_Label.Name = "movieShowtimes_Label";
             movieShowtimes_Label.Size = new Size(293, 27);
             movieShowtimes_Label.TabIndex = 15;
@@ -332,7 +350,7 @@
             movieCard_TableLayoutPanel1.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel1.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel1.Name = "movieCard_TableLayoutPanel1";
-            movieCard_TableLayoutPanel1.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel1.Padding = new Padding(5);
             movieCard_TableLayoutPanel1.RowCount = 2;
             movieCard_TableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -344,7 +362,7 @@
             thumbnailPictureBox1.Dock = DockStyle.Fill;
             thumbnailPictureBox1.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox1.Location = new Point(10, 10);
-            thumbnailPictureBox1.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox1.Margin = new Padding(5);
             thumbnailPictureBox1.Name = "thumbnailPictureBox1";
             movieCard_TableLayoutPanel1.SetRowSpan(thumbnailPictureBox1, 2);
             thumbnailPictureBox1.Size = new Size(59, 82);
@@ -360,9 +378,9 @@
             movieNameLabel1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel1.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel1.Location = new Point(84, 15);
-            movieNameLabel1.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel1.Margin = new Padding(10);
             movieNameLabel1.Name = "movieNameLabel1";
-            movieNameLabel1.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel1.Padding = new Padding(3);
             movieNameLabel1.Size = new Size(214, 26);
             movieNameLabel1.TabIndex = 1;
             movieNameLabel1.Text = "Some Movie Title";
@@ -375,9 +393,9 @@
             movieSeatsLabel1.Dock = DockStyle.Fill;
             movieSeatsLabel1.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel1.Location = new Point(84, 61);
-            movieSeatsLabel1.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel1.Margin = new Padding(10);
             movieSeatsLabel1.Name = "movieSeatsLabel1";
-            movieSeatsLabel1.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel1.Padding = new Padding(3);
             movieSeatsLabel1.Size = new Size(214, 26);
             movieSeatsLabel1.TabIndex = 2;
             movieSeatsLabel1.Text = "label2";
@@ -397,7 +415,7 @@
             movieCard_TableLayoutPanel2.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel2.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel2.Name = "movieCard_TableLayoutPanel2";
-            movieCard_TableLayoutPanel2.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel2.Padding = new Padding(5);
             movieCard_TableLayoutPanel2.RowCount = 2;
             movieCard_TableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -410,7 +428,7 @@
             thumbnailPictureBox2.Dock = DockStyle.Fill;
             thumbnailPictureBox2.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox2.Location = new Point(10, 10);
-            thumbnailPictureBox2.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox2.Margin = new Padding(5);
             thumbnailPictureBox2.Name = "thumbnailPictureBox2";
             movieCard_TableLayoutPanel2.SetRowSpan(thumbnailPictureBox2, 2);
             thumbnailPictureBox2.Size = new Size(59, 82);
@@ -426,9 +444,9 @@
             movieNameLabel2.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel2.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel2.Location = new Point(84, 15);
-            movieNameLabel2.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel2.Margin = new Padding(10);
             movieNameLabel2.Name = "movieNameLabel2";
-            movieNameLabel2.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel2.Padding = new Padding(3);
             movieNameLabel2.Size = new Size(214, 26);
             movieNameLabel2.TabIndex = 1;
             movieNameLabel2.Text = "Some Movie Title";
@@ -441,9 +459,9 @@
             movieSeatsLabel2.Dock = DockStyle.Fill;
             movieSeatsLabel2.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel2.Location = new Point(84, 61);
-            movieSeatsLabel2.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel2.Margin = new Padding(10);
             movieSeatsLabel2.Name = "movieSeatsLabel2";
-            movieSeatsLabel2.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel2.Padding = new Padding(3);
             movieSeatsLabel2.Size = new Size(214, 26);
             movieSeatsLabel2.TabIndex = 2;
             movieSeatsLabel2.Text = "label4";
@@ -463,7 +481,7 @@
             movieCard_TableLayoutPanel3.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel3.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel3.Name = "movieCard_TableLayoutPanel3";
-            movieCard_TableLayoutPanel3.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel3.Padding = new Padding(5);
             movieCard_TableLayoutPanel3.RowCount = 2;
             movieCard_TableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -475,7 +493,7 @@
             thumbnailPictureBox3.Dock = DockStyle.Fill;
             thumbnailPictureBox3.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox3.Location = new Point(10, 10);
-            thumbnailPictureBox3.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox3.Margin = new Padding(5);
             thumbnailPictureBox3.Name = "thumbnailPictureBox3";
             movieCard_TableLayoutPanel3.SetRowSpan(thumbnailPictureBox3, 2);
             thumbnailPictureBox3.Size = new Size(59, 82);
@@ -491,9 +509,9 @@
             movieNameLabel3.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel3.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel3.Location = new Point(84, 15);
-            movieNameLabel3.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel3.Margin = new Padding(10);
             movieNameLabel3.Name = "movieNameLabel3";
-            movieNameLabel3.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel3.Padding = new Padding(3);
             movieNameLabel3.Size = new Size(214, 26);
             movieNameLabel3.TabIndex = 1;
             movieNameLabel3.Text = "Some Movie Title";
@@ -506,9 +524,9 @@
             movieSeatsLabel3.Dock = DockStyle.Fill;
             movieSeatsLabel3.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel3.Location = new Point(84, 61);
-            movieSeatsLabel3.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel3.Margin = new Padding(10);
             movieSeatsLabel3.Name = "movieSeatsLabel3";
-            movieSeatsLabel3.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel3.Padding = new Padding(3);
             movieSeatsLabel3.Size = new Size(214, 26);
             movieSeatsLabel3.TabIndex = 2;
             movieSeatsLabel3.Text = "label6";
@@ -528,7 +546,7 @@
             movieCard_TableLayoutPanel4.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel4.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel4.Name = "movieCard_TableLayoutPanel4";
-            movieCard_TableLayoutPanel4.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel4.Padding = new Padding(5);
             movieCard_TableLayoutPanel4.RowCount = 2;
             movieCard_TableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -540,7 +558,7 @@
             thumbnailPictureBox4.Dock = DockStyle.Fill;
             thumbnailPictureBox4.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox4.Location = new Point(10, 10);
-            thumbnailPictureBox4.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox4.Margin = new Padding(5);
             thumbnailPictureBox4.Name = "thumbnailPictureBox4";
             movieCard_TableLayoutPanel4.SetRowSpan(thumbnailPictureBox4, 2);
             thumbnailPictureBox4.Size = new Size(59, 82);
@@ -556,9 +574,9 @@
             movieNameLabel4.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel4.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel4.Location = new Point(84, 15);
-            movieNameLabel4.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel4.Margin = new Padding(10);
             movieNameLabel4.Name = "movieNameLabel4";
-            movieNameLabel4.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel4.Padding = new Padding(3);
             movieNameLabel4.Size = new Size(214, 26);
             movieNameLabel4.TabIndex = 1;
             movieNameLabel4.Text = "Some Movie Title";
@@ -571,9 +589,9 @@
             movieSeatsLabel4.Dock = DockStyle.Fill;
             movieSeatsLabel4.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel4.Location = new Point(84, 61);
-            movieSeatsLabel4.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel4.Margin = new Padding(10);
             movieSeatsLabel4.Name = "movieSeatsLabel4";
-            movieSeatsLabel4.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel4.Padding = new Padding(3);
             movieSeatsLabel4.Size = new Size(214, 26);
             movieSeatsLabel4.TabIndex = 2;
             movieSeatsLabel4.Text = "label8";
@@ -593,7 +611,7 @@
             movieCard_TableLayoutPanel5.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel5.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel5.Name = "movieCard_TableLayoutPanel5";
-            movieCard_TableLayoutPanel5.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel5.Padding = new Padding(5);
             movieCard_TableLayoutPanel5.RowCount = 2;
             movieCard_TableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -606,7 +624,7 @@
             thumbnailPictureBox5.Dock = DockStyle.Fill;
             thumbnailPictureBox5.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox5.Location = new Point(10, 10);
-            thumbnailPictureBox5.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox5.Margin = new Padding(5);
             thumbnailPictureBox5.Name = "thumbnailPictureBox5";
             movieCard_TableLayoutPanel5.SetRowSpan(thumbnailPictureBox5, 2);
             thumbnailPictureBox5.Size = new Size(59, 82);
@@ -622,9 +640,9 @@
             movieNameLabel5.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel5.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel5.Location = new Point(84, 15);
-            movieNameLabel5.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel5.Margin = new Padding(10);
             movieNameLabel5.Name = "movieNameLabel5";
-            movieNameLabel5.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel5.Padding = new Padding(3);
             movieNameLabel5.Size = new Size(214, 26);
             movieNameLabel5.TabIndex = 1;
             movieNameLabel5.Text = "Some Movie Title";
@@ -637,9 +655,9 @@
             movieSeatsLabel5.Dock = DockStyle.Fill;
             movieSeatsLabel5.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel5.Location = new Point(84, 61);
-            movieSeatsLabel5.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel5.Margin = new Padding(10);
             movieSeatsLabel5.Name = "movieSeatsLabel5";
-            movieSeatsLabel5.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel5.Padding = new Padding(3);
             movieSeatsLabel5.Size = new Size(214, 26);
             movieSeatsLabel5.TabIndex = 2;
             movieSeatsLabel5.Text = "label10";
@@ -659,7 +677,7 @@
             movieCard_TableLayoutPanel6.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel6.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel6.Name = "movieCard_TableLayoutPanel6";
-            movieCard_TableLayoutPanel6.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel6.Padding = new Padding(5);
             movieCard_TableLayoutPanel6.RowCount = 2;
             movieCard_TableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -672,7 +690,7 @@
             thumbnailPictureBox6.Dock = DockStyle.Fill;
             thumbnailPictureBox6.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox6.Location = new Point(10, 10);
-            thumbnailPictureBox6.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox6.Margin = new Padding(5);
             thumbnailPictureBox6.Name = "thumbnailPictureBox6";
             movieCard_TableLayoutPanel6.SetRowSpan(thumbnailPictureBox6, 2);
             thumbnailPictureBox6.Size = new Size(59, 82);
@@ -688,9 +706,9 @@
             movieNameLabel6.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel6.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel6.Location = new Point(84, 15);
-            movieNameLabel6.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel6.Margin = new Padding(10);
             movieNameLabel6.Name = "movieNameLabel6";
-            movieNameLabel6.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel6.Padding = new Padding(3);
             movieNameLabel6.Size = new Size(214, 26);
             movieNameLabel6.TabIndex = 1;
             movieNameLabel6.Text = "Some Movie Title";
@@ -703,9 +721,9 @@
             movieSeatsLabel6.Dock = DockStyle.Fill;
             movieSeatsLabel6.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel6.Location = new Point(84, 61);
-            movieSeatsLabel6.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel6.Margin = new Padding(10);
             movieSeatsLabel6.Name = "movieSeatsLabel6";
-            movieSeatsLabel6.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel6.Padding = new Padding(3);
             movieSeatsLabel6.Size = new Size(214, 26);
             movieSeatsLabel6.TabIndex = 2;
             movieSeatsLabel6.Text = "label13";
@@ -725,7 +743,7 @@
             movieCard_TableLayoutPanel7.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel7.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel7.Name = "movieCard_TableLayoutPanel7";
-            movieCard_TableLayoutPanel7.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel7.Padding = new Padding(5);
             movieCard_TableLayoutPanel7.RowCount = 2;
             movieCard_TableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -738,7 +756,7 @@
             thumbnailPictureBox7.Dock = DockStyle.Fill;
             thumbnailPictureBox7.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox7.Location = new Point(10, 10);
-            thumbnailPictureBox7.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox7.Margin = new Padding(5);
             thumbnailPictureBox7.Name = "thumbnailPictureBox7";
             movieCard_TableLayoutPanel7.SetRowSpan(thumbnailPictureBox7, 2);
             thumbnailPictureBox7.Size = new Size(59, 82);
@@ -754,9 +772,9 @@
             movieNameLabel7.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel7.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel7.Location = new Point(84, 15);
-            movieNameLabel7.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel7.Margin = new Padding(10);
             movieNameLabel7.Name = "movieNameLabel7";
-            movieNameLabel7.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel7.Padding = new Padding(3);
             movieNameLabel7.Size = new Size(214, 26);
             movieNameLabel7.TabIndex = 1;
             movieNameLabel7.Text = "Some Movie Title";
@@ -769,9 +787,9 @@
             movieSeatsLabel7.Dock = DockStyle.Fill;
             movieSeatsLabel7.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel7.Location = new Point(84, 61);
-            movieSeatsLabel7.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel7.Margin = new Padding(10);
             movieSeatsLabel7.Name = "movieSeatsLabel7";
-            movieSeatsLabel7.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel7.Padding = new Padding(3);
             movieSeatsLabel7.Size = new Size(214, 26);
             movieSeatsLabel7.TabIndex = 2;
             movieSeatsLabel7.Text = "label15";
@@ -791,7 +809,7 @@
             movieCard_TableLayoutPanel8.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel8.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel8.Name = "movieCard_TableLayoutPanel8";
-            movieCard_TableLayoutPanel8.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel8.Padding = new Padding(5);
             movieCard_TableLayoutPanel8.RowCount = 2;
             movieCard_TableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -804,7 +822,7 @@
             thumbnailPictureBox8.Dock = DockStyle.Fill;
             thumbnailPictureBox8.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox8.Location = new Point(10, 10);
-            thumbnailPictureBox8.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox8.Margin = new Padding(5);
             thumbnailPictureBox8.Name = "thumbnailPictureBox8";
             movieCard_TableLayoutPanel8.SetRowSpan(thumbnailPictureBox8, 2);
             thumbnailPictureBox8.Size = new Size(59, 82);
@@ -820,9 +838,9 @@
             movieNameLabel8.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel8.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel8.Location = new Point(84, 15);
-            movieNameLabel8.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel8.Margin = new Padding(10);
             movieNameLabel8.Name = "movieNameLabel8";
-            movieNameLabel8.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel8.Padding = new Padding(3);
             movieNameLabel8.Size = new Size(214, 26);
             movieNameLabel8.TabIndex = 1;
             movieNameLabel8.Text = "Some Movie Title";
@@ -835,9 +853,9 @@
             movieSeatsLabel8.Dock = DockStyle.Fill;
             movieSeatsLabel8.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel8.Location = new Point(84, 61);
-            movieSeatsLabel8.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel8.Margin = new Padding(10);
             movieSeatsLabel8.Name = "movieSeatsLabel8";
-            movieSeatsLabel8.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel8.Padding = new Padding(3);
             movieSeatsLabel8.Size = new Size(214, 26);
             movieSeatsLabel8.TabIndex = 2;
             movieSeatsLabel8.Text = "label17";
@@ -857,7 +875,7 @@
             movieCard_TableLayoutPanel9.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel9.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel9.Name = "movieCard_TableLayoutPanel9";
-            movieCard_TableLayoutPanel9.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel9.Padding = new Padding(5);
             movieCard_TableLayoutPanel9.RowCount = 2;
             movieCard_TableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -870,7 +888,7 @@
             thumbnailPictureBox9.Dock = DockStyle.Fill;
             thumbnailPictureBox9.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox9.Location = new Point(10, 10);
-            thumbnailPictureBox9.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox9.Margin = new Padding(5);
             thumbnailPictureBox9.Name = "thumbnailPictureBox9";
             movieCard_TableLayoutPanel9.SetRowSpan(thumbnailPictureBox9, 2);
             thumbnailPictureBox9.Size = new Size(59, 82);
@@ -886,9 +904,9 @@
             movieNameLabel9.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel9.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel9.Location = new Point(84, 15);
-            movieNameLabel9.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel9.Margin = new Padding(10);
             movieNameLabel9.Name = "movieNameLabel9";
-            movieNameLabel9.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel9.Padding = new Padding(3);
             movieNameLabel9.Size = new Size(214, 26);
             movieNameLabel9.TabIndex = 1;
             movieNameLabel9.Text = "Some Movie Title";
@@ -901,9 +919,9 @@
             movieSeatsLabel9.Dock = DockStyle.Fill;
             movieSeatsLabel9.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel9.Location = new Point(84, 61);
-            movieSeatsLabel9.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel9.Margin = new Padding(10);
             movieSeatsLabel9.Name = "movieSeatsLabel9";
-            movieSeatsLabel9.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel9.Padding = new Padding(3);
             movieSeatsLabel9.Size = new Size(214, 26);
             movieSeatsLabel9.TabIndex = 2;
             movieSeatsLabel9.Text = "label19";
@@ -923,7 +941,7 @@
             movieCard_TableLayoutPanel10.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel10.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel10.Name = "movieCard_TableLayoutPanel10";
-            movieCard_TableLayoutPanel10.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel10.Padding = new Padding(5);
             movieCard_TableLayoutPanel10.RowCount = 2;
             movieCard_TableLayoutPanel10.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel10.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -936,7 +954,7 @@
             thumbnailPictureBox10.Dock = DockStyle.Fill;
             thumbnailPictureBox10.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox10.Location = new Point(10, 10);
-            thumbnailPictureBox10.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox10.Margin = new Padding(5);
             thumbnailPictureBox10.Name = "thumbnailPictureBox10";
             movieCard_TableLayoutPanel10.SetRowSpan(thumbnailPictureBox10, 2);
             thumbnailPictureBox10.Size = new Size(59, 82);
@@ -952,9 +970,9 @@
             movieNameLabel10.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel10.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel10.Location = new Point(84, 15);
-            movieNameLabel10.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel10.Margin = new Padding(10);
             movieNameLabel10.Name = "movieNameLabel10";
-            movieNameLabel10.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel10.Padding = new Padding(3);
             movieNameLabel10.Size = new Size(214, 26);
             movieNameLabel10.TabIndex = 1;
             movieNameLabel10.Text = "Some Movie Title";
@@ -967,9 +985,9 @@
             movieSeatsLabel10.Dock = DockStyle.Fill;
             movieSeatsLabel10.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel10.Location = new Point(84, 61);
-            movieSeatsLabel10.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel10.Margin = new Padding(10);
             movieSeatsLabel10.Name = "movieSeatsLabel10";
-            movieSeatsLabel10.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel10.Padding = new Padding(3);
             movieSeatsLabel10.Size = new Size(214, 26);
             movieSeatsLabel10.TabIndex = 2;
             movieSeatsLabel10.Text = "label21";
@@ -989,7 +1007,7 @@
             movieCard_TableLayoutPanel11.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel11.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel11.Name = "movieCard_TableLayoutPanel11";
-            movieCard_TableLayoutPanel11.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel11.Padding = new Padding(5);
             movieCard_TableLayoutPanel11.RowCount = 2;
             movieCard_TableLayoutPanel11.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel11.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -1002,7 +1020,7 @@
             thumbnailPictureBox11.Dock = DockStyle.Fill;
             thumbnailPictureBox11.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox11.Location = new Point(10, 10);
-            thumbnailPictureBox11.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox11.Margin = new Padding(5);
             thumbnailPictureBox11.Name = "thumbnailPictureBox11";
             movieCard_TableLayoutPanel11.SetRowSpan(thumbnailPictureBox11, 2);
             thumbnailPictureBox11.Size = new Size(59, 82);
@@ -1018,9 +1036,9 @@
             movieNameLabel11.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel11.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel11.Location = new Point(84, 15);
-            movieNameLabel11.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel11.Margin = new Padding(10);
             movieNameLabel11.Name = "movieNameLabel11";
-            movieNameLabel11.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel11.Padding = new Padding(3);
             movieNameLabel11.Size = new Size(214, 26);
             movieNameLabel11.TabIndex = 1;
             movieNameLabel11.Text = "Some Movie Title";
@@ -1033,9 +1051,9 @@
             movieSeatsLabel11.Dock = DockStyle.Fill;
             movieSeatsLabel11.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel11.Location = new Point(84, 61);
-            movieSeatsLabel11.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel11.Margin = new Padding(10);
             movieSeatsLabel11.Name = "movieSeatsLabel11";
-            movieSeatsLabel11.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel11.Padding = new Padding(3);
             movieSeatsLabel11.Size = new Size(214, 26);
             movieSeatsLabel11.TabIndex = 2;
             movieSeatsLabel11.Text = "label23";
@@ -1055,7 +1073,7 @@
             movieCard_TableLayoutPanel12.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel12.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel12.Name = "movieCard_TableLayoutPanel12";
-            movieCard_TableLayoutPanel12.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel12.Padding = new Padding(5);
             movieCard_TableLayoutPanel12.RowCount = 2;
             movieCard_TableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -1068,7 +1086,7 @@
             thumbnailPictureBox12.Dock = DockStyle.Fill;
             thumbnailPictureBox12.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox12.Location = new Point(10, 10);
-            thumbnailPictureBox12.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox12.Margin = new Padding(5);
             thumbnailPictureBox12.Name = "thumbnailPictureBox12";
             movieCard_TableLayoutPanel12.SetRowSpan(thumbnailPictureBox12, 2);
             thumbnailPictureBox12.Size = new Size(59, 82);
@@ -1084,9 +1102,9 @@
             movieNameLabel12.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel12.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel12.Location = new Point(84, 15);
-            movieNameLabel12.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel12.Margin = new Padding(10);
             movieNameLabel12.Name = "movieNameLabel12";
-            movieNameLabel12.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel12.Padding = new Padding(3);
             movieNameLabel12.Size = new Size(214, 26);
             movieNameLabel12.TabIndex = 1;
             movieNameLabel12.Text = "Some Movie Title";
@@ -1099,9 +1117,9 @@
             movieSeatsLabel12.Dock = DockStyle.Fill;
             movieSeatsLabel12.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel12.Location = new Point(84, 61);
-            movieSeatsLabel12.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel12.Margin = new Padding(10);
             movieSeatsLabel12.Name = "movieSeatsLabel12";
-            movieSeatsLabel12.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel12.Padding = new Padding(3);
             movieSeatsLabel12.Size = new Size(214, 26);
             movieSeatsLabel12.TabIndex = 2;
             movieSeatsLabel12.Text = "label25";
@@ -1121,7 +1139,7 @@
             movieCard_TableLayoutPanel13.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel13.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel13.Name = "movieCard_TableLayoutPanel13";
-            movieCard_TableLayoutPanel13.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel13.Padding = new Padding(5);
             movieCard_TableLayoutPanel13.RowCount = 2;
             movieCard_TableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -1134,7 +1152,7 @@
             thumbnailPictureBox13.Dock = DockStyle.Fill;
             thumbnailPictureBox13.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox13.Location = new Point(10, 10);
-            thumbnailPictureBox13.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox13.Margin = new Padding(5);
             thumbnailPictureBox13.Name = "thumbnailPictureBox13";
             movieCard_TableLayoutPanel13.SetRowSpan(thumbnailPictureBox13, 2);
             thumbnailPictureBox13.Size = new Size(59, 82);
@@ -1150,9 +1168,9 @@
             movieNameLabel13.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel13.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel13.Location = new Point(84, 15);
-            movieNameLabel13.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel13.Margin = new Padding(10);
             movieNameLabel13.Name = "movieNameLabel13";
-            movieNameLabel13.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel13.Padding = new Padding(3);
             movieNameLabel13.Size = new Size(214, 26);
             movieNameLabel13.TabIndex = 1;
             movieNameLabel13.Text = "Some Movie Title";
@@ -1165,9 +1183,9 @@
             movieSeatsLabel13.Dock = DockStyle.Fill;
             movieSeatsLabel13.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel13.Location = new Point(84, 61);
-            movieSeatsLabel13.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel13.Margin = new Padding(10);
             movieSeatsLabel13.Name = "movieSeatsLabel13";
-            movieSeatsLabel13.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel13.Padding = new Padding(3);
             movieSeatsLabel13.Size = new Size(214, 26);
             movieSeatsLabel13.TabIndex = 2;
             movieSeatsLabel13.Text = "label27";
@@ -1187,7 +1205,7 @@
             movieCard_TableLayoutPanel14.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel14.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel14.Name = "movieCard_TableLayoutPanel14";
-            movieCard_TableLayoutPanel14.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel14.Padding = new Padding(5);
             movieCard_TableLayoutPanel14.RowCount = 2;
             movieCard_TableLayoutPanel14.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel14.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -1200,7 +1218,7 @@
             thumbnailPictureBox14.Dock = DockStyle.Fill;
             thumbnailPictureBox14.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox14.Location = new Point(10, 10);
-            thumbnailPictureBox14.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox14.Margin = new Padding(5);
             thumbnailPictureBox14.Name = "thumbnailPictureBox14";
             movieCard_TableLayoutPanel14.SetRowSpan(thumbnailPictureBox14, 2);
             thumbnailPictureBox14.Size = new Size(59, 82);
@@ -1216,9 +1234,9 @@
             movieNameLabel14.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel14.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel14.Location = new Point(84, 15);
-            movieNameLabel14.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel14.Margin = new Padding(10);
             movieNameLabel14.Name = "movieNameLabel14";
-            movieNameLabel14.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel14.Padding = new Padding(3);
             movieNameLabel14.Size = new Size(214, 26);
             movieNameLabel14.TabIndex = 1;
             movieNameLabel14.Text = "Some Movie Title";
@@ -1231,9 +1249,9 @@
             movieSeatsLabel14.Dock = DockStyle.Fill;
             movieSeatsLabel14.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel14.Location = new Point(84, 61);
-            movieSeatsLabel14.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel14.Margin = new Padding(10);
             movieSeatsLabel14.Name = "movieSeatsLabel14";
-            movieSeatsLabel14.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel14.Padding = new Padding(3);
             movieSeatsLabel14.Size = new Size(214, 26);
             movieSeatsLabel14.TabIndex = 2;
             movieSeatsLabel14.Text = "label29";
@@ -1253,7 +1271,7 @@
             movieCard_TableLayoutPanel15.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel15.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel15.Name = "movieCard_TableLayoutPanel15";
-            movieCard_TableLayoutPanel15.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel15.Padding = new Padding(5);
             movieCard_TableLayoutPanel15.RowCount = 2;
             movieCard_TableLayoutPanel15.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel15.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -1266,7 +1284,7 @@
             thumbnailPictureBox15.Dock = DockStyle.Fill;
             thumbnailPictureBox15.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox15.Location = new Point(10, 10);
-            thumbnailPictureBox15.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox15.Margin = new Padding(5);
             thumbnailPictureBox15.Name = "thumbnailPictureBox15";
             movieCard_TableLayoutPanel15.SetRowSpan(thumbnailPictureBox15, 2);
             thumbnailPictureBox15.Size = new Size(59, 82);
@@ -1282,9 +1300,9 @@
             movieNameLabel15.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel15.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel15.Location = new Point(84, 15);
-            movieNameLabel15.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel15.Margin = new Padding(10);
             movieNameLabel15.Name = "movieNameLabel15";
-            movieNameLabel15.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel15.Padding = new Padding(3);
             movieNameLabel15.Size = new Size(214, 26);
             movieNameLabel15.TabIndex = 1;
             movieNameLabel15.Text = "Some Movie Title";
@@ -1297,9 +1315,9 @@
             movieSeatsLabel15.Dock = DockStyle.Fill;
             movieSeatsLabel15.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel15.Location = new Point(84, 61);
-            movieSeatsLabel15.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel15.Margin = new Padding(10);
             movieSeatsLabel15.Name = "movieSeatsLabel15";
-            movieSeatsLabel15.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel15.Padding = new Padding(3);
             movieSeatsLabel15.Size = new Size(214, 26);
             movieSeatsLabel15.TabIndex = 2;
             movieSeatsLabel15.Text = "label31";
@@ -1319,7 +1337,7 @@
             movieCard_TableLayoutPanel16.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel16.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel16.Name = "movieCard_TableLayoutPanel16";
-            movieCard_TableLayoutPanel16.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel16.Padding = new Padding(5);
             movieCard_TableLayoutPanel16.RowCount = 2;
             movieCard_TableLayoutPanel16.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel16.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -1332,7 +1350,7 @@
             thumbnailPictureBox16.Dock = DockStyle.Fill;
             thumbnailPictureBox16.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox16.Location = new Point(10, 10);
-            thumbnailPictureBox16.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox16.Margin = new Padding(5);
             thumbnailPictureBox16.Name = "thumbnailPictureBox16";
             movieCard_TableLayoutPanel16.SetRowSpan(thumbnailPictureBox16, 2);
             thumbnailPictureBox16.Size = new Size(59, 82);
@@ -1348,9 +1366,9 @@
             movieNameLabel16.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel16.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel16.Location = new Point(84, 15);
-            movieNameLabel16.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel16.Margin = new Padding(10);
             movieNameLabel16.Name = "movieNameLabel16";
-            movieNameLabel16.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel16.Padding = new Padding(3);
             movieNameLabel16.Size = new Size(214, 26);
             movieNameLabel16.TabIndex = 1;
             movieNameLabel16.Text = "Some Movie Title";
@@ -1363,9 +1381,9 @@
             movieSeatsLabel16.Dock = DockStyle.Fill;
             movieSeatsLabel16.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel16.Location = new Point(84, 61);
-            movieSeatsLabel16.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel16.Margin = new Padding(10);
             movieSeatsLabel16.Name = "movieSeatsLabel16";
-            movieSeatsLabel16.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel16.Padding = new Padding(3);
             movieSeatsLabel16.Size = new Size(214, 26);
             movieSeatsLabel16.TabIndex = 2;
             movieSeatsLabel16.Text = "label33";
@@ -1385,7 +1403,7 @@
             movieCard_TableLayoutPanel17.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel17.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel17.Name = "movieCard_TableLayoutPanel17";
-            movieCard_TableLayoutPanel17.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel17.Padding = new Padding(5);
             movieCard_TableLayoutPanel17.RowCount = 2;
             movieCard_TableLayoutPanel17.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel17.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -1398,7 +1416,7 @@
             thumbnailPictureBox17.Dock = DockStyle.Fill;
             thumbnailPictureBox17.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox17.Location = new Point(10, 10);
-            thumbnailPictureBox17.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox17.Margin = new Padding(5);
             thumbnailPictureBox17.Name = "thumbnailPictureBox17";
             movieCard_TableLayoutPanel17.SetRowSpan(thumbnailPictureBox17, 2);
             thumbnailPictureBox17.Size = new Size(59, 82);
@@ -1414,9 +1432,9 @@
             movieNameLabel17.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel17.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel17.Location = new Point(84, 15);
-            movieNameLabel17.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel17.Margin = new Padding(10);
             movieNameLabel17.Name = "movieNameLabel17";
-            movieNameLabel17.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel17.Padding = new Padding(3);
             movieNameLabel17.Size = new Size(214, 26);
             movieNameLabel17.TabIndex = 1;
             movieNameLabel17.Text = "Some Movie Title";
@@ -1429,9 +1447,9 @@
             movieSeatsLabel17.Dock = DockStyle.Fill;
             movieSeatsLabel17.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel17.Location = new Point(84, 61);
-            movieSeatsLabel17.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel17.Margin = new Padding(10);
             movieSeatsLabel17.Name = "movieSeatsLabel17";
-            movieSeatsLabel17.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel17.Padding = new Padding(3);
             movieSeatsLabel17.Size = new Size(214, 26);
             movieSeatsLabel17.TabIndex = 2;
             movieSeatsLabel17.Text = "label35";
@@ -1451,7 +1469,7 @@
             movieCard_TableLayoutPanel18.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel18.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel18.Name = "movieCard_TableLayoutPanel18";
-            movieCard_TableLayoutPanel18.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel18.Padding = new Padding(5);
             movieCard_TableLayoutPanel18.RowCount = 2;
             movieCard_TableLayoutPanel18.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel18.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -1464,7 +1482,7 @@
             thumbnailPictureBox18.Dock = DockStyle.Fill;
             thumbnailPictureBox18.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox18.Location = new Point(10, 10);
-            thumbnailPictureBox18.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox18.Margin = new Padding(5);
             thumbnailPictureBox18.Name = "thumbnailPictureBox18";
             movieCard_TableLayoutPanel18.SetRowSpan(thumbnailPictureBox18, 2);
             thumbnailPictureBox18.Size = new Size(59, 82);
@@ -1480,9 +1498,9 @@
             movieNameLabel18.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel18.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel18.Location = new Point(84, 15);
-            movieNameLabel18.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel18.Margin = new Padding(10);
             movieNameLabel18.Name = "movieNameLabel18";
-            movieNameLabel18.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel18.Padding = new Padding(3);
             movieNameLabel18.Size = new Size(214, 26);
             movieNameLabel18.TabIndex = 1;
             movieNameLabel18.Text = "Some Movie Title";
@@ -1495,9 +1513,9 @@
             movieSeatsLabel18.Dock = DockStyle.Fill;
             movieSeatsLabel18.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel18.Location = new Point(84, 61);
-            movieSeatsLabel18.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel18.Margin = new Padding(10);
             movieSeatsLabel18.Name = "movieSeatsLabel18";
-            movieSeatsLabel18.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel18.Padding = new Padding(3);
             movieSeatsLabel18.Size = new Size(214, 26);
             movieSeatsLabel18.TabIndex = 2;
             movieSeatsLabel18.Text = "label37";
@@ -1517,7 +1535,7 @@
             movieCard_TableLayoutPanel19.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel19.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel19.Name = "movieCard_TableLayoutPanel19";
-            movieCard_TableLayoutPanel19.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel19.Padding = new Padding(5);
             movieCard_TableLayoutPanel19.RowCount = 2;
             movieCard_TableLayoutPanel19.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel19.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -1530,7 +1548,7 @@
             thumbnailPictureBox19.Dock = DockStyle.Fill;
             thumbnailPictureBox19.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox19.Location = new Point(10, 10);
-            thumbnailPictureBox19.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox19.Margin = new Padding(5);
             thumbnailPictureBox19.Name = "thumbnailPictureBox19";
             movieCard_TableLayoutPanel19.SetRowSpan(thumbnailPictureBox19, 2);
             thumbnailPictureBox19.Size = new Size(59, 82);
@@ -1546,9 +1564,9 @@
             movieNameLabel19.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             movieNameLabel19.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel19.Location = new Point(84, 15);
-            movieNameLabel19.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel19.Margin = new Padding(10);
             movieNameLabel19.Name = "movieNameLabel19";
-            movieNameLabel19.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel19.Padding = new Padding(3);
             movieNameLabel19.Size = new Size(214, 26);
             movieNameLabel19.TabIndex = 1;
             movieNameLabel19.Text = "Some Movie Title";
@@ -1561,9 +1579,9 @@
             movieSeatsLabel19.Dock = DockStyle.Fill;
             movieSeatsLabel19.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel19.Location = new Point(84, 61);
-            movieSeatsLabel19.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel19.Margin = new Padding(10);
             movieSeatsLabel19.Name = "movieSeatsLabel19";
-            movieSeatsLabel19.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel19.Padding = new Padding(3);
             movieSeatsLabel19.Size = new Size(214, 26);
             movieSeatsLabel19.TabIndex = 2;
             movieSeatsLabel19.Text = "label39";
@@ -1583,7 +1601,7 @@
             movieCard_TableLayoutPanel20.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel20.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel20.Name = "movieCard_TableLayoutPanel20";
-            movieCard_TableLayoutPanel20.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel20.Padding = new Padding(5);
             movieCard_TableLayoutPanel20.RowCount = 2;
             movieCard_TableLayoutPanel20.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel20.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -1596,7 +1614,7 @@
             thumbnailPictureBox20.Dock = DockStyle.Fill;
             thumbnailPictureBox20.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox20.Location = new Point(10, 10);
-            thumbnailPictureBox20.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox20.Margin = new Padding(5);
             thumbnailPictureBox20.Name = "thumbnailPictureBox20";
             movieCard_TableLayoutPanel20.SetRowSpan(thumbnailPictureBox20, 2);
             thumbnailPictureBox20.Size = new Size(59, 82);
@@ -1610,9 +1628,9 @@
             movieNameLabel20.Dock = DockStyle.Fill;
             movieNameLabel20.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel20.Location = new Point(84, 15);
-            movieNameLabel20.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel20.Margin = new Padding(10);
             movieNameLabel20.Name = "movieNameLabel20";
-            movieNameLabel20.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel20.Padding = new Padding(3);
             movieNameLabel20.Size = new Size(214, 26);
             movieNameLabel20.TabIndex = 1;
             movieNameLabel20.Text = "Some Movie Title";
@@ -1625,9 +1643,9 @@
             movieSeatsLabel20.Dock = DockStyle.Fill;
             movieSeatsLabel20.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel20.Location = new Point(84, 61);
-            movieSeatsLabel20.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel20.Margin = new Padding(10);
             movieSeatsLabel20.Name = "movieSeatsLabel20";
-            movieSeatsLabel20.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel20.Padding = new Padding(3);
             movieSeatsLabel20.Size = new Size(214, 26);
             movieSeatsLabel20.TabIndex = 2;
             movieSeatsLabel20.Text = "label41";
@@ -1647,7 +1665,7 @@
             movieCard_TableLayoutPanel21.Margin = new Padding(0, 10, 0, 10);
             movieCard_TableLayoutPanel21.MinimumSize = new Size(313, 102);
             movieCard_TableLayoutPanel21.Name = "movieCard_TableLayoutPanel21";
-            movieCard_TableLayoutPanel21.Padding = new Padding(5, 5, 5, 5);
+            movieCard_TableLayoutPanel21.Padding = new Padding(5);
             movieCard_TableLayoutPanel21.RowCount = 2;
             movieCard_TableLayoutPanel21.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             movieCard_TableLayoutPanel21.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -1660,7 +1678,7 @@
             thumbnailPictureBox21.Dock = DockStyle.Fill;
             thumbnailPictureBox21.Image = Properties.Resources.TaylorSwift;
             thumbnailPictureBox21.Location = new Point(10, 10);
-            thumbnailPictureBox21.Margin = new Padding(5, 5, 5, 5);
+            thumbnailPictureBox21.Margin = new Padding(5);
             thumbnailPictureBox21.Name = "thumbnailPictureBox21";
             movieCard_TableLayoutPanel21.SetRowSpan(thumbnailPictureBox21, 2);
             thumbnailPictureBox21.Size = new Size(59, 82);
@@ -1674,9 +1692,9 @@
             movieNameLabel21.Dock = DockStyle.Fill;
             movieNameLabel21.ForeColor = SystemColors.ControlLightLight;
             movieNameLabel21.Location = new Point(84, 15);
-            movieNameLabel21.Margin = new Padding(10, 10, 10, 10);
+            movieNameLabel21.Margin = new Padding(10);
             movieNameLabel21.Name = "movieNameLabel21";
-            movieNameLabel21.Padding = new Padding(3, 3, 3, 3);
+            movieNameLabel21.Padding = new Padding(3);
             movieNameLabel21.Size = new Size(214, 26);
             movieNameLabel21.TabIndex = 1;
             movieNameLabel21.Text = "Some Movie Title";
@@ -1689,13 +1707,275 @@
             movieSeatsLabel21.Dock = DockStyle.Fill;
             movieSeatsLabel21.ForeColor = SystemColors.ControlLight;
             movieSeatsLabel21.Location = new Point(84, 61);
-            movieSeatsLabel21.Margin = new Padding(10, 10, 10, 10);
+            movieSeatsLabel21.Margin = new Padding(10);
             movieSeatsLabel21.Name = "movieSeatsLabel21";
-            movieSeatsLabel21.Padding = new Padding(3, 3, 3, 3);
+            movieSeatsLabel21.Padding = new Padding(3);
             movieSeatsLabel21.Size = new Size(214, 26);
             movieSeatsLabel21.TabIndex = 2;
             movieSeatsLabel21.Text = "label43";
             movieSeatsLabel21.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.BackColor = Color.FromArgb(20, 20, 20);
+            tableLayoutPanel1.ColumnCount = 18;
+            managerView_TableLayout.SetColumnSpan(tableLayoutPanel1, 3);
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.555554F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.55555439F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.55555439F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.55555439F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.55555439F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.55555439F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.55555439F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.55555439F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.55555439F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.55555439F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.55555439F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.55555439F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.55555439F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.55555439F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.55555439F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.55555439F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.55555439F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.55555439F));
+            tableLayoutPanel1.Controls.Add(movieRemoveDateButton, 2, 15);
+            tableLayoutPanel1.Controls.Add(movieDateTimes_Listbox, 2, 9);
+            tableLayoutPanel1.Controls.Add(label9, 2, 8);
+            tableLayoutPanel1.Controls.Add(label5, 0, 0);
+            tableLayoutPanel1.Controls.Add(movieDate_DateTimePicker, 7, 4);
+            tableLayoutPanel1.Controls.Add(label8, 7, 3);
+            tableLayoutPanel1.Controls.Add(label6, 0, 1);
+            tableLayoutPanel1.Controls.Add(movieThumbnail_PictureBox, 0, 2);
+            tableLayoutPanel1.Controls.Add(movieTitle_TextBox, 7, 2);
+            tableLayoutPanel1.Controls.Add(label7, 7, 1);
+            tableLayoutPanel1.Controls.Add(movieAddDate_Button, 7, 5);
+            tableLayoutPanel1.Controls.Add(movieAdd_Button, 0, 17);
+            tableLayoutPanel1.Controls.Add(movieDelete_Button, 6, 17);
+            tableLayoutPanel1.Controls.Add(movieSave_Button, 13, 17);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(352, 116);
+            tableLayoutPanel1.Margin = new Padding(20, 10, 10, 10);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.Padding = new Padding(10);
+            tableLayoutPanel1.RowCount = 18;
+            managerView_TableLayout.SetRowSpan(tableLayoutPanel1, 9);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.060728F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.060728F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.28744841F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.28744841F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.28744841F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.28744841F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.060728F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.060728F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.060728F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.060728F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.060728F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.060728F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.060728F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.060728F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.060728F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.060728F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.060728F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.060728F));
+            tableLayoutPanel1.Size = new Size(453, 846);
+            tableLayoutPanel1.TabIndex = 17;
+            // 
+            // movieRemoveDateButton
+            // 
+            movieRemoveDateButton.BackColor = Color.Salmon;
+            tableLayoutPanel1.SetColumnSpan(movieRemoveDateButton, 14);
+            movieRemoveDateButton.Dock = DockStyle.Fill;
+            movieRemoveDateButton.Font = new Font("Copperplate Gothic Bold", 9.75F);
+            movieRemoveDateButton.ForeColor = SystemColors.ControlLightLight;
+            movieRemoveDateButton.Location = new Point(63, 706);
+            movieRemoveDateButton.Margin = new Padding(5);
+            movieRemoveDateButton.Name = "movieRemoveDateButton";
+            movieRemoveDateButton.Size = new Size(326, 31);
+            movieRemoveDateButton.TabIndex = 31;
+            movieRemoveDateButton.Text = "Remove Date";
+            movieRemoveDateButton.UseVisualStyleBackColor = false;
+            movieRemoveDateButton.Click += movieRemoveDateButton_Click;
+            // 
+            // movieDateTimes_Listbox
+            // 
+            tableLayoutPanel1.SetColumnSpan(movieDateTimes_Listbox, 14);
+            movieDateTimes_Listbox.Dock = DockStyle.Fill;
+            movieDateTimes_Listbox.FormattingEnabled = true;
+            movieDateTimes_Listbox.ItemHeight = 15;
+            movieDateTimes_Listbox.Location = new Point(61, 458);
+            movieDateTimes_Listbox.Name = "movieDateTimes_Listbox";
+            tableLayoutPanel1.SetRowSpan(movieDateTimes_Listbox, 6);
+            movieDateTimes_Listbox.Size = new Size(330, 240);
+            movieDateTimes_Listbox.TabIndex = 29;
+            // 
+            // label9
+            // 
+            label9.BackColor = Color.Gray;
+            tableLayoutPanel1.SetColumnSpan(label9, 14);
+            label9.Dock = DockStyle.Fill;
+            label9.Font = new Font("Gill Sans MT", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label9.ForeColor = SystemColors.ControlLightLight;
+            label9.Location = new Point(58, 424);
+            label9.Margin = new Padding(0, 10, 0, 5);
+            label9.Name = "label9";
+            label9.Size = new Size(336, 26);
+            label9.TabIndex = 30;
+            label9.Text = "Movie Dates";
+            label9.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            label5.BackColor = Color.FromArgb(64, 64, 64);
+            tableLayoutPanel1.SetColumnSpan(label5, 18);
+            label5.Dock = DockStyle.Fill;
+            label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = SystemColors.ControlLightLight;
+            label5.Location = new Point(10, 10);
+            label5.Margin = new Padding(0, 0, 0, 5);
+            label5.Name = "label5";
+            label5.Size = new Size(433, 36);
+            label5.TabIndex = 17;
+            label5.Text = "Movie Editor";
+            label5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // movieDate_DateTimePicker
+            // 
+            tableLayoutPanel1.SetColumnSpan(movieDate_DateTimePicker, 11);
+            movieDate_DateTimePicker.Dock = DockStyle.Fill;
+            movieDate_DateTimePicker.Format = DateTimePickerFormat.Time;
+            movieDate_DateTimePicker.Location = new Point(183, 217);
+            movieDate_DateTimePicker.Margin = new Padding(5);
+            movieDate_DateTimePicker.Name = "movieDate_DateTimePicker";
+            movieDate_DateTimePicker.Size = new Size(255, 23);
+            movieDate_DateTimePicker.TabIndex = 26;
+            // 
+            // label8
+            // 
+            label8.BackColor = Color.Gray;
+            tableLayoutPanel1.SetColumnSpan(label8, 11);
+            label8.Dock = DockStyle.Fill;
+            label8.Font = new Font("Gill Sans MT", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label8.ForeColor = SystemColors.ControlLightLight;
+            label8.Location = new Point(183, 167);
+            label8.Margin = new Padding(5, 15, 5, 15);
+            label8.Name = "label8";
+            label8.Size = new Size(255, 30);
+            label8.TabIndex = 27;
+            label8.Text = "Movie Dates";
+            label8.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            label6.BackColor = Color.Gray;
+            tableLayoutPanel1.SetColumnSpan(label6, 6);
+            label6.Dock = DockStyle.Fill;
+            label6.Font = new Font("Gill Sans MT", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label6.ForeColor = SystemColors.ControlLightLight;
+            label6.Location = new Point(15, 56);
+            label6.Margin = new Padding(5);
+            label6.Name = "label6";
+            label6.Size = new Size(134, 31);
+            label6.TabIndex = 23;
+            label6.Text = "Movie Tumbnail";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // movieThumbnail_PictureBox
+            // 
+            movieThumbnail_PictureBox.BackColor = Color.Honeydew;
+            tableLayoutPanel1.SetColumnSpan(movieThumbnail_PictureBox, 6);
+            movieThumbnail_PictureBox.Dock = DockStyle.Fill;
+            movieThumbnail_PictureBox.Location = new Point(15, 97);
+            movieThumbnail_PictureBox.Margin = new Padding(5);
+            movieThumbnail_PictureBox.Name = "movieThumbnail_PictureBox";
+            tableLayoutPanel1.SetRowSpan(movieThumbnail_PictureBox, 4);
+            movieThumbnail_PictureBox.Size = new Size(134, 230);
+            movieThumbnail_PictureBox.TabIndex = 22;
+            movieThumbnail_PictureBox.TabStop = false;
+            // 
+            // movieTitle_TextBox
+            // 
+            tableLayoutPanel1.SetColumnSpan(movieTitle_TextBox, 11);
+            movieTitle_TextBox.Dock = DockStyle.Fill;
+            movieTitle_TextBox.Location = new Point(183, 102);
+            movieTitle_TextBox.Margin = new Padding(5, 10, 5, 10);
+            movieTitle_TextBox.Name = "movieTitle_TextBox";
+            movieTitle_TextBox.Size = new Size(255, 23);
+            movieTitle_TextBox.TabIndex = 25;
+            // 
+            // label7
+            // 
+            label7.BackColor = Color.Gray;
+            tableLayoutPanel1.SetColumnSpan(label7, 11);
+            label7.Dock = DockStyle.Fill;
+            label7.Font = new Font("Gill Sans MT", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label7.ForeColor = SystemColors.ControlLightLight;
+            label7.Location = new Point(183, 56);
+            label7.Margin = new Padding(5);
+            label7.Name = "label7";
+            label7.Size = new Size(255, 31);
+            label7.TabIndex = 24;
+            label7.Text = "Movie Title";
+            label7.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // movieAddDate_Button
+            // 
+            movieAddDate_Button.BackColor = Color.LightGreen;
+            tableLayoutPanel1.SetColumnSpan(movieAddDate_Button, 11);
+            movieAddDate_Button.Dock = DockStyle.Fill;
+            movieAddDate_Button.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieAddDate_Button.Location = new Point(183, 287);
+            movieAddDate_Button.Margin = new Padding(5, 15, 5, 15);
+            movieAddDate_Button.Name = "movieAddDate_Button";
+            movieAddDate_Button.Size = new Size(255, 30);
+            movieAddDate_Button.TabIndex = 32;
+            movieAddDate_Button.Text = "Add Date";
+            movieAddDate_Button.UseVisualStyleBackColor = false;
+            movieAddDate_Button.Click += movieAddDate_Button_Click;
+            // 
+            // movieAdd_Button
+            // 
+            movieAdd_Button.BackColor = Color.MediumSpringGreen;
+            tableLayoutPanel1.SetColumnSpan(movieAdd_Button, 5);
+            movieAdd_Button.Dock = DockStyle.Fill;
+            movieAdd_Button.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            movieAdd_Button.ForeColor = SystemColors.ControlLightLight;
+            movieAdd_Button.Location = new Point(20, 793);
+            movieAdd_Button.Margin = new Padding(10);
+            movieAdd_Button.Name = "movieAdd_Button";
+            movieAdd_Button.Size = new Size(100, 33);
+            movieAdd_Button.TabIndex = 33;
+            movieAdd_Button.Text = "Add";
+            movieAdd_Button.UseVisualStyleBackColor = false;
+            // 
+            // movieDelete_Button
+            // 
+            movieDelete_Button.BackColor = Color.Tomato;
+            tableLayoutPanel1.SetColumnSpan(movieDelete_Button, 6);
+            movieDelete_Button.Dock = DockStyle.Fill;
+            movieDelete_Button.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            movieDelete_Button.ForeColor = SystemColors.ControlLightLight;
+            movieDelete_Button.Location = new Point(164, 793);
+            movieDelete_Button.Margin = new Padding(10);
+            movieDelete_Button.Name = "movieDelete_Button";
+            movieDelete_Button.Size = new Size(124, 33);
+            movieDelete_Button.TabIndex = 34;
+            movieDelete_Button.Text = "Delete";
+            movieDelete_Button.UseVisualStyleBackColor = false;
+            // 
+            // movieSave_Button
+            // 
+            movieSave_Button.BackColor = Color.DeepSkyBlue;
+            tableLayoutPanel1.SetColumnSpan(movieSave_Button, 5);
+            movieSave_Button.Dock = DockStyle.Fill;
+            movieSave_Button.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            movieSave_Button.ForeColor = SystemColors.ControlLightLight;
+            movieSave_Button.Location = new Point(332, 793);
+            movieSave_Button.Margin = new Padding(10);
+            movieSave_Button.Name = "movieSave_Button";
+            movieSave_Button.Size = new Size(101, 33);
+            movieSave_Button.TabIndex = 35;
+            movieSave_Button.Text = "Save";
+            movieSave_Button.UseVisualStyleBackColor = false;
             // 
             // movieCard_TableLayoutPanel25
             // 
@@ -1745,7 +2025,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(47, 47, 47);
-            ClientSize = new Size(1132, 591);
+            ClientSize = new Size(1631, 982);
             Controls.Add(managerView_TableLayout);
             Name = "ManagerView";
             Text = "ManagerView";
@@ -1818,6 +2098,9 @@
             movieCard_TableLayoutPanel21.ResumeLayout(false);
             movieCard_TableLayoutPanel21.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox21).EndInit();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)movieThumbnail_PictureBox).EndInit();
             movieCard_TableLayoutPanel25.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox25).EndInit();
             ResumeLayout(false);
@@ -1920,5 +2203,25 @@
         private Label movieSeatsLabel21;
         private TableLayoutPanel movieCard_TableLayoutPanel1;
         private Label movieSeatsLabel3;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Panel panel1;
+        private Label label5;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private PictureBox movieThumbnail_PictureBox;
+        private Label label6;
+        private Label label7;
+        private Button button5;
+        private Label label8;
+        private DateTimePicker movieDate_DateTimePicker;
+        private TextBox movieTitle_TextBox;
+        private Button movieRemoveDateButton;
+        private Label label9;
+        private ListBox movieDateTimes_Listbox;
+        private Button movieAddDate_Button;
+        private Button movieDelete_Button;
+        private Button movieAdd_Button;
+        private Button movieSave_Button;
     }
 }

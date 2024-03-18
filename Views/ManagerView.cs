@@ -1,4 +1,5 @@
 ﻿using CS161_FinalProject_MovieTheaterManager.Data;
+using System.Reflection.Metadata.Ecma335;
 using System.Text.Json;
 
 
@@ -33,7 +34,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 
                     //Turning our demo image into a bye array so that it can be saved as JSON. For testing sakes.
 
-                    movie.tumbnail = theaterDataManager.convertImageToBas64String(@"C:\Users\Nathaniel\Source\Repos\DeveloperSpoot\CS161_FinalProject_MovieTheaterManager\MovieThumbnails\taylor-swift-the-eras-tour-movie-poster.png"); // Setting our thumbnail that string we creating.
+                    movie.tumbnail = theaterDataManager.convertImageToBas64String(Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + @"\MovieThumbnails\taylor-swift-the-eras-tour-movie-poster.png"); // Setting our thumbnail that string we creating.
 
 
                     List<DateTime> availableTimes = new List<DateTime>(); // Creating a list instance of available times.
@@ -85,7 +86,8 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
         private void ManagerViewResized(object sender, EventArgs e)
         {
             titleMoviePanel.Width = (flowLayoutPanel1.Width - 20);
-            for (int i = 1; i < 22; i++) {
+            for (int i = 1; i < 22; i++)
+            {
                 ((TableLayoutPanel)this.Controls.Find($"movieCard_TableLayoutPanel{i}", true)[0]).Width = (flowLayoutPanel1.Width - 20);
                 ((TableLayoutPanel)this.Controls.Find($"movieCard_TableLayoutPanel{i}", true)[0]).Height = (flowLayoutPanel1.Width) / 3;
 
@@ -122,15 +124,15 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                 //Looping through all saved movies to populate the movie cards.
                 MovieColelctions.movies.ForEach(movie => //Foreach movie
                 {
-                    TableLayoutPanel moviePanel = (TableLayoutPanel) this.Controls.Find($"movieCard_TableLayoutPanel{movie.ident}", true)[0];
-                    
+                    TableLayoutPanel moviePanel = (TableLayoutPanel)this.Controls.Find($"movieCard_TableLayoutPanel{movie.ident}", true)[0];
+
                     PictureBox movieThumbnail = (PictureBox)this.Controls.Find($"thumbnailPictureBox{movie.ident}", true)[0]; // retreiveing the movie picture box.
 
                     //Setting the Movie thumbnail.
                     movieThumbnail.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(movie.tumbnail))); //Populating the movie thumbnail and turning our image string back to an image.
                     movieThumbnail.AccessibleDescription = movieIndex.ToString();
 
-                  ((Label)this.Controls.Find($"movieNameLabel{movie.ident}", true)[0]).Text = movie.title; // Populating the movie title.
+                    ((Label)this.Controls.Find($"movieNameLabel{movie.ident}", true)[0]).Text = movie.title; // Populating the movie title.
 
                     int seatsPossible = movie.availablity.Count * 44; // Variable to calculate the total number of seat options avialable per movie.
 
@@ -159,6 +161,39 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 
 
             return successful; //Returning our flag.
+        }
+
+        List<DateTime> movieEditor_DateTimes = new List<DateTime>();
+
+        private void movieAddDate_Button_Click(object sender, EventArgs e)
+        {
+            DateTimePicker movieDatePicker = movieDate_DateTimePicker;
+
+            bool? warningAnswer = null;
+            if(movieDatePicker.Value < DateTime.Now) {
+               DialogResult warningResault =  MessageBox.Show("Mmmm... You sure about that?. You are adding a date and time that is in the past", "Warrning", MessageBoxButtons.YesNo);
+
+                if(warningResault.Equals(DialogResult.No)) {
+                    warningAnswer = false;
+                }
+                else
+                {
+                    warningAnswer = true;
+                }
+            }
+
+            if(warningAnswer == false)
+            {
+                return;
+            }
+
+            movieEditor_DateTimes.Add(movieDatePicker.Value);
+            movieDateTimes_Listbox.Items.Add(movieDatePicker.Value);
+        }
+
+        private void movieRemoveDateButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
