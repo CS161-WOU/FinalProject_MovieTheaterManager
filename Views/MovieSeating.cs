@@ -221,7 +221,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                 {
                     TheaterDataManager.reservation newReservation = new TheaterDataManager.reservation(); //Creating a new instance of our custom reservation class.
                     newReservation.ident = reservationIDENT; // Setting the reservation id to the generated IDENT. Serves a confirmation code ish.
-                    newReservation.name = Name; // Setting the customers name for the reservations.
+                    newReservation.name = reservationName; // Setting the customers name for the reservations.
                     newReservation.seatPosition = seat.Text; // Setting the seat position for the rservation.
                     newReservation.movieIdent = MovieCollections.movies[movieIndex].ident; // And setting the movie ID for the rservation.
                     newReservation.ScreeningTime = (DateTime)selectedShowTime; // Set the showtime for the reservation.

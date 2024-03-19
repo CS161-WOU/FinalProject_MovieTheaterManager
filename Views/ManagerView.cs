@@ -460,11 +460,30 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                     }
                 }
 
-               
+                int confirmationCode = int.Parse(confirmationCode_TextBox.Text); // getting the inputted confirmation code.
 
-                int seatIndex = 1; // Index vairbale to track the current seat.
+                bool confirmationFound = false;
 
-               ///Loop through each movie and through each reservation check if said reservation matches with the entered confirmation code.
+                //Loop through each movie and through each reservation check if said reservation matches with the entered confirmation code.
+                MovieCollections.movies.ForEach(movie =>
+                {
+                    movie.reservations.ForEach(seat =>
+                    {
+                        Label seatLabel = (Label)this.Controls.Find($"seat{seat.seatPosition}_Label", true)[0]; //Getting the current seat Label object.
+                        if(seat.ident == confirmationCode) // Checking to see if the confirmation codes match.
+                        {
+                            seatLabel.BackColor = Color.Tomato; // Updating the seat.
+                            movieTitle_Label.Text = movie.title;
+                            reservationName_Label.Text = seat.name;
+                            confirmationFound = true;
+                        }
+                    });
+                });
+
+                if(confirmationFound == false)
+                {
+                    MessageBox.Show("No reservations were found under the entered confirmation code.");
+                }
             }
             catch (Exception ex)
             {

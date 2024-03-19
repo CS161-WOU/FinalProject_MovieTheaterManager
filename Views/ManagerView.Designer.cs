@@ -135,11 +135,8 @@
             movieDelete_Button = new Button();
             movieSave_Button = new Button();
             tableLayoutPanel2 = new TableLayoutPanel();
-            movieCard_TableLayoutPanel25 = new TableLayoutPanel();
-            thumbnailPictureBox25 = new PictureBox();
-            label11 = new Label();
-            openFileDialog1 = new OpenFileDialog();
-            label1 = new Label();
+            movieTitle_Label = new Label();
+            label3 = new Label();
             tableLayoutPanel3 = new TableLayoutPanel();
             seatC2R5_Label = new Label();
             seatC3R5_Label = new Label();
@@ -185,11 +182,16 @@
             seatC5R1_Label = new Label();
             seatC6R1_Label = new Label();
             seatC7R1_Label = new Label();
+            label1 = new Label();
             label2 = new Label();
             confirmationCode_TextBox = new TextBox();
             confirmationCheck_Button = new Button();
-            label3 = new Label();
-            movieTitle_Label = new Label();
+            movieCard_TableLayoutPanel25 = new TableLayoutPanel();
+            thumbnailPictureBox25 = new PictureBox();
+            label11 = new Label();
+            openFileDialog1 = new OpenFileDialog();
+            reservationName_Label = new Label();
+            label10 = new Label();
             managerView_TableLayout.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             titleMoviePanel.SuspendLayout();
@@ -238,9 +240,9 @@
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)movieThumbnail_PictureBox).BeginInit();
             tableLayoutPanel2.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
             movieCard_TableLayoutPanel25.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox25).BeginInit();
-            tableLayoutPanel3.SuspendLayout();
             SuspendLayout();
             // 
             // managerView_TableLayout
@@ -2075,8 +2077,10 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.Controls.Add(movieTitle_Label, 3, 3);
-            tableLayoutPanel2.Controls.Add(label3, 0, 3);
+            tableLayoutPanel2.Controls.Add(reservationName_Label, 0, 3);
+            tableLayoutPanel2.Controls.Add(label10, 0, 3);
+            tableLayoutPanel2.Controls.Add(movieTitle_Label, 3, 2);
+            tableLayoutPanel2.Controls.Add(label3, 0, 2);
             tableLayoutPanel2.Controls.Add(tableLayoutPanel3, 0, 5);
             tableLayoutPanel2.Controls.Add(label1, 0, 0);
             tableLayoutPanel2.Controls.Add(label2, 0, 1);
@@ -2086,7 +2090,7 @@
             tableLayoutPanel2.Location = new Point(986, 116);
             tableLayoutPanel2.Margin = new Padding(10);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 12;
+            tableLayoutPanel2.RowCount = 10;
             managerView_TableLayout.SetRowSpan(tableLayoutPanel2, 9);
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
@@ -2105,75 +2109,40 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel2.Size = new Size(625, 846);
             tableLayoutPanel2.TabIndex = 18;
             // 
-            // movieCard_TableLayoutPanel25
+            // movieTitle_Label
             // 
-            movieCard_TableLayoutPanel25.Anchor = AnchorStyles.None;
-            movieCard_TableLayoutPanel25.BackColor = Color.FromArgb(36, 36, 36);
-            movieCard_TableLayoutPanel25.ColumnCount = 2;
-            movieCard_TableLayoutPanel25.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 23.0769234F));
-            movieCard_TableLayoutPanel25.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 76.92308F));
-            movieCard_TableLayoutPanel25.Controls.Add(thumbnailPictureBox25, 0, 0);
-            movieCard_TableLayoutPanel25.Location = new Point(0, 0);
-            movieCard_TableLayoutPanel25.Name = "movieCard_TableLayoutPanel25";
-            movieCard_TableLayoutPanel25.RowCount = 2;
-            movieCard_TableLayoutPanel25.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            movieCard_TableLayoutPanel25.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            movieCard_TableLayoutPanel25.Size = new Size(200, 100);
-            movieCard_TableLayoutPanel25.TabIndex = 0;
+            movieTitle_Label.AutoSize = true;
+            movieTitle_Label.BackColor = Color.FromArgb(25, 25, 25);
+            tableLayoutPanel2.SetColumnSpan(movieTitle_Label, 5);
+            movieTitle_Label.Dock = DockStyle.Fill;
+            movieTitle_Label.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            movieTitle_Label.ForeColor = SystemColors.ControlLightLight;
+            movieTitle_Label.Location = new Point(201, 183);
+            movieTitle_Label.Margin = new Padding(15);
+            movieTitle_Label.Name = "movieTitle_Label";
+            movieTitle_Label.Size = new Size(280, 54);
+            movieTitle_Label.TabIndex = 24;
+            movieTitle_Label.Text = "Enter Confirmation Code";
+            movieTitle_Label.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // thumbnailPictureBox25
+            // label3
             // 
-            thumbnailPictureBox25.Dock = DockStyle.Fill;
-            thumbnailPictureBox25.Image = Properties.Resources.TaylorSwift;
-            thumbnailPictureBox25.Location = new Point(5, 5);
-            thumbnailPictureBox25.Margin = new Padding(5);
-            thumbnailPictureBox25.Name = "thumbnailPictureBox25";
-            movieCard_TableLayoutPanel25.SetRowSpan(thumbnailPictureBox25, 2);
-            thumbnailPictureBox25.Size = new Size(36, 90);
-            thumbnailPictureBox25.SizeMode = PictureBoxSizeMode.StretchImage;
-            thumbnailPictureBox25.TabIndex = 0;
-            thumbnailPictureBox25.TabStop = false;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Dock = DockStyle.Fill;
-            label11.ForeColor = SystemColors.ControlLightLight;
-            label11.Location = new Point(84, 15);
-            label11.Margin = new Padding(10);
-            label11.Name = "label11";
-            label11.Padding = new Padding(3);
-            label11.Size = new Size(214, 21);
-            label11.TabIndex = 1;
-            label11.Text = "Some Movie Title";
-            label11.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // openFileDialog1
-            // 
-            openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // label1
-            // 
-            label1.BackColor = Color.FromArgb(64, 64, 64);
-            tableLayoutPanel2.SetColumnSpan(label1, 10);
-            label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(0, 0);
-            label1.Margin = new Padding(0, 0, 0, 5);
-            label1.Name = "label1";
-            label1.Size = new Size(625, 67);
-            label1.TabIndex = 18;
-            label1.Text = "Confirmation Checker";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            label3.AutoSize = true;
+            label3.BackColor = Color.Gray;
+            tableLayoutPanel2.SetColumnSpan(label3, 3);
+            label3.Dock = DockStyle.Fill;
+            label3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.ControlLightLight;
+            label3.Location = new Point(15, 183);
+            label3.Margin = new Padding(15);
+            label3.Name = "label3";
+            label3.Size = new Size(156, 54);
+            label3.TabIndex = 23;
+            label3.Text = "Movie:";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel3
             // 
@@ -2239,18 +2208,18 @@
             tableLayoutPanel3.Controls.Add(seatC6R1_Label, 5, 0);
             tableLayoutPanel3.Controls.Add(seatC7R1_Label, 6, 0);
             tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(6, 366);
+            tableLayoutPanel3.Location = new Point(6, 426);
             tableLayoutPanel3.Margin = new Padding(6);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 5;
-            tableLayoutPanel2.SetRowSpan(tableLayoutPanel3, 11);
+            tableLayoutPanel2.SetRowSpan(tableLayoutPanel3, 5);
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.Size = new Size(613, 474);
+            tableLayoutPanel3.Size = new Size(613, 414);
             tableLayoutPanel3.TabIndex = 19;
             // 
             // seatC2R5_Label
@@ -2261,10 +2230,10 @@
             seatC2R5_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC2R5_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC2R5_Label.ForeColor = Color.Black;
-            seatC2R5_Label.Location = new Point(66, 381);
+            seatC2R5_Label.Location = new Point(66, 333);
             seatC2R5_Label.Margin = new Padding(5);
             seatC2R5_Label.Name = "seatC2R5_Label";
-            seatC2R5_Label.Size = new Size(51, 88);
+            seatC2R5_Label.Size = new Size(51, 76);
             seatC2R5_Label.TabIndex = 43;
             seatC2R5_Label.Text = "C2R5";
             seatC2R5_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2277,10 +2246,10 @@
             seatC3R5_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC3R5_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC3R5_Label.ForeColor = Color.Black;
-            seatC3R5_Label.Location = new Point(127, 381);
+            seatC3R5_Label.Location = new Point(127, 333);
             seatC3R5_Label.Margin = new Padding(5);
             seatC3R5_Label.Name = "seatC3R5_Label";
-            seatC3R5_Label.Size = new Size(51, 88);
+            seatC3R5_Label.Size = new Size(51, 76);
             seatC3R5_Label.TabIndex = 42;
             seatC3R5_Label.Text = "C3R5";
             seatC3R5_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2293,10 +2262,10 @@
             seatC1R5_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC1R5_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC1R5_Label.ForeColor = Color.Black;
-            seatC1R5_Label.Location = new Point(5, 381);
+            seatC1R5_Label.Location = new Point(5, 333);
             seatC1R5_Label.Margin = new Padding(5);
             seatC1R5_Label.Name = "seatC1R5_Label";
-            seatC1R5_Label.Size = new Size(51, 88);
+            seatC1R5_Label.Size = new Size(51, 76);
             seatC1R5_Label.TabIndex = 41;
             seatC1R5_Label.Text = "C1R5";
             seatC1R5_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2309,10 +2278,10 @@
             seatC9R5_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC9R5_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC9R5_Label.ForeColor = Color.Black;
-            seatC9R5_Label.Location = new Point(493, 381);
+            seatC9R5_Label.Location = new Point(493, 333);
             seatC9R5_Label.Margin = new Padding(5);
             seatC9R5_Label.Name = "seatC9R5_Label";
-            seatC9R5_Label.Size = new Size(51, 88);
+            seatC9R5_Label.Size = new Size(51, 76);
             seatC9R5_Label.TabIndex = 40;
             seatC9R5_Label.Text = "C9R5";
             seatC9R5_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2325,10 +2294,10 @@
             seatC10R5_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC10R5_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC10R5_Label.ForeColor = Color.Black;
-            seatC10R5_Label.Location = new Point(554, 381);
+            seatC10R5_Label.Location = new Point(554, 333);
             seatC10R5_Label.Margin = new Padding(5);
             seatC10R5_Label.Name = "seatC10R5_Label";
-            seatC10R5_Label.Size = new Size(54, 88);
+            seatC10R5_Label.Size = new Size(54, 76);
             seatC10R5_Label.TabIndex = 39;
             seatC10R5_Label.Text = "C10R5";
             seatC10R5_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2341,10 +2310,10 @@
             seatC7R5_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC7R5_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC7R5_Label.ForeColor = Color.Black;
-            seatC7R5_Label.Location = new Point(371, 381);
+            seatC7R5_Label.Location = new Point(371, 333);
             seatC7R5_Label.Margin = new Padding(5);
             seatC7R5_Label.Name = "seatC7R5_Label";
-            seatC7R5_Label.Size = new Size(51, 88);
+            seatC7R5_Label.Size = new Size(51, 76);
             seatC7R5_Label.TabIndex = 38;
             seatC7R5_Label.Text = "C7R5";
             seatC7R5_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2357,10 +2326,10 @@
             seatC4R5_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC4R5_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC4R5_Label.ForeColor = Color.Black;
-            seatC4R5_Label.Location = new Point(188, 381);
+            seatC4R5_Label.Location = new Point(188, 333);
             seatC4R5_Label.Margin = new Padding(5);
             seatC4R5_Label.Name = "seatC4R5_Label";
-            seatC4R5_Label.Size = new Size(51, 88);
+            seatC4R5_Label.Size = new Size(51, 76);
             seatC4R5_Label.TabIndex = 37;
             seatC4R5_Label.Text = "C4R5";
             seatC4R5_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2373,10 +2342,10 @@
             seatC5R5_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC5R5_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC5R5_Label.ForeColor = Color.Black;
-            seatC5R5_Label.Location = new Point(249, 381);
+            seatC5R5_Label.Location = new Point(249, 333);
             seatC5R5_Label.Margin = new Padding(5);
             seatC5R5_Label.Name = "seatC5R5_Label";
-            seatC5R5_Label.Size = new Size(51, 88);
+            seatC5R5_Label.Size = new Size(51, 76);
             seatC5R5_Label.TabIndex = 36;
             seatC5R5_Label.Text = "C5R5";
             seatC5R5_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2389,10 +2358,10 @@
             seatC6R5_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC6R5_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC6R5_Label.ForeColor = Color.Black;
-            seatC6R5_Label.Location = new Point(310, 381);
+            seatC6R5_Label.Location = new Point(310, 333);
             seatC6R5_Label.Margin = new Padding(5);
             seatC6R5_Label.Name = "seatC6R5_Label";
-            seatC6R5_Label.Size = new Size(51, 88);
+            seatC6R5_Label.Size = new Size(51, 76);
             seatC6R5_Label.TabIndex = 35;
             seatC6R5_Label.Text = "C6R5";
             seatC6R5_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2405,10 +2374,10 @@
             seatC8R5_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC8R5_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC8R5_Label.ForeColor = Color.Black;
-            seatC8R5_Label.Location = new Point(432, 381);
+            seatC8R5_Label.Location = new Point(432, 333);
             seatC8R5_Label.Margin = new Padding(5);
             seatC8R5_Label.Name = "seatC8R5_Label";
-            seatC8R5_Label.Size = new Size(51, 88);
+            seatC8R5_Label.Size = new Size(51, 76);
             seatC8R5_Label.TabIndex = 34;
             seatC8R5_Label.Text = "C8R5";
             seatC8R5_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2425,7 +2394,7 @@
             seatC3R1_Label.Location = new Point(127, 5);
             seatC3R1_Label.Margin = new Padding(5);
             seatC3R1_Label.Name = "seatC3R1_Label";
-            seatC3R1_Label.Size = new Size(51, 84);
+            seatC3R1_Label.Size = new Size(51, 72);
             seatC3R1_Label.TabIndex = 0;
             seatC3R1_Label.Text = "C3R1";
             seatC3R1_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2442,7 +2411,7 @@
             seatC4R1_Label.Location = new Point(188, 5);
             seatC4R1_Label.Margin = new Padding(5);
             seatC4R1_Label.Name = "seatC4R1_Label";
-            seatC4R1_Label.Size = new Size(51, 84);
+            seatC4R1_Label.Size = new Size(51, 72);
             seatC4R1_Label.TabIndex = 1;
             seatC4R1_Label.Text = "C4R1";
             seatC4R1_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2458,7 +2427,7 @@
             seatC8R1_Label.Location = new Point(432, 5);
             seatC8R1_Label.Margin = new Padding(5);
             seatC8R1_Label.Name = "seatC8R1_Label";
-            seatC8R1_Label.Size = new Size(51, 84);
+            seatC8R1_Label.Size = new Size(51, 72);
             seatC8R1_Label.TabIndex = 11;
             seatC8R1_Label.Text = "C8R1";
             seatC8R1_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2471,10 +2440,10 @@
             seatC2R2_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC2R2_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC2R2_Label.ForeColor = Color.Black;
-            seatC2R2_Label.Location = new Point(66, 99);
+            seatC2R2_Label.Location = new Point(66, 87);
             seatC2R2_Label.Margin = new Padding(5);
             seatC2R2_Label.Name = "seatC2R2_Label";
-            seatC2R2_Label.Size = new Size(51, 84);
+            seatC2R2_Label.Size = new Size(51, 72);
             seatC2R2_Label.TabIndex = 8;
             seatC2R2_Label.Text = "C2R2";
             seatC2R2_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2487,10 +2456,10 @@
             seatC3R2_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC3R2_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC3R2_Label.ForeColor = Color.Black;
-            seatC3R2_Label.Location = new Point(127, 99);
+            seatC3R2_Label.Location = new Point(127, 87);
             seatC3R2_Label.Margin = new Padding(5);
             seatC3R2_Label.Name = "seatC3R2_Label";
-            seatC3R2_Label.Size = new Size(51, 84);
+            seatC3R2_Label.Size = new Size(51, 72);
             seatC3R2_Label.TabIndex = 9;
             seatC3R2_Label.Text = "C3R2";
             seatC3R2_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2503,10 +2472,10 @@
             seatC4R2_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC4R2_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC4R2_Label.ForeColor = Color.Black;
-            seatC4R2_Label.Location = new Point(188, 99);
+            seatC4R2_Label.Location = new Point(188, 87);
             seatC4R2_Label.Margin = new Padding(5);
             seatC4R2_Label.Name = "seatC4R2_Label";
-            seatC4R2_Label.Size = new Size(51, 84);
+            seatC4R2_Label.Size = new Size(51, 72);
             seatC4R2_Label.TabIndex = 7;
             seatC4R2_Label.Text = "C4R2";
             seatC4R2_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2519,10 +2488,10 @@
             seatC5R2_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC5R2_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC5R2_Label.ForeColor = Color.Black;
-            seatC5R2_Label.Location = new Point(249, 99);
+            seatC5R2_Label.Location = new Point(249, 87);
             seatC5R2_Label.Margin = new Padding(5);
             seatC5R2_Label.Name = "seatC5R2_Label";
-            seatC5R2_Label.Size = new Size(51, 84);
+            seatC5R2_Label.Size = new Size(51, 72);
             seatC5R2_Label.TabIndex = 6;
             seatC5R2_Label.Text = "C5R2";
             seatC5R2_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2535,10 +2504,10 @@
             seatC6R2_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC6R2_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC6R2_Label.ForeColor = Color.Black;
-            seatC6R2_Label.Location = new Point(310, 99);
+            seatC6R2_Label.Location = new Point(310, 87);
             seatC6R2_Label.Margin = new Padding(5);
             seatC6R2_Label.Name = "seatC6R2_Label";
-            seatC6R2_Label.Size = new Size(51, 84);
+            seatC6R2_Label.Size = new Size(51, 72);
             seatC6R2_Label.TabIndex = 5;
             seatC6R2_Label.Text = "C6R2";
             seatC6R2_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2551,10 +2520,10 @@
             seatC7R2_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC7R2_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC7R2_Label.ForeColor = Color.Black;
-            seatC7R2_Label.Location = new Point(371, 99);
+            seatC7R2_Label.Location = new Point(371, 87);
             seatC7R2_Label.Margin = new Padding(5);
             seatC7R2_Label.Name = "seatC7R2_Label";
-            seatC7R2_Label.Size = new Size(51, 84);
+            seatC7R2_Label.Size = new Size(51, 72);
             seatC7R2_Label.TabIndex = 10;
             seatC7R2_Label.Text = "C7R2";
             seatC7R2_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2567,10 +2536,10 @@
             seatC8R2_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC8R2_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC8R2_Label.ForeColor = Color.Black;
-            seatC8R2_Label.Location = new Point(432, 99);
+            seatC8R2_Label.Location = new Point(432, 87);
             seatC8R2_Label.Margin = new Padding(5);
             seatC8R2_Label.Name = "seatC8R2_Label";
-            seatC8R2_Label.Size = new Size(51, 84);
+            seatC8R2_Label.Size = new Size(51, 72);
             seatC8R2_Label.TabIndex = 12;
             seatC8R2_Label.Text = "C8R2";
             seatC8R2_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2583,10 +2552,10 @@
             seatC9R2_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC9R2_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC9R2_Label.ForeColor = Color.Black;
-            seatC9R2_Label.Location = new Point(493, 99);
+            seatC9R2_Label.Location = new Point(493, 87);
             seatC9R2_Label.Margin = new Padding(5);
             seatC9R2_Label.Name = "seatC9R2_Label";
-            seatC9R2_Label.Size = new Size(51, 84);
+            seatC9R2_Label.Size = new Size(51, 72);
             seatC9R2_Label.TabIndex = 13;
             seatC9R2_Label.Text = "C9R2";
             seatC9R2_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2599,10 +2568,10 @@
             seatC1R3_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC1R3_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC1R3_Label.ForeColor = Color.Black;
-            seatC1R3_Label.Location = new Point(5, 193);
+            seatC1R3_Label.Location = new Point(5, 169);
             seatC1R3_Label.Margin = new Padding(5);
             seatC1R3_Label.Name = "seatC1R3_Label";
-            seatC1R3_Label.Size = new Size(51, 84);
+            seatC1R3_Label.Size = new Size(51, 72);
             seatC1R3_Label.TabIndex = 14;
             seatC1R3_Label.Text = "C1R3";
             seatC1R3_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2615,10 +2584,10 @@
             seatC2R3_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC2R3_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC2R3_Label.ForeColor = Color.Black;
-            seatC2R3_Label.Location = new Point(66, 193);
+            seatC2R3_Label.Location = new Point(66, 169);
             seatC2R3_Label.Margin = new Padding(5);
             seatC2R3_Label.Name = "seatC2R3_Label";
-            seatC2R3_Label.Size = new Size(51, 84);
+            seatC2R3_Label.Size = new Size(51, 72);
             seatC2R3_Label.TabIndex = 15;
             seatC2R3_Label.Text = "C2R3";
             seatC2R3_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2631,10 +2600,10 @@
             seatC3R3_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC3R3_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC3R3_Label.ForeColor = Color.Black;
-            seatC3R3_Label.Location = new Point(127, 193);
+            seatC3R3_Label.Location = new Point(127, 169);
             seatC3R3_Label.Margin = new Padding(5);
             seatC3R3_Label.Name = "seatC3R3_Label";
-            seatC3R3_Label.Size = new Size(51, 84);
+            seatC3R3_Label.Size = new Size(51, 72);
             seatC3R3_Label.TabIndex = 16;
             seatC3R3_Label.Text = "C3R3";
             seatC3R3_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2647,10 +2616,10 @@
             seatC4R3_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC4R3_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC4R3_Label.ForeColor = Color.Black;
-            seatC4R3_Label.Location = new Point(188, 193);
+            seatC4R3_Label.Location = new Point(188, 169);
             seatC4R3_Label.Margin = new Padding(5);
             seatC4R3_Label.Name = "seatC4R3_Label";
-            seatC4R3_Label.Size = new Size(51, 84);
+            seatC4R3_Label.Size = new Size(51, 72);
             seatC4R3_Label.TabIndex = 17;
             seatC4R3_Label.Text = "C4R3";
             seatC4R3_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2663,10 +2632,10 @@
             seatC5R3_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC5R3_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC5R3_Label.ForeColor = Color.Black;
-            seatC5R3_Label.Location = new Point(249, 193);
+            seatC5R3_Label.Location = new Point(249, 169);
             seatC5R3_Label.Margin = new Padding(5);
             seatC5R3_Label.Name = "seatC5R3_Label";
-            seatC5R3_Label.Size = new Size(51, 84);
+            seatC5R3_Label.Size = new Size(51, 72);
             seatC5R3_Label.TabIndex = 18;
             seatC5R3_Label.Text = "C5R3";
             seatC5R3_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2679,10 +2648,10 @@
             seatC6R3_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC6R3_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC6R3_Label.ForeColor = Color.Black;
-            seatC6R3_Label.Location = new Point(310, 193);
+            seatC6R3_Label.Location = new Point(310, 169);
             seatC6R3_Label.Margin = new Padding(5);
             seatC6R3_Label.Name = "seatC6R3_Label";
-            seatC6R3_Label.Size = new Size(51, 84);
+            seatC6R3_Label.Size = new Size(51, 72);
             seatC6R3_Label.TabIndex = 19;
             seatC6R3_Label.Text = "C6R3";
             seatC6R3_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2695,10 +2664,10 @@
             seatC7R3_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC7R3_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC7R3_Label.ForeColor = Color.Black;
-            seatC7R3_Label.Location = new Point(371, 193);
+            seatC7R3_Label.Location = new Point(371, 169);
             seatC7R3_Label.Margin = new Padding(5);
             seatC7R3_Label.Name = "seatC7R3_Label";
-            seatC7R3_Label.Size = new Size(51, 84);
+            seatC7R3_Label.Size = new Size(51, 72);
             seatC7R3_Label.TabIndex = 20;
             seatC7R3_Label.Text = "C7R3";
             seatC7R3_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2711,10 +2680,10 @@
             seatC8R3_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC8R3_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC8R3_Label.ForeColor = Color.Black;
-            seatC8R3_Label.Location = new Point(432, 193);
+            seatC8R3_Label.Location = new Point(432, 169);
             seatC8R3_Label.Margin = new Padding(5);
             seatC8R3_Label.Name = "seatC8R3_Label";
-            seatC8R3_Label.Size = new Size(51, 84);
+            seatC8R3_Label.Size = new Size(51, 72);
             seatC8R3_Label.TabIndex = 21;
             seatC8R3_Label.Text = "C8R3";
             seatC8R3_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2727,10 +2696,10 @@
             seatC9R3_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC9R3_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC9R3_Label.ForeColor = Color.Black;
-            seatC9R3_Label.Location = new Point(493, 193);
+            seatC9R3_Label.Location = new Point(493, 169);
             seatC9R3_Label.Margin = new Padding(5);
             seatC9R3_Label.Name = "seatC9R3_Label";
-            seatC9R3_Label.Size = new Size(51, 84);
+            seatC9R3_Label.Size = new Size(51, 72);
             seatC9R3_Label.TabIndex = 22;
             seatC9R3_Label.Text = "C9R3";
             seatC9R3_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2743,10 +2712,10 @@
             seatC10R3_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC10R3_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC10R3_Label.ForeColor = Color.Black;
-            seatC10R3_Label.Location = new Point(554, 193);
+            seatC10R3_Label.Location = new Point(554, 169);
             seatC10R3_Label.Margin = new Padding(5);
             seatC10R3_Label.Name = "seatC10R3_Label";
-            seatC10R3_Label.Size = new Size(54, 84);
+            seatC10R3_Label.Size = new Size(54, 72);
             seatC10R3_Label.TabIndex = 23;
             seatC10R3_Label.Text = "C10R3";
             seatC10R3_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2759,10 +2728,10 @@
             seatC1R4_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC1R4_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC1R4_Label.ForeColor = Color.Black;
-            seatC1R4_Label.Location = new Point(5, 287);
+            seatC1R4_Label.Location = new Point(5, 251);
             seatC1R4_Label.Margin = new Padding(5);
             seatC1R4_Label.Name = "seatC1R4_Label";
-            seatC1R4_Label.Size = new Size(51, 84);
+            seatC1R4_Label.Size = new Size(51, 72);
             seatC1R4_Label.TabIndex = 24;
             seatC1R4_Label.Text = "C1R4";
             seatC1R4_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2775,10 +2744,10 @@
             seatC2R4_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC2R4_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC2R4_Label.ForeColor = Color.Black;
-            seatC2R4_Label.Location = new Point(66, 287);
+            seatC2R4_Label.Location = new Point(66, 251);
             seatC2R4_Label.Margin = new Padding(5);
             seatC2R4_Label.Name = "seatC2R4_Label";
-            seatC2R4_Label.Size = new Size(51, 84);
+            seatC2R4_Label.Size = new Size(51, 72);
             seatC2R4_Label.TabIndex = 25;
             seatC2R4_Label.Text = "C2R4";
             seatC2R4_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2791,10 +2760,10 @@
             seatC3R4_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC3R4_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC3R4_Label.ForeColor = Color.Black;
-            seatC3R4_Label.Location = new Point(127, 287);
+            seatC3R4_Label.Location = new Point(127, 251);
             seatC3R4_Label.Margin = new Padding(5);
             seatC3R4_Label.Name = "seatC3R4_Label";
-            seatC3R4_Label.Size = new Size(51, 84);
+            seatC3R4_Label.Size = new Size(51, 72);
             seatC3R4_Label.TabIndex = 26;
             seatC3R4_Label.Text = "C3R4";
             seatC3R4_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2807,10 +2776,10 @@
             seatC4R4_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC4R4_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC4R4_Label.ForeColor = Color.Black;
-            seatC4R4_Label.Location = new Point(188, 287);
+            seatC4R4_Label.Location = new Point(188, 251);
             seatC4R4_Label.Margin = new Padding(5);
             seatC4R4_Label.Name = "seatC4R4_Label";
-            seatC4R4_Label.Size = new Size(51, 84);
+            seatC4R4_Label.Size = new Size(51, 72);
             seatC4R4_Label.TabIndex = 27;
             seatC4R4_Label.Text = "C4R4";
             seatC4R4_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2823,10 +2792,10 @@
             seatC5R4_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC5R4_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC5R4_Label.ForeColor = Color.Black;
-            seatC5R4_Label.Location = new Point(249, 287);
+            seatC5R4_Label.Location = new Point(249, 251);
             seatC5R4_Label.Margin = new Padding(5);
             seatC5R4_Label.Name = "seatC5R4_Label";
-            seatC5R4_Label.Size = new Size(51, 84);
+            seatC5R4_Label.Size = new Size(51, 72);
             seatC5R4_Label.TabIndex = 28;
             seatC5R4_Label.Text = "C5R4";
             seatC5R4_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2839,10 +2808,10 @@
             seatC6R4_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC6R4_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC6R4_Label.ForeColor = Color.Black;
-            seatC6R4_Label.Location = new Point(310, 287);
+            seatC6R4_Label.Location = new Point(310, 251);
             seatC6R4_Label.Margin = new Padding(5);
             seatC6R4_Label.Name = "seatC6R4_Label";
-            seatC6R4_Label.Size = new Size(51, 84);
+            seatC6R4_Label.Size = new Size(51, 72);
             seatC6R4_Label.TabIndex = 29;
             seatC6R4_Label.Text = "C6R4";
             seatC6R4_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2855,10 +2824,10 @@
             seatC7R4_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC7R4_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC7R4_Label.ForeColor = Color.Black;
-            seatC7R4_Label.Location = new Point(371, 287);
+            seatC7R4_Label.Location = new Point(371, 251);
             seatC7R4_Label.Margin = new Padding(5);
             seatC7R4_Label.Name = "seatC7R4_Label";
-            seatC7R4_Label.Size = new Size(51, 84);
+            seatC7R4_Label.Size = new Size(51, 72);
             seatC7R4_Label.TabIndex = 30;
             seatC7R4_Label.Text = "C7R4";
             seatC7R4_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2871,10 +2840,10 @@
             seatC8R4_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC8R4_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC8R4_Label.ForeColor = Color.Black;
-            seatC8R4_Label.Location = new Point(432, 287);
+            seatC8R4_Label.Location = new Point(432, 251);
             seatC8R4_Label.Margin = new Padding(5);
             seatC8R4_Label.Name = "seatC8R4_Label";
-            seatC8R4_Label.Size = new Size(51, 84);
+            seatC8R4_Label.Size = new Size(51, 72);
             seatC8R4_Label.TabIndex = 31;
             seatC8R4_Label.Text = "C8R4";
             seatC8R4_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2887,10 +2856,10 @@
             seatC9R4_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC9R4_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC9R4_Label.ForeColor = Color.Black;
-            seatC9R4_Label.Location = new Point(493, 287);
+            seatC9R4_Label.Location = new Point(493, 251);
             seatC9R4_Label.Margin = new Padding(5);
             seatC9R4_Label.Name = "seatC9R4_Label";
-            seatC9R4_Label.Size = new Size(51, 84);
+            seatC9R4_Label.Size = new Size(51, 72);
             seatC9R4_Label.TabIndex = 32;
             seatC9R4_Label.Text = "C9R4";
             seatC9R4_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2903,10 +2872,10 @@
             seatC10R4_Label.BorderStyle = BorderStyle.FixedSingle;
             seatC10R4_Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             seatC10R4_Label.ForeColor = Color.Black;
-            seatC10R4_Label.Location = new Point(554, 287);
+            seatC10R4_Label.Location = new Point(554, 251);
             seatC10R4_Label.Margin = new Padding(5);
             seatC10R4_Label.Name = "seatC10R4_Label";
-            seatC10R4_Label.Size = new Size(54, 84);
+            seatC10R4_Label.Size = new Size(54, 72);
             seatC10R4_Label.TabIndex = 33;
             seatC10R4_Label.Text = "C10R4";
             seatC10R4_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2922,7 +2891,7 @@
             seatC5R1_Label.Location = new Point(249, 5);
             seatC5R1_Label.Margin = new Padding(5);
             seatC5R1_Label.Name = "seatC5R1_Label";
-            seatC5R1_Label.Size = new Size(51, 84);
+            seatC5R1_Label.Size = new Size(51, 72);
             seatC5R1_Label.TabIndex = 2;
             seatC5R1_Label.Text = "C5R1";
             seatC5R1_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2938,7 +2907,7 @@
             seatC6R1_Label.Location = new Point(310, 5);
             seatC6R1_Label.Margin = new Padding(5);
             seatC6R1_Label.Name = "seatC6R1_Label";
-            seatC6R1_Label.Size = new Size(51, 84);
+            seatC6R1_Label.Size = new Size(51, 72);
             seatC6R1_Label.TabIndex = 3;
             seatC6R1_Label.Text = "C6R1";
             seatC6R1_Label.TextAlign = ContentAlignment.MiddleCenter;
@@ -2954,10 +2923,25 @@
             seatC7R1_Label.Location = new Point(371, 5);
             seatC7R1_Label.Margin = new Padding(5);
             seatC7R1_Label.Name = "seatC7R1_Label";
-            seatC7R1_Label.Size = new Size(51, 84);
+            seatC7R1_Label.Size = new Size(51, 72);
             seatC7R1_Label.TabIndex = 4;
             seatC7R1_Label.Text = "C7R1";
             seatC7R1_Label.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            label1.BackColor = Color.FromArgb(64, 64, 64);
+            tableLayoutPanel2.SetColumnSpan(label1, 10);
+            label1.Dock = DockStyle.Fill;
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ControlLightLight;
+            label1.Location = new Point(0, 0);
+            label1.Margin = new Padding(0, 0, 0, 5);
+            label1.Name = "label1";
+            label1.Size = new Size(625, 79);
+            label1.TabIndex = 18;
+            label1.Text = "Confirmation Checker";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -2967,10 +2951,10 @@
             label2.Dock = DockStyle.Fill;
             label2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(15, 87);
+            label2.Location = new Point(15, 99);
             label2.Margin = new Padding(15);
             label2.Name = "label2";
-            label2.Size = new Size(156, 42);
+            label2.Size = new Size(156, 54);
             label2.TabIndex = 20;
             label2.Text = "Enter Confirmation Code:";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -2978,7 +2962,7 @@
             // confirmationCode_TextBox
             // 
             tableLayoutPanel2.SetColumnSpan(confirmationCode_TextBox, 4);
-            confirmationCode_TextBox.Location = new Point(196, 82);
+            confirmationCode_TextBox.Location = new Point(196, 94);
             confirmationCode_TextBox.Margin = new Padding(10);
             confirmationCode_TextBox.Name = "confirmationCode_TextBox";
             confirmationCode_TextBox.Size = new Size(228, 23);
@@ -2991,46 +2975,93 @@
             confirmationCheck_Button.Dock = DockStyle.Fill;
             confirmationCheck_Button.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             confirmationCheck_Button.ForeColor = SystemColors.ControlLightLight;
-            confirmationCheck_Button.Location = new Point(449, 87);
+            confirmationCheck_Button.Location = new Point(449, 99);
             confirmationCheck_Button.Margin = new Padding(15);
             confirmationCheck_Button.Name = "confirmationCheck_Button";
-            confirmationCheck_Button.Size = new Size(161, 42);
+            confirmationCheck_Button.Size = new Size(161, 54);
             confirmationCheck_Button.TabIndex = 22;
             confirmationCheck_Button.Text = "Check Confirmation Code";
             confirmationCheck_Button.UseVisualStyleBackColor = false;
             confirmationCheck_Button.Click += confirmationCheck_Button_Click;
             // 
-            // label3
+            // movieCard_TableLayoutPanel25
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Gray;
-            tableLayoutPanel2.SetColumnSpan(label3, 3);
-            label3.Dock = DockStyle.Fill;
-            label3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(15, 231);
-            label3.Margin = new Padding(15);
-            label3.Name = "label3";
-            label3.Size = new Size(156, 42);
-            label3.TabIndex = 23;
-            label3.Text = "Movie:";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
+            movieCard_TableLayoutPanel25.Anchor = AnchorStyles.None;
+            movieCard_TableLayoutPanel25.BackColor = Color.FromArgb(36, 36, 36);
+            movieCard_TableLayoutPanel25.ColumnCount = 2;
+            movieCard_TableLayoutPanel25.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 23.0769234F));
+            movieCard_TableLayoutPanel25.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 76.92308F));
+            movieCard_TableLayoutPanel25.Controls.Add(thumbnailPictureBox25, 0, 0);
+            movieCard_TableLayoutPanel25.Location = new Point(0, 0);
+            movieCard_TableLayoutPanel25.Name = "movieCard_TableLayoutPanel25";
+            movieCard_TableLayoutPanel25.RowCount = 2;
+            movieCard_TableLayoutPanel25.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            movieCard_TableLayoutPanel25.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            movieCard_TableLayoutPanel25.Size = new Size(200, 100);
+            movieCard_TableLayoutPanel25.TabIndex = 0;
             // 
-            // movieTitle_Label
+            // thumbnailPictureBox25
             // 
-            movieTitle_Label.AutoSize = true;
-            movieTitle_Label.BackColor = Color.FromArgb(25, 25, 25);
-            tableLayoutPanel2.SetColumnSpan(movieTitle_Label, 5);
-            movieTitle_Label.Dock = DockStyle.Fill;
-            movieTitle_Label.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            movieTitle_Label.ForeColor = SystemColors.ControlLightLight;
-            movieTitle_Label.Location = new Point(201, 231);
-            movieTitle_Label.Margin = new Padding(15);
-            movieTitle_Label.Name = "movieTitle_Label";
-            movieTitle_Label.Size = new Size(280, 42);
-            movieTitle_Label.TabIndex = 24;
-            movieTitle_Label.Text = "Enter Confirmation Code";
-            movieTitle_Label.TextAlign = ContentAlignment.MiddleCenter;
+            thumbnailPictureBox25.Dock = DockStyle.Fill;
+            thumbnailPictureBox25.Image = Properties.Resources.TaylorSwift;
+            thumbnailPictureBox25.Location = new Point(5, 5);
+            thumbnailPictureBox25.Margin = new Padding(5);
+            thumbnailPictureBox25.Name = "thumbnailPictureBox25";
+            movieCard_TableLayoutPanel25.SetRowSpan(thumbnailPictureBox25, 2);
+            thumbnailPictureBox25.Size = new Size(36, 90);
+            thumbnailPictureBox25.SizeMode = PictureBoxSizeMode.StretchImage;
+            thumbnailPictureBox25.TabIndex = 0;
+            thumbnailPictureBox25.TabStop = false;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Dock = DockStyle.Fill;
+            label11.ForeColor = SystemColors.ControlLightLight;
+            label11.Location = new Point(84, 15);
+            label11.Margin = new Padding(10);
+            label11.Name = "label11";
+            label11.Padding = new Padding(3);
+            label11.Size = new Size(214, 21);
+            label11.TabIndex = 1;
+            label11.Text = "Some Movie Title";
+            label11.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // reservationName_Label
+            // 
+            reservationName_Label.AutoSize = true;
+            reservationName_Label.BackColor = Color.FromArgb(25, 25, 25);
+            tableLayoutPanel2.SetColumnSpan(reservationName_Label, 5);
+            reservationName_Label.Dock = DockStyle.Fill;
+            reservationName_Label.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            reservationName_Label.ForeColor = SystemColors.ControlLightLight;
+            reservationName_Label.Location = new Point(201, 267);
+            reservationName_Label.Margin = new Padding(15);
+            reservationName_Label.Name = "reservationName_Label";
+            reservationName_Label.Size = new Size(280, 54);
+            reservationName_Label.TabIndex = 26;
+            reservationName_Label.Text = "Enter Confirmation Code";
+            reservationName_Label.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.BackColor = Color.Gray;
+            tableLayoutPanel2.SetColumnSpan(label10, 3);
+            label10.Dock = DockStyle.Fill;
+            label10.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.ForeColor = SystemColors.ControlLightLight;
+            label10.Location = new Point(15, 267);
+            label10.Margin = new Padding(15);
+            label10.Name = "label10";
+            label10.Size = new Size(156, 54);
+            label10.TabIndex = 25;
+            label10.Text = "Reservation Name:";
+            label10.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // ManagerView
             // 
@@ -3115,10 +3146,10 @@
             ((System.ComponentModel.ISupportInitialize)movieThumbnail_PictureBox).EndInit();
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
-            movieCard_TableLayoutPanel25.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox25).EndInit();
             tableLayoutPanel3.ResumeLayout(false);
             tableLayoutPanel3.PerformLayout();
+            movieCard_TableLayoutPanel25.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)thumbnailPictureBox25).EndInit();
             ResumeLayout(false);
         }
 
@@ -3291,5 +3322,7 @@
         private Label movieTitle_Label;
         private Label label3;
         private TextBox confirmationCode_TextBox;
+        private Label reservationName_Label;
+        private Label label10;
     }
 }
