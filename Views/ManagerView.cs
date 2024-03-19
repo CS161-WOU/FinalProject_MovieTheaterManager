@@ -1,4 +1,5 @@
 ﻿using CS161_FinalProject_MovieTheaterManager.Data;
+using System.Configuration;
 using System.Reflection.Metadata.Ecma335;
 using System.Text.Json;
 using static CS161_FinalProject_MovieTheaterManager.Data.TheaterDataManager;
@@ -81,11 +82,15 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close(); //Close the window.
         }
 
-        private void ManagerViewResized(object sender, EventArgs e)
+        private void ManagerViewResized(object sender, EventArgs e) //Custom resize for the managers movie list.
         {
+
+            ///
+            /// Updates the movie pnales based ont he flow panels width.
+            ///
             titleMoviePanel.Width = (flowLayoutPanel1.Width - 20);
             for (int i = 1; i < 22; i++)
             {
@@ -98,7 +103,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
         private void onWindowLoad(object sender, EventArgs e)
         {
 
-            loadMovies();
+            loadMovies(); //When the window is opened, load the movies.
         }
 
         public bool loadMovies()
@@ -109,7 +114,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
             {
                 for (int i = 1; i < 22; i++)
                 {
-                    ((TableLayoutPanel)this.Controls.Find($"movieCard_TableLayoutPanel{i}", true)[0]).Visible = false;
+                    ((TableLayoutPanel)this.Controls.Find($"movieCard_TableLayoutPanel{i}", true)[0]).Visible = false; // Hide all movie panels by default.
                 }
 
                 TheaterDataManager theaterDataManager = new TheaterDataManager(); // New Instance of our custom class.
@@ -173,25 +178,28 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
         TheaterDataManager.movie? selectedMovie = null;
         List<DateTime> movieEditor_DateTimes = new List<DateTime>();
 
+        // Add movie date method..
         private void movieAddDate_Button_Click(object sender, EventArgs e)
         {
             try
             {
 
-                DateTimePicker movieDatePicker = movieDate_DateTimePicker;
+                DateTimePicker movieDatePicker = movieDate_DateTimePicker; //Get the movie time entered.
 
-                if (movieEditor_DateTimes.Count >= 5)
+                if (movieEditor_DateTimes.Count >= 5) //Check if the showtime limit has been reached.
                 {
                     MessageBox.Show("You may not exceed more than 5 showtimes. Womp Womp.");
                     return;
                 }
 
-                bool? warningAnswer = null;
+                bool? warningAnswer = null; //Flag to hold the answer of a Messaegbox below.
+
+                //Checking if the date entered was in the pase.
                 if (movieDatePicker.Value < DateTime.Now)
                 {
-                    DialogResult warningResault = MessageBox.Show("Mmmm... You sure about that?. You are adding a date and time that is in the past", "Warrning", MessageBoxButtons.YesNo);
+                    DialogResult warningResault = MessageBox.Show("Mmmm... You sure about that?. You are adding a date and time that is in the past", "Warrning", MessageBoxButtons.YesNo); //If so ask the user fi they are sure.
 
-                    if (warningResault.Equals(DialogResult.No))
+                    if (warningResault.Equals(DialogResult.No)) //Check the answer and update the flag.
                     {
                         warningAnswer = false;
                     }
@@ -201,10 +209,12 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                     }
                 }
 
-                if (warningAnswer == false)
+                if (warningAnswer == false) // if they said no, return.
                 {
                     return;
                 }
+
+                //otherwise add the movie date to the list, and await saving.
 
                 movieEditor_DateTimes.Add(movieDatePicker.Value);
                 movieDateTimes_Listbox.Items.Add(movieDatePicker.Value);
@@ -215,15 +225,18 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
             }
         }
 
+        //Method to remove a movie date.
         private void movieRemoveDateButton_Click(object sender, EventArgs e)
         {
             try
             {
-                if (movieDateTimes_Listbox.SelectedItem == null) { MessageBox.Show("Mmmmm. Try selecting a time to remove first."); return; }
+                if (movieDateTimes_Listbox.SelectedItem == null) { MessageBox.Show("Mmmmm. Try selecting a time to remove first."); return; } //Checking if a showtime was even selected.
 
-                DateTime selectedDate = (DateTime)movieDateTimes_Listbox.SelectedItem;
-                movieEditor_DateTimes.Remove(selectedDate);
+                DateTime selectedDate = (DateTime)movieDateTimes_Listbox.SelectedItem; //Getting the DateTime Object of the showtime selected.
+                movieEditor_DateTimes.Remove(selectedDate); //Removing it from the lists.
                 movieDateTimes_Listbox.Items.Remove(selectedDate);
+
+                //Awaiting save button.
             }
             catch (Exception ex)
             {
@@ -231,14 +244,16 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
             }
         }
 
+
+        //thumbnail update method.
         private void movieThumbnail_PictureBox_Click(object sender, EventArgs e)
         {
             try
             {
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                if (openFileDialog1.ShowDialog() == DialogResult.OK) //Display the open file dialog.
                 {
-                    string imageFileName = openFileDialog1.FileName;
-                    movieThumbnail_PictureBox.Image = new Bitmap(imageFileName);
+                    string imageFileName = openFileDialog1.FileName; //Get the path.
+                    movieThumbnail_PictureBox.Image = new Bitmap(imageFileName); //Update te picturebox to reflect the new thumbnail.
                 }
             }
             catch (Exception ex)
@@ -248,6 +263,8 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 
         }
 
+
+        //Adding movie method.
         private void movieAdd_Button_Click(object sender, EventArgs e)
         {
             try
@@ -257,34 +274,38 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 
                 TheaterDataManager.Movies? MovieCollections = theaterDataManager.Retreieve(); // Retreieving Movies.
 
-                if (MovieCollections == null)
+                if (MovieCollections == null) //Chekcing if a  movie collectiosn exist/ Data file.
                 {
                     MovieCollections = new TheaterDataManager.Movies();
                     MovieCollections.movies = new List<TheaterDataManager.movie>();
                 }
 
-                TheaterDataManager.movie newMovie = new TheaterDataManager.movie();
+                TheaterDataManager.movie newMovie = new TheaterDataManager.movie(); //Creating a new mvoie.
 
-                Random rand = new Random();
-                string title = movieTitle_TextBox.Text;
-                if (title == null || title == "")
+                Random rand = new Random(); // Rand object for screen showing.
+                string title = movieTitle_TextBox.Text; //Getting the title.
+
+                if (title == null || title == "") //Checking if a title was entered.
                 {
                     MessageBox.Show("Please enter a movie title.");
                     return;
                 }
 
+                //Checking if showtimes were entered.
                 if (movieEditor_DateTimes.Count == 0)
                 {
                     MessageBox.Show("Please add screening times.");
                     return;
                 }
 
+                //Checking if a thumbnail has been added.
                 if (openFileDialog1.FileName == null || movieThumbnail_PictureBox.Image == null || openFileDialog1.FileName == string.Empty)
                 {
                     MessageBox.Show("Please upload a movie thumbnail.");
                     return;
                 }
 
+                //Setting all the movie properties.
                 newMovie.title = movieTitle_TextBox.Text;
                 newMovie.availablity = movieEditor_DateTimes;
                 newMovie.screen = rand.Next(1, 11);
@@ -293,9 +314,12 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                 newMovie.index = MovieCollections.movies.Count;
                 newMovie.ident = MovieCollections.movies.Count + 1;
 
+                //Adding the movie tot he movie collection.
                 MovieCollections.movies.Add(newMovie);
 
-                theaterDataManager.Save(MovieCollections);
+                theaterDataManager.Save(MovieCollections); //Saving the movie and data file.
+
+                //Clean up.
                 loadMovies();
                 MessageBox.Show("Movie added.");
                 openFileDialog1.FileName = string.Empty;
@@ -306,19 +330,26 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
             }
         }
 
+        //Loading the selected mvoie.
         private void loadSelectedMovie(object sender, EventArgs e)
         {
-            movieEditor_DateTimes.Clear();
+            //Clearing all lists.
+            movieEditor_DateTimes.Clear(); 
             movieDateTimes_Listbox.Items.Clear();
 
             TheaterDataManager theaterDataManager = new TheaterDataManager(); // New Instance of our custom class.
 
             TheaterDataManager.Movies? MovieCollections = theaterDataManager.Retreieve(); // Retreieving Movies.
-            PictureBox selectexPictureBox = (PictureBox)sender;
-            selectedMovie = MovieCollections.movies[int.Parse(selectexPictureBox.AccessibleDescription)];
 
-            movieThumbnail_PictureBox.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(selectedMovie.tumbnail)));
-            movieTitle_TextBox.Text = selectedMovie.title;
+            //Getting the picturebox that was clicked.
+            PictureBox selectexPictureBox = (PictureBox)sender;
+            selectedMovie = MovieCollections.movies[int.Parse(selectexPictureBox.AccessibleDescription)]; //Getting the movie index through our cheat cheat.
+
+            movieThumbnail_PictureBox.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(selectedMovie.tumbnail)));//Getting the tumbnail from the data file.
+
+            movieTitle_TextBox.Text = selectedMovie.title; //Displaying the title
+
+            //Displaying the showtimes.
             selectedMovie.availablity.ForEach(showtime =>
             {
                 movieDateTimes_Listbox.Items.Add(showtime);
@@ -326,11 +357,12 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
             });
         }
 
+        // Save button method.
         private void movieSave_Button_Click(object sender, EventArgs e)
         {
             try
             {
-                if (selectedMovie == null)
+                if (selectedMovie == null) // if no movie was selected to edit, return.
                 {
                     MessageBox.Show("Please select a movie to edit first.");
                     return;
@@ -339,7 +371,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 
                 TheaterDataManager.Movies? MovieCollections = theaterDataManager.Retreieve(); // Retreieving Movies.
 
-                if (MovieCollections == null)
+                if (MovieCollections == null) // Checking if there any movies....
                 {
                     MovieCollections = new TheaterDataManager.Movies();
                     MovieCollections.movies = new List<TheaterDataManager.movie>();
@@ -347,36 +379,42 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 
                 TheaterDataManager.movie editedMovie = MovieCollections.movies[selectedMovie.index];
 
-                string title = movieTitle_TextBox.Text;
-                if (title == null || title == "")
+                string title = movieTitle_TextBox.Text; //Getting the new title (or old).
+
+                if (title == null || title == "") // Checking if a title is entered.
                 {
                     MessageBox.Show("Please enter a movie title.");
                     return;
                 }
 
-                if (movieEditor_DateTimes.Count == 0)
+                if (movieEditor_DateTimes.Count == 0) // Checking if the showtimes exist.
                 {
                     MessageBox.Show("Please add screening times.");
                     return;
                 }
 
+                //Checking if a new tumbnail was selected, if not let the user know.
                 if (openFileDialog1.FileName == string.Empty || openFileDialog1.FileName == null || openFileDialog1.FileName == "")
                 {
                     MessageBox.Show("Just to let you know, the thumbnail has not been changed because you didn't upload a new one.");
                 }
                 else
                 {
-                    editedMovie.tumbnail = theaterDataManager.convertImageToBas64String(openFileDialog1.FileName);
+                    editedMovie.tumbnail = theaterDataManager.convertImageToBas64String(openFileDialog1.FileName); //Otherwise update the thumbnail to the new thumbnail.
                 }
 
+                //Update all the movie properties.
                 editedMovie.title = title;
                 editedMovie.availablity = movieEditor_DateTimes;
                 MovieCollections.movies[selectedMovie.index] = editedMovie;
 
+                //Save and reload movies.
                 theaterDataManager.Save(MovieCollections);
                 loadMovies();
 
-                MessageBox.Show("Movie has been edited.");
+                MessageBox.Show("Movie has been edited."); //let the user know.
+
+                //Clean up.
                 selectedMovie = null;
                 openFileDialog1.FileName = string.Empty;
             }
@@ -387,7 +425,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
         {
             try
             {
-                if (selectedMovie == null)
+                if (selectedMovie == null) // Checking if a movie was selected.
                 {
                     MessageBox.Show("Please select a movie to delete first.");
                     return;
@@ -396,40 +434,41 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 
                 Movies? MovieCollections = theaterDataManager.Retreieve(); // Retreieving Movies.
 
-                if (MovieCollections == null)
+                if (MovieCollections == null) // Checking if there even any movies just in case....
                 {
                     MessageBox.Show("Hmmm... There are no current movies to delete. The data file was not found.");
                     return;
                 }
 
-                TheaterDataManager.movie indexedMovie = MovieCollections.movies[selectedMovie.index];
+                TheaterDataManager.movie indexedMovie = MovieCollections.movies[selectedMovie.index]; // getting the selected movie.
 
-                List<movie> newMovies = new List<movie>();
+                List<movie> newMovies = new List<movie>(); // Creating a new list of movies.
 
-                int index = 0;
-                MovieCollections.movies.ForEach(movie =>
+                int index = 0; // Index to track the index...
+                MovieCollections.movies.ForEach(movie => //For each movie.....
                 {
-                    if (movie == indexedMovie)
+                    if (movie == indexedMovie) // If the current movie is the selected movie, don't add it to the list.
                     {
                         return;
                     }
 
+                    //Otherwise update the movie index and ident, and add it to the list.
                     movie.index = index;
                     movie.ident = index + 1;
                     newMovies.Add(movie);
-                    index++;
+
+                    index++;//Update index.
                 });
 
 
-                MovieCollections.movies = newMovies;
+                MovieCollections.movies = newMovies; // Set the movies collections to the new movies collections.
 
-                theaterDataManager.Save(MovieCollections);
-                loadMovies();
+                theaterDataManager.Save(MovieCollections); // Save to the data file.
+                loadMovies(); // Reload the movie list.
 
-                newMovies.Clear();
-                MessageBox.Show("Movie has been deleted.");
-                selectedMovie = null;
-                openFileDialog1.FileName = string.Empty;
+                newMovies.Clear(); //Clean up.
+                MessageBox.Show("Movie has been deleted."); // Inform the user.
+                selectedMovie = null; // Clean up.
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
@@ -480,7 +519,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                     });
                 });
 
-                if(confirmationFound == false)
+                if(confirmationFound == false) // If no confirmation was found, say so.
                 {
                     MessageBox.Show("No reservations were found under the entered confirmation code.");
                 }
