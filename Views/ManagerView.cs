@@ -409,7 +409,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                 int index = 0;
                 MovieCollections.movies.ForEach(movie =>
                 {
-                    if(movie == indexedMovie)
+                    if (movie == indexedMovie)
                     {
                         return;
                     }
@@ -432,6 +432,44 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                 openFileDialog1.FileName = string.Empty;
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void confirmationCheck_Button_Click(object sender, EventArgs e)
+        {
+            try // Try catch to catch any unforseen errors and display said unforseen errors.
+            {
+                TheaterDataManager theaterDataManager = new TheaterDataManager(); // New Instance of our custom class.
+                Movies MovieCollections = theaterDataManager.Retreieve();
+
+                for (int column = 1; column < 11; column++)
+                {
+
+                    for (int row = 1; row < 6; row++)
+                    {
+                        Control[] foundControls = (Control[])this.Controls.Find($"seatC{column}R{row}_Label", true); //Getting the current seat Label object.
+
+                        if (foundControls.Length == 0)
+                        {
+                            continue;
+                        }
+
+                        Label seatLabel = (Label)foundControls[0];
+
+
+                        seatLabel.BackColor = Color.CornflowerBlue;
+                    }
+                }
+
+               
+
+                int seatIndex = 1; // Index vairbale to track the current seat.
+
+               ///Loop through each movie and through each reservation check if said reservation matches with the entered confirmation code.
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

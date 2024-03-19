@@ -237,8 +237,8 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                 movieView.loadMovies();
                 loadSeats(); // Reload the seats.
                 MessageBox.Show($"Your seats are reserved, your confirmation code is {reservationIDENT}. Please keep this code for check in.");
-            }catch {
-
+            }catch(Exception ex) {
+                MessageBox.Show(ex.Message);
             }
         }
 
