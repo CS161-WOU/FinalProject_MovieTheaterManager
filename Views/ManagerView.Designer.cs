@@ -1986,6 +1986,7 @@
             movieDelete_Button.TabIndex = 34;
             movieDelete_Button.Text = "Delete";
             movieDelete_Button.UseVisualStyleBackColor = false;
+            movieDelete_Button.Click += movieDelete_Button_Click;
             // 
             // movieSave_Button
             // 

@@ -240,11 +240,12 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                     string imageFileName = openFileDialog1.FileName;
                     movieThumbnail_PictureBox.Image = new Bitmap(imageFileName);
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-           
+
         }
 
         private void movieAdd_Button_Click(object sender, EventArgs e)
@@ -327,9 +328,9 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
 
         private void movieSave_Button_Click(object sender, EventArgs e)
         {
-           try
+            try
             {
-                if(selectedMovie == null)
+                if (selectedMovie == null)
                 {
                     MessageBox.Show("Please select a movie to edit first.");
                     return;
@@ -345,7 +346,7 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                 }
 
                 TheaterDataManager.movie editedMovie = MovieCollections.movies[selectedMovie.index];
-               
+
                 string title = movieTitle_TextBox.Text;
                 if (title == null || title == "")
                 {
@@ -358,8 +359,9 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                     MessageBox.Show("Please add screening times.");
                     return;
                 }
-                
-                if(openFileDialog1.FileName == string.Empty || openFileDialog1.FileName == null || openFileDialog1.FileName == "") {
+
+                if (openFileDialog1.FileName == string.Empty || openFileDialog1.FileName == null || openFileDialog1.FileName == "")
+                {
                     MessageBox.Show("Just to let you know, the thumbnail has not been changed because you didn't upload a new one.");
                 }
                 else
@@ -378,7 +380,58 @@ namespace CS161_FinalProject_MovieTheaterManager.Views
                 selectedMovie = null;
                 openFileDialog1.FileName = string.Empty;
             }
-           catch(Exception ex) {  MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void movieDelete_Button_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (selectedMovie == null)
+                {
+                    MessageBox.Show("Please select a movie to delete first.");
+                    return;
+                }
+                TheaterDataManager theaterDataManager = new TheaterDataManager(); // New Instance of our custom class.
+
+                Movies? MovieCollections = theaterDataManager.Retreieve(); // Retreieving Movies.
+
+                if (MovieCollections == null)
+                {
+                    MessageBox.Show("Hmmm... There are no current movies to delete. The data file was not found.");
+                    return;
+                }
+
+                TheaterDataManager.movie indexedMovie = MovieCollections.movies[selectedMovie.index];
+
+                List<movie> newMovies = new List<movie>();
+
+                int index = 0;
+                MovieCollections.movies.ForEach(movie =>
+                {
+                    if(movie == indexedMovie)
+                    {
+                        return;
+                    }
+
+                    movie.index = index;
+                    movie.ident = index + 1;
+                    newMovies.Add(movie);
+                    index++;
+                });
+
+
+                MovieCollections.movies = newMovies;
+
+                theaterDataManager.Save(MovieCollections);
+                loadMovies();
+
+                newMovies.Clear();
+                MessageBox.Show("Movie has been deleted.");
+                selectedMovie = null;
+                openFileDialog1.FileName = string.Empty;
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
     }
 }
